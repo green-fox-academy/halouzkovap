@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="web developer">
+    <meta name="description" content="blog page">
+    <title>petula</title>
+    <link rel="icon" href="pictures/favicon.ico">
+    <!-- fontawsome -->
+    <script src="https://kit.fontawesome.com/7c8522a197.js" crossorigin="anonymous"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- style sheet -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!--font-->
+    <link href="https://fonts.googleapis.com/css?family=Caveat:400,700|Oswald:300,400,700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+
+<body>
+    <!-- navbar -->
+    <section class="title">
+        <nav class="navbar navbar-expand-md">
+            <a class="navbar-brand" href="#">
+                <img class="icon" src="pictures/icon.PNG" width="50" height="50" class="d-inline-block align-top" alt="">
+                <strong>Blog with cheesecake recepies</strong>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">HOME</a>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+    </section>
+
+    <!-- SubmitingContainer -->
+    <div class="bod">
+        <section class="SubmitingContainer">
+            <div class="addPost">
+
+
+                <h3>Add new post</h3>
+            </div>
+
+
+            <form action="" method="get" class="form-example">
+                <div class="form-example">
+                    <label for="name">
+               
+                <h3>Title</h3>
+                
+                    </label>
+                    <input class="imputTitle" type="text" name="name" id="name" placeholder="Write title" required>
+                </div>
+                <div class="form-example">
+                    <label for="Content">
+                <h3>Content</h3>
+                     </label>
+                    <textarea class="imputContent" type="text" name="Content" id="Content" placeholder="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Integer imperdiet lectus quis justo. Morbi scelerisque luctus velit. Praesent in mauris eu tortor porttitor accumsan. Morbi leo mi, nonummy eget tristique non, rhoncus non leo. Praesent vitae arcu tempor neque la..."
+                        required></textarea>
+                </div>
+
+                <form action="/action_page.php">
+                    <h3>Select pictures</h3><input type="file" name="myFile"><br>
+                </form>
+
+                <div class="form-example">
+                    <input class="myButton" type="submit" value="Submit">
+                </div>
+            </form>
+        </section>
+
+        <!-- posts -->
+        <section class="postContainer">
+            <h3>Recepies
+                <h3> <br>
+                    <div class="articles">
+
+                        <h2>Lorem ipsum dolor</h2>
+
+                        <table>
+                            <tr>
+                                <th>
+                                    <p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Integer imperdiet lectus quis justo. Morbi scelerisque luctus velit. Praesent in mauris eu tortor porttitor accumsan. Morbi leo mi, nonummy eget tristique non,
+                                        rhoncus non leo. Praesent vitae arcu tempor neque lacinia pretium. Morbi leo mi, nonummy eget tristique non, rhoncus non leo. Integer tempor. Morbi scelerisque luctus velit. Nullam at arcu a est sollicitudin euismod.
+                                        Fusce consectetuer risus a nunc. Nullam faucibus mi quis velit. Fusce consectetuer risus a nunc.
+                                    </p>
+
+                                </th>
+                                <th><img src="pictures/dort1.PNG" width="150" height="100" alt=""></th>
+                            </tr>
+                        </table>
+                        <a class="showMore" href="#">Show more >></a>
+
+                    </div>
+                    <div class="articles">
+                        <h2>Lorem ipsum dolor</h2>
+                        <table>
+                            <tr>
+                                <th>
+                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Integer imperdiet lectus quis justo. Morbi scelerisque luctus velit. Praesent in mauris eu tortor porttitor accumsan. Morbi leo mi, nonummy eget tristique non,
+                                        rhoncus non leo. Praesent vitae arcu tempor neque lacinia pretium. Morbi leo mi, nonummy eget tristique non, rhoncus non leo. Integer tempor. Morbi scelerisque luctus velit. Nullam at arcu a est sollicitudin euismod.
+                                        Fusce consectetuer risus a nunc. Nullam faucibus mi quis velit. Fusce consectetuer risus a nunc.</p>
+
+                                </th>
+                                <th><img src="pictures/dort2.PNG" width="150" height="100" alt=""></th>
+                            </tr>
+                        </table>
+                        <a class="showMore" href="#">Show more >></a>
+                    </div>
+
+        </section>
+    </div>
+
+    <!-- footer -->
+    <section class="footerContainer">
+        <div class="bottom-container">
+            <a class="footer-link" href="https://www.facebook.com/petra.hal.7"><i
+                    class="fab fa-facebook-f fa-0.5x iconka"></i></a>
+            <a class="footer-link" href="https://www.linkedin.com/in/petra-halouzkov%C3%A1-43a694b8/"><i
+                    class="fab fa-linkedin-in fa-0.5x iconka"></i></a>
+            <a class="footer-link" href="https://www.instagram.com/petra_hal/" target="_blank"><i
+                    class="fab fa-instagram fa-0.5x iconka"></i></a>
+
+        </div>
+
+    </section>
+
+</body>
+
+</html>

@@ -1,0 +1,158 @@
+body {
+    margin: 0%;
+    padding: 0%;
+    background-image: url(pictures/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: auto;
+    background-attachment: fixed;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Calistoga', cursive;
+}
+
+h1 {
+    font-size: 3.5rem;
+    text-shadow: 2px 2px grey;
+}
+
+h2,
+h3 {
+    text-align: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin: 0%;
+}
+
+h6 {
+    text-align: right;
+}
+
+p {
+    font-family: 'Lato', sans-serif;
+}
+
+.transparency2 {
+    margin: 3%;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 20px 10px 20px #888888;
+}
+
+.transparency {
+    margin: 3%;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 20px 10px 20px #888888;
+    padding: 2%;
+}
+
+a:hover {
+    color: black;
+}
+
+.hobbo,
+.hobby {
+    margin: auto 5%;
+}
+
+
+/* title */
+
+.whoAmI {
+    text-align: center;
+    background-image: url(pictures/backgroundtitle.PNG);
+    background-size: cover;
+    color: white;
+    height: 200px;
+    padding-top: 5%;
+}
+
+.hobby {
+    text-align: center;
+}
+
+.fas {
+    margin-right: 1%;
+}
+
+.bas {
+    margin-left: 2%;
+}
+
+
+/* experience */
+
+.tabulka {
+    padding-right: 20% !important;
+}
+
+td {
+    width: 100px !important;
+}
+
+.job {
+    text-align: left;
+}
+
+.sokrates {
+    text-align: center;
+    font-weight: 400;
+    text-shadow: none;
+    font-size: 1rem;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.star {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+}
+
+.radek {
+    padding: 0px !important;
+}
+
+.hobbies {
+    margin: 5%;
+    padding: 5%;
+}
+
+
+/* cite */
+
+.cite {
+    background-image: url(pictures/downtitle.PNG);
+    height: 98px;
+    background-repeat: no-repeat;
+    color: white;
+    padding-top: 1.5%;
+}
+
+blockquote {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-shadow: 2px 2px grey;
+}
+
+
+/* footer */
+
+.bottom-container {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-right: 2%;
+    text-align: right;
+}
+
+.footer-link {
+    padding-right: 1rem;
+    padding-left: 1rem;
+    color: white;
+    text-shadow: 2px 2px grey;
+}

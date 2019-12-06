@@ -1,0 +1,182 @@
+/*generaly*/
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(pictures/backpics.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: auto;
+    background-attachment: fixed;
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: white;
+    font-family: 'Caveat', cursive;
+}
+
+h2 {
+    font-family: 'Caveat', cursive;
+}
+
+h2,
+p {
+    color: #3b064d;
+    margin-right: 3%;
+}
+
+p {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.bod {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+a {
+    color: #ac3a08;
+    font-family: 'Oswald', sans-serif;
+}
+
+a:hover {
+    color: grey;
+}
+
+.addPost {
+    font-weight: bold;
+    margin-bottom: 2%;
+}
+
+.SubmitingContainer,
+.postContainer {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+
+/*navbar*/
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.icon {
+    border-radius: 100%;
+    margin-right: 5%;
+}
+
+
+/*SubmitingContainer*/
+
+.SubmitingContainer {
+    padding-right: 0px;
+}
+
+form.form-example {
+    display: table;
+}
+
+label,
+input {
+    display: table-cell;
+    margin-bottom: 10px;
+}
+
+.imputTitle {
+    width: 300px;
+    border-color: #3b064d;
+}
+
+.imputContent {
+    height: 100px;
+    text-align: justify;
+    width: 1000px;
+    border-color: #3b064d;
+}
+
+textarea,
+input {
+    margin-bottom: 1%;
+    margin-top: 1%;
+    background-color: rgba(245, 245, 245, 0.7);
+}
+
+textarea {
+    outline: 1px solid #3b064d !important;
+}
+
+label {
+    padding-right: 10px;
+}
+
+.myButton {
+    box-shadow: 0px 12px 25px -3px #1a2021;
+    background-color: transparent;
+    border-radius: 8px;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: 'Caveat', cursive;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 6px 50px;
+    text-decoration: none;
+    text-shadow: 1px 2px 5px #111212;
+}
+
+.myButton:hover {
+    background-color: transparent;
+}
+
+.myButton:active {
+    position: relative;
+    top: 1px;
+}
+
+
+/*Posts*/
+
+.articles {
+    border: 1px solid #3b064d;
+    margin-bottom: 2%;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 2%;
+}
+
+.showMore {
+    color: #3b064d;
+    text-decoration: underline;
+    font-size: 1.2rem;
+}
+
+
+/*footerContainer*/
+
+.footerContainer {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.bottom-container {
+    padding-right: 10%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: right;
+}
+
+.footer {
+    font-size: 0.6rem;
+    text-align: left;
+}
+
+.footer-link {
+    padding-right: 1rem;
+    padding-left: 1rem;
+    color: white;
+}

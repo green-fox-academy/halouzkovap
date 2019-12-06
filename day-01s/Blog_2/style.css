@@ -1,0 +1,118 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(pictures/Crown.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: auto;
+    background-attachment: fixed;
+}
+
+h3::before {
+    content: "\2600";
+    color: gold;
+}
+
+h1 {
+    color: gold;
+}
+
+h2,
+h3,
+p {
+    color: white;
+}
+
+* :hover {
+    transform: rotate(100);
+}
+
+p {
+    text-align: justify;
+}
+
+nav a {
+    color: gold;
+    margin: 0 10px;
+    text-align: right;
+}
+
+i {
+    color: gold;
+}
+
+nav {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    justify-content: space-between;
+}
+
+.wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    font-weight: bold;
+    text-align: center;
+    min-width: 100vh;
+}
+
+.wrapper>* {
+    padding: 10px;
+    flex: 1 100%;
+}
+
+.header {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.footer {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.main {
+    text-align: left;
+    padding: 5%;
+}
+
+.aside-1 {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.aside-2 {
+    background-color: rgba(10, 10, 10, 0.4);
+}
+
+.footerContainer {
+    height: 60px;
+    padding: 20px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media all and (min-width: 600px) {
+    .aside {
+        flex: 1 0 0;
+    }
+}
+
+@media all and (min-width: 800px) {
+    .main {
+        flex: 3 0px;
+    }
+    .aside-1 {
+        order: 1;
+    }
+    .main {
+        order: 2;
+    }
+    .aside-2 {
+        order: 3;
+    }
+    .footer {
+        order: 4;
+    }
+}
