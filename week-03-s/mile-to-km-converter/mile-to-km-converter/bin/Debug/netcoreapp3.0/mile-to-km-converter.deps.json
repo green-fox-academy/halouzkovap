@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.0": {
+      "mile-to-km-converter/1.0.0": {
+        "runtime": {
+          "mile-to-km-converter.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "mile-to-km-converter/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,10 @@
+C:\Users\42073\greenfox\halouzkovap\week-03-s\count-from-to\count-from-to\bin\Debug\netcoreapp3.0\count-from-to.exe
+C:\Users\42073\greenfox\halouzkovap\week-03-s\count-from-to\count-from-to\bin\Debug\netcoreapp3.0\count-from-to.deps.json
+C:\Users\42073\greenfox\halouzkovap\week-03-s\count-from-to\count-from-to\bin\Debug\netcoreapp3.0\count-from-to.runtimeconfig.json
+C:\Users\42073\greenfox\halouzkovap\week-03-s\count-from-to\count-from-to\bin\Debug\netcoreapp3.0\count-from-to.runtimeconfig.dev.json
+C:\Users\42073\greenfox\halouzkovap\week-03-s\count-from-to\count-from-to\bin\Debug\netcoreapp3.0\count-from-to.dll
+C:\Users\42073\greenfox\halouzkovap\week-03-s\count-from-to\count-from-to\bin\Debug\netcoreapp3.0\count-from-to.pdb
+C:\Users\42073\greenfox\halouzkovap\week-03-s\count-from-to\count-from-to\obj\Debug\netcoreapp3.0\count-from-to.AssemblyInfoInputs.cache
+C:\Users\42073\greenfox\halouzkovap\week-03-s\count-from-to\count-from-to\obj\Debug\netcoreapp3.0\count-from-to.AssemblyInfo.cs
+C:\Users\42073\greenfox\halouzkovap\week-03-s\count-from-to\count-from-to\obj\Debug\netcoreapp3.0\count-from-to.dll
+C:\Users\42073\greenfox\halouzkovap\week-03-s\count-from-to\count-from-to\obj\Debug\netcoreapp3.0\count-from-to.pdb

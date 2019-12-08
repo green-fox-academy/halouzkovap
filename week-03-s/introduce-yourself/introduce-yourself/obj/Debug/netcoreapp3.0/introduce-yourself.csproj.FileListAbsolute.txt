@@ -1,0 +1,11 @@
+C:\Users\42073\greenfox\halouzkovap\week-03-s\introduce-yourself\introduce-yourself\bin\Debug\netcoreapp3.0\introduce-yourself.exe
+C:\Users\42073\greenfox\halouzkovap\week-03-s\introduce-yourself\introduce-yourself\bin\Debug\netcoreapp3.0\introduce-yourself.deps.json
+C:\Users\42073\greenfox\halouzkovap\week-03-s\introduce-yourself\introduce-yourself\bin\Debug\netcoreapp3.0\introduce-yourself.runtimeconfig.json
+C:\Users\42073\greenfox\halouzkovap\week-03-s\introduce-yourself\introduce-yourself\bin\Debug\netcoreapp3.0\introduce-yourself.runtimeconfig.dev.json
+C:\Users\42073\greenfox\halouzkovap\week-03-s\introduce-yourself\introduce-yourself\bin\Debug\netcoreapp3.0\introduce-yourself.dll
+C:\Users\42073\greenfox\halouzkovap\week-03-s\introduce-yourself\introduce-yourself\bin\Debug\netcoreapp3.0\introduce-yourself.pdb
+C:\Users\42073\greenfox\halouzkovap\week-03-s\introduce-yourself\introduce-yourself\obj\Debug\netcoreapp3.0\introduce-yourself.csprojAssemblyReference.cache
+C:\Users\42073\greenfox\halouzkovap\week-03-s\introduce-yourself\introduce-yourself\obj\Debug\netcoreapp3.0\introduce-yourself.AssemblyInfoInputs.cache
+C:\Users\42073\greenfox\halouzkovap\week-03-s\introduce-yourself\introduce-yourself\obj\Debug\netcoreapp3.0\introduce-yourself.AssemblyInfo.cs
+C:\Users\42073\greenfox\halouzkovap\week-03-s\introduce-yourself\introduce-yourself\obj\Debug\netcoreapp3.0\introduce-yourself.dll
+C:\Users\42073\greenfox\halouzkovap\week-03-s\introduce-yourself\introduce-yourself\obj\Debug\netcoreapp3.0\introduce-yourself.pdb

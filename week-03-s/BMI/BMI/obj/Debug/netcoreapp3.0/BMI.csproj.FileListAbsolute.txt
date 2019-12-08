@@ -1,0 +1,10 @@
+C:\Users\42073\greenfox\halouzkovap\week-03-s\BMI\BMI\bin\Debug\netcoreapp3.0\BMI.exe
+C:\Users\42073\greenfox\halouzkovap\week-03-s\BMI\BMI\bin\Debug\netcoreapp3.0\BMI.deps.json
+C:\Users\42073\greenfox\halouzkovap\week-03-s\BMI\BMI\bin\Debug\netcoreapp3.0\BMI.runtimeconfig.json
+C:\Users\42073\greenfox\halouzkovap\week-03-s\BMI\BMI\bin\Debug\netcoreapp3.0\BMI.runtimeconfig.dev.json
+C:\Users\42073\greenfox\halouzkovap\week-03-s\BMI\BMI\bin\Debug\netcoreapp3.0\BMI.dll
+C:\Users\42073\greenfox\halouzkovap\week-03-s\BMI\BMI\bin\Debug\netcoreapp3.0\BMI.pdb
+C:\Users\42073\greenfox\halouzkovap\week-03-s\BMI\BMI\obj\Debug\netcoreapp3.0\BMI.AssemblyInfoInputs.cache
+C:\Users\42073\greenfox\halouzkovap\week-03-s\BMI\BMI\obj\Debug\netcoreapp3.0\BMI.AssemblyInfo.cs
+C:\Users\42073\greenfox\halouzkovap\week-03-s\BMI\BMI\obj\Debug\netcoreapp3.0\BMI.dll
+C:\Users\42073\greenfox\halouzkovap\week-03-s\BMI\BMI\obj\Debug\netcoreapp3.0\BMI.pdb

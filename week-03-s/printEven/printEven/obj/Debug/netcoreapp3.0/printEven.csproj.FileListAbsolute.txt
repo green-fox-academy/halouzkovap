@@ -1,0 +1,11 @@
+C:\Users\42073\greenfox\halouzkovap\week-03-s\printEven\printEven\bin\Debug\netcoreapp3.0\printEven.exe
+C:\Users\42073\greenfox\halouzkovap\week-03-s\printEven\printEven\bin\Debug\netcoreapp3.0\printEven.deps.json
+C:\Users\42073\greenfox\halouzkovap\week-03-s\printEven\printEven\bin\Debug\netcoreapp3.0\printEven.runtimeconfig.json
+C:\Users\42073\greenfox\halouzkovap\week-03-s\printEven\printEven\bin\Debug\netcoreapp3.0\printEven.runtimeconfig.dev.json
+C:\Users\42073\greenfox\halouzkovap\week-03-s\printEven\printEven\bin\Debug\netcoreapp3.0\printEven.dll
+C:\Users\42073\greenfox\halouzkovap\week-03-s\printEven\printEven\bin\Debug\netcoreapp3.0\printEven.pdb
+C:\Users\42073\greenfox\halouzkovap\week-03-s\printEven\printEven\obj\Debug\netcoreapp3.0\printEven.csprojAssemblyReference.cache
+C:\Users\42073\greenfox\halouzkovap\week-03-s\printEven\printEven\obj\Debug\netcoreapp3.0\printEven.AssemblyInfoInputs.cache
+C:\Users\42073\greenfox\halouzkovap\week-03-s\printEven\printEven\obj\Debug\netcoreapp3.0\printEven.AssemblyInfo.cs
+C:\Users\42073\greenfox\halouzkovap\week-03-s\printEven\printEven\obj\Debug\netcoreapp3.0\printEven.dll
+C:\Users\42073\greenfox\halouzkovap\week-03-s\printEven\printEven\obj\Debug\netcoreapp3.0\printEven.pdb

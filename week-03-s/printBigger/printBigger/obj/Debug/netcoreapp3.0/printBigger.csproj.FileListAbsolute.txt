@@ -1,0 +1,11 @@
+C:\Users\42073\greenfox\halouzkovap\week-03-s\printBigger\printBigger\bin\Debug\netcoreapp3.0\printBigger.exe
+C:\Users\42073\greenfox\halouzkovap\week-03-s\printBigger\printBigger\bin\Debug\netcoreapp3.0\printBigger.deps.json
+C:\Users\42073\greenfox\halouzkovap\week-03-s\printBigger\printBigger\bin\Debug\netcoreapp3.0\printBigger.runtimeconfig.json
+C:\Users\42073\greenfox\halouzkovap\week-03-s\printBigger\printBigger\bin\Debug\netcoreapp3.0\printBigger.runtimeconfig.dev.json
+C:\Users\42073\greenfox\halouzkovap\week-03-s\printBigger\printBigger\bin\Debug\netcoreapp3.0\printBigger.dll
+C:\Users\42073\greenfox\halouzkovap\week-03-s\printBigger\printBigger\bin\Debug\netcoreapp3.0\printBigger.pdb
+C:\Users\42073\greenfox\halouzkovap\week-03-s\printBigger\printBigger\obj\Debug\netcoreapp3.0\printBigger.csprojAssemblyReference.cache
+C:\Users\42073\greenfox\halouzkovap\week-03-s\printBigger\printBigger\obj\Debug\netcoreapp3.0\printBigger.AssemblyInfoInputs.cache
+C:\Users\42073\greenfox\halouzkovap\week-03-s\printBigger\printBigger\obj\Debug\netcoreapp3.0\printBigger.AssemblyInfo.cs
+C:\Users\42073\greenfox\halouzkovap\week-03-s\printBigger\printBigger\obj\Debug\netcoreapp3.0\printBigger.dll
+C:\Users\42073\greenfox\halouzkovap\week-03-s\printBigger\printBigger\obj\Debug\netcoreapp3.0\printBigger.pdb

@@ -1,0 +1,11 @@
+C:\Users\42073\greenfox\halouzkovap\week-03-s\draw-triangle\draw-triangle\bin\Debug\netcoreapp3.0\draw-triangle.exe
+C:\Users\42073\greenfox\halouzkovap\week-03-s\draw-triangle\draw-triangle\bin\Debug\netcoreapp3.0\draw-triangle.deps.json
+C:\Users\42073\greenfox\halouzkovap\week-03-s\draw-triangle\draw-triangle\bin\Debug\netcoreapp3.0\draw-triangle.runtimeconfig.json
+C:\Users\42073\greenfox\halouzkovap\week-03-s\draw-triangle\draw-triangle\bin\Debug\netcoreapp3.0\draw-triangle.runtimeconfig.dev.json
+C:\Users\42073\greenfox\halouzkovap\week-03-s\draw-triangle\draw-triangle\bin\Debug\netcoreapp3.0\draw-triangle.dll
+C:\Users\42073\greenfox\halouzkovap\week-03-s\draw-triangle\draw-triangle\bin\Debug\netcoreapp3.0\draw-triangle.pdb
+C:\Users\42073\greenfox\halouzkovap\week-03-s\draw-triangle\draw-triangle\obj\Debug\netcoreapp3.0\draw-triangle.AssemblyInfoInputs.cache
+C:\Users\42073\greenfox\halouzkovap\week-03-s\draw-triangle\draw-triangle\obj\Debug\netcoreapp3.0\draw-triangle.AssemblyInfo.cs
+C:\Users\42073\greenfox\halouzkovap\week-03-s\draw-triangle\draw-triangle\obj\Debug\netcoreapp3.0\draw-triangle.dll
+C:\Users\42073\greenfox\halouzkovap\week-03-s\draw-triangle\draw-triangle\obj\Debug\netcoreapp3.0\draw-triangle.pdb
+C:\Users\42073\greenfox\halouzkovap\week-03-s\draw-triangle\draw-triangle\obj\Debug\netcoreapp3.0\draw-triangle.csprojAssemblyReference.cache

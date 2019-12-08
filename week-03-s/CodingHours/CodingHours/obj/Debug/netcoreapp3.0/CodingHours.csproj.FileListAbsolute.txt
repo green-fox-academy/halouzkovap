@@ -1,0 +1,11 @@
+C:\Users\42073\greenfox\halouzkovap\week-03-s\CodingHours\CodingHours\bin\Debug\netcoreapp3.0\CodingHours.exe
+C:\Users\42073\greenfox\halouzkovap\week-03-s\CodingHours\CodingHours\bin\Debug\netcoreapp3.0\CodingHours.deps.json
+C:\Users\42073\greenfox\halouzkovap\week-03-s\CodingHours\CodingHours\bin\Debug\netcoreapp3.0\CodingHours.runtimeconfig.json
+C:\Users\42073\greenfox\halouzkovap\week-03-s\CodingHours\CodingHours\bin\Debug\netcoreapp3.0\CodingHours.runtimeconfig.dev.json
+C:\Users\42073\greenfox\halouzkovap\week-03-s\CodingHours\CodingHours\bin\Debug\netcoreapp3.0\CodingHours.dll
+C:\Users\42073\greenfox\halouzkovap\week-03-s\CodingHours\CodingHours\bin\Debug\netcoreapp3.0\CodingHours.pdb
+C:\Users\42073\greenfox\halouzkovap\week-03-s\CodingHours\CodingHours\obj\Debug\netcoreapp3.0\CodingHours.csprojAssemblyReference.cache
+C:\Users\42073\greenfox\halouzkovap\week-03-s\CodingHours\CodingHours\obj\Debug\netcoreapp3.0\CodingHours.AssemblyInfoInputs.cache
+C:\Users\42073\greenfox\halouzkovap\week-03-s\CodingHours\CodingHours\obj\Debug\netcoreapp3.0\CodingHours.AssemblyInfo.cs
+C:\Users\42073\greenfox\halouzkovap\week-03-s\CodingHours\CodingHours\obj\Debug\netcoreapp3.0\CodingHours.dll
+C:\Users\42073\greenfox\halouzkovap\week-03-s\CodingHours\CodingHours\obj\Debug\netcoreapp3.0\CodingHours.pdb

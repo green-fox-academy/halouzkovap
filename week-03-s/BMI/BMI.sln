@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29519.87
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BMI", "BMI\BMI.csproj", "{DF1B8B2C-FB03-45AA-89AB-5AF9E50DA441}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DF1B8B2C-FB03-45AA-89AB-5AF9E50DA441}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF1B8B2C-FB03-45AA-89AB-5AF9E50DA441}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF1B8B2C-FB03-45AA-89AB-5AF9E50DA441}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF1B8B2C-FB03-45AA-89AB-5AF9E50DA441}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CEEED250-7F19-4036-B89B-57889B97977D}
+	EndGlobalSection
+EndGlobal

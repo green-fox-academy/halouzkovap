@@ -1,0 +1,11 @@
+C:\Users\42073\greenfox\halouzkovap\week-03-s\variable-mutation\variable-mutation\bin\Debug\netcoreapp3.0\variable-mutation.exe
+C:\Users\42073\greenfox\halouzkovap\week-03-s\variable-mutation\variable-mutation\bin\Debug\netcoreapp3.0\variable-mutation.deps.json
+C:\Users\42073\greenfox\halouzkovap\week-03-s\variable-mutation\variable-mutation\bin\Debug\netcoreapp3.0\variable-mutation.runtimeconfig.json
+C:\Users\42073\greenfox\halouzkovap\week-03-s\variable-mutation\variable-mutation\bin\Debug\netcoreapp3.0\variable-mutation.runtimeconfig.dev.json
+C:\Users\42073\greenfox\halouzkovap\week-03-s\variable-mutation\variable-mutation\bin\Debug\netcoreapp3.0\variable-mutation.dll
+C:\Users\42073\greenfox\halouzkovap\week-03-s\variable-mutation\variable-mutation\bin\Debug\netcoreapp3.0\variable-mutation.pdb
+C:\Users\42073\greenfox\halouzkovap\week-03-s\variable-mutation\variable-mutation\obj\Debug\netcoreapp3.0\variable-mutation.csprojAssemblyReference.cache
+C:\Users\42073\greenfox\halouzkovap\week-03-s\variable-mutation\variable-mutation\obj\Debug\netcoreapp3.0\variable-mutation.AssemblyInfoInputs.cache
+C:\Users\42073\greenfox\halouzkovap\week-03-s\variable-mutation\variable-mutation\obj\Debug\netcoreapp3.0\variable-mutation.AssemblyInfo.cs
+C:\Users\42073\greenfox\halouzkovap\week-03-s\variable-mutation\variable-mutation\obj\Debug\netcoreapp3.0\variable-mutation.dll
+C:\Users\42073\greenfox\halouzkovap\week-03-s\variable-mutation\variable-mutation\obj\Debug\netcoreapp3.0\variable-mutation.pdb

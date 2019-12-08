@@ -1,0 +1,11 @@
+C:\Users\42073\greenfox\halouzkovap\week-03-s\drawPyramid\drawPyramid\bin\Debug\netcoreapp3.0\drawPyramid.exe
+C:\Users\42073\greenfox\halouzkovap\week-03-s\drawPyramid\drawPyramid\bin\Debug\netcoreapp3.0\drawPyramid.deps.json
+C:\Users\42073\greenfox\halouzkovap\week-03-s\drawPyramid\drawPyramid\bin\Debug\netcoreapp3.0\drawPyramid.runtimeconfig.json
+C:\Users\42073\greenfox\halouzkovap\week-03-s\drawPyramid\drawPyramid\bin\Debug\netcoreapp3.0\drawPyramid.runtimeconfig.dev.json
+C:\Users\42073\greenfox\halouzkovap\week-03-s\drawPyramid\drawPyramid\bin\Debug\netcoreapp3.0\drawPyramid.dll
+C:\Users\42073\greenfox\halouzkovap\week-03-s\drawPyramid\drawPyramid\bin\Debug\netcoreapp3.0\drawPyramid.pdb
+C:\Users\42073\greenfox\halouzkovap\week-03-s\drawPyramid\drawPyramid\obj\Debug\netcoreapp3.0\drawPyramid.csprojAssemblyReference.cache
+C:\Users\42073\greenfox\halouzkovap\week-03-s\drawPyramid\drawPyramid\obj\Debug\netcoreapp3.0\drawPyramid.AssemblyInfoInputs.cache
+C:\Users\42073\greenfox\halouzkovap\week-03-s\drawPyramid\drawPyramid\obj\Debug\netcoreapp3.0\drawPyramid.AssemblyInfo.cs
+C:\Users\42073\greenfox\halouzkovap\week-03-s\drawPyramid\drawPyramid\obj\Debug\netcoreapp3.0\drawPyramid.dll
+C:\Users\42073\greenfox\halouzkovap\week-03-s\drawPyramid\drawPyramid\obj\Debug\netcoreapp3.0\drawPyramid.pdb

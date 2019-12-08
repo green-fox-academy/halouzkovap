@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29519.87
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "draw-triangle", "draw-triangle\draw-triangle.csproj", "{78F50181-3335-40F0-9599-D6D5346CA736}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{78F50181-3335-40F0-9599-D6D5346CA736}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78F50181-3335-40F0-9599-D6D5346CA736}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78F50181-3335-40F0-9599-D6D5346CA736}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78F50181-3335-40F0-9599-D6D5346CA736}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7E26BC17-D95B-4D97-8E9C-6DEBEB2F770C}
+	EndGlobalSection
+EndGlobal

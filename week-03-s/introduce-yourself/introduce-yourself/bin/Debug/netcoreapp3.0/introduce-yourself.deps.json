@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.0": {
+      "introduce-yourself/1.0.0": {
+        "runtime": {
+          "introduce-yourself.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "introduce-yourself/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,11 @@
+C:\Users\42073\greenfox\halouzkovap\week-03-s\ConditionalVariableMutation\ConditionalVariableMutation\obj\Debug\netcoreapp3.0\ConditionalVariableMutation.csprojAssemblyReference.cache
+C:\Users\42073\greenfox\halouzkovap\week-03-s\ConditionalVariableMutation\ConditionalVariableMutation\obj\Debug\netcoreapp3.0\ConditionalVariableMutation.AssemblyInfoInputs.cache
+C:\Users\42073\greenfox\halouzkovap\week-03-s\ConditionalVariableMutation\ConditionalVariableMutation\obj\Debug\netcoreapp3.0\ConditionalVariableMutation.AssemblyInfo.cs
+C:\Users\42073\greenfox\halouzkovap\week-03-s\ConditionalVariableMutation\ConditionalVariableMutation\bin\Debug\netcoreapp3.0\ConditionalVariableMutation.exe
+C:\Users\42073\greenfox\halouzkovap\week-03-s\ConditionalVariableMutation\ConditionalVariableMutation\bin\Debug\netcoreapp3.0\ConditionalVariableMutation.deps.json
+C:\Users\42073\greenfox\halouzkovap\week-03-s\ConditionalVariableMutation\ConditionalVariableMutation\bin\Debug\netcoreapp3.0\ConditionalVariableMutation.runtimeconfig.json
+C:\Users\42073\greenfox\halouzkovap\week-03-s\ConditionalVariableMutation\ConditionalVariableMutation\bin\Debug\netcoreapp3.0\ConditionalVariableMutation.runtimeconfig.dev.json
+C:\Users\42073\greenfox\halouzkovap\week-03-s\ConditionalVariableMutation\ConditionalVariableMutation\bin\Debug\netcoreapp3.0\ConditionalVariableMutation.dll
+C:\Users\42073\greenfox\halouzkovap\week-03-s\ConditionalVariableMutation\ConditionalVariableMutation\bin\Debug\netcoreapp3.0\ConditionalVariableMutation.pdb
+C:\Users\42073\greenfox\halouzkovap\week-03-s\ConditionalVariableMutation\ConditionalVariableMutation\obj\Debug\netcoreapp3.0\ConditionalVariableMutation.dll
+C:\Users\42073\greenfox\halouzkovap\week-03-s\ConditionalVariableMutation\ConditionalVariableMutation\obj\Debug\netcoreapp3.0\ConditionalVariableMutation.pdb
