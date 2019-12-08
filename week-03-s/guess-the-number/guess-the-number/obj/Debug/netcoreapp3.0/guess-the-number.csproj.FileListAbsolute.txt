@@ -1,0 +1,11 @@
+C:\Users\42073\greenfox\halouzkovap\week-03-s\guess-the-number\guess-the-number\bin\Debug\netcoreapp3.0\guess-the-number.exe
+C:\Users\42073\greenfox\halouzkovap\week-03-s\guess-the-number\guess-the-number\bin\Debug\netcoreapp3.0\guess-the-number.deps.json
+C:\Users\42073\greenfox\halouzkovap\week-03-s\guess-the-number\guess-the-number\bin\Debug\netcoreapp3.0\guess-the-number.runtimeconfig.json
+C:\Users\42073\greenfox\halouzkovap\week-03-s\guess-the-number\guess-the-number\bin\Debug\netcoreapp3.0\guess-the-number.runtimeconfig.dev.json
+C:\Users\42073\greenfox\halouzkovap\week-03-s\guess-the-number\guess-the-number\bin\Debug\netcoreapp3.0\guess-the-number.dll
+C:\Users\42073\greenfox\halouzkovap\week-03-s\guess-the-number\guess-the-number\bin\Debug\netcoreapp3.0\guess-the-number.pdb
+C:\Users\42073\greenfox\halouzkovap\week-03-s\guess-the-number\guess-the-number\obj\Debug\netcoreapp3.0\guess-the-number.csprojAssemblyReference.cache
+C:\Users\42073\greenfox\halouzkovap\week-03-s\guess-the-number\guess-the-number\obj\Debug\netcoreapp3.0\guess-the-number.AssemblyInfoInputs.cache
+C:\Users\42073\greenfox\halouzkovap\week-03-s\guess-the-number\guess-the-number\obj\Debug\netcoreapp3.0\guess-the-number.AssemblyInfo.cs
+C:\Users\42073\greenfox\halouzkovap\week-03-s\guess-the-number\guess-the-number\obj\Debug\netcoreapp3.0\guess-the-number.dll
+C:\Users\42073\greenfox\halouzkovap\week-03-s\guess-the-number\guess-the-number\obj\Debug\netcoreapp3.0\guess-the-number.pdb
