@@ -1,0 +1,5 @@
+C:\Users\halouzkova\source\repos\todoprint\bin\Debug\todoprint.exe.config
+C:\Users\halouzkova\source\repos\todoprint\bin\Debug\todoprint.exe
+C:\Users\halouzkova\source\repos\todoprint\bin\Debug\todoprint.pdb
+C:\Users\halouzkova\source\repos\todoprint\obj\Debug\todoprint.exe
+C:\Users\halouzkova\source\repos\todoprint\obj\Debug\todoprint.pdb

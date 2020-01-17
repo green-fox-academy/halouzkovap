@@ -1,0 +1,15 @@
+C:\Users\halouzkova\source\repos\CalculatorXAML\bin\Debug\CalculatorXAML.exe.config
+C:\Users\halouzkova\source\repos\CalculatorXAML\bin\Debug\CalculatorXAML.exe
+C:\Users\halouzkova\source\repos\CalculatorXAML\bin\Debug\CalculatorXAML.pdb
+C:\Users\halouzkova\source\repos\CalculatorXAML\obj\Debug\CalculatorXAML.csprojAssemblyReference.cache
+C:\Users\halouzkova\source\repos\CalculatorXAML\obj\Debug\MainWindow.g.cs
+C:\Users\halouzkova\source\repos\CalculatorXAML\obj\Debug\App.g.cs
+C:\Users\halouzkova\source\repos\CalculatorXAML\obj\Debug\CalculatorXAML_MarkupCompile.cache
+C:\Users\halouzkova\source\repos\CalculatorXAML\obj\Debug\CalculatorXAML_MarkupCompile.lref
+C:\Users\halouzkova\source\repos\CalculatorXAML\obj\Debug\MainWindow.baml
+C:\Users\halouzkova\source\repos\CalculatorXAML\obj\Debug\CalculatorXAML.g.resources
+C:\Users\halouzkova\source\repos\CalculatorXAML\obj\Debug\CalculatorXAML.Properties.Resources.resources
+C:\Users\halouzkova\source\repos\CalculatorXAML\obj\Debug\CalculatorXAML.csproj.GenerateResource.cache
+C:\Users\halouzkova\source\repos\CalculatorXAML\obj\Debug\CalculatorXAML.exe
+C:\Users\halouzkova\source\repos\CalculatorXAML\obj\Debug\CalculatorXAML.pdb
+C:\Users\halouzkova\source\repos\CalculatorXAML\obj\Debug\App.baml

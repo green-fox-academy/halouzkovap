@@ -1,0 +1,11 @@
+C:\Users\halouzkova\source\repos\ClassMethod\bin\Debug\netcoreapp3.0\ClassMethod.exe
+C:\Users\halouzkova\source\repos\ClassMethod\bin\Debug\netcoreapp3.0\ClassMethod.deps.json
+C:\Users\halouzkova\source\repos\ClassMethod\bin\Debug\netcoreapp3.0\ClassMethod.runtimeconfig.json
+C:\Users\halouzkova\source\repos\ClassMethod\bin\Debug\netcoreapp3.0\ClassMethod.runtimeconfig.dev.json
+C:\Users\halouzkova\source\repos\ClassMethod\bin\Debug\netcoreapp3.0\ClassMethod.dll
+C:\Users\halouzkova\source\repos\ClassMethod\bin\Debug\netcoreapp3.0\ClassMethod.pdb
+C:\Users\halouzkova\source\repos\ClassMethod\obj\Debug\netcoreapp3.0\ClassMethod.csprojAssemblyReference.cache
+C:\Users\halouzkova\source\repos\ClassMethod\obj\Debug\netcoreapp3.0\ClassMethod.AssemblyInfoInputs.cache
+C:\Users\halouzkova\source\repos\ClassMethod\obj\Debug\netcoreapp3.0\ClassMethod.AssemblyInfo.cs
+C:\Users\halouzkova\source\repos\ClassMethod\obj\Debug\netcoreapp3.0\ClassMethod.dll
+C:\Users\halouzkova\source\repos\ClassMethod\obj\Debug\netcoreapp3.0\ClassMethod.pdb

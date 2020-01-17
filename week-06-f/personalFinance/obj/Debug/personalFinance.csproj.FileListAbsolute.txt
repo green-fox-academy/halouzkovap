@@ -1,0 +1,6 @@
+C:\Users\halouzkova\source\repos\personalFinance\bin\Debug\personalFinance.exe.config
+C:\Users\halouzkova\source\repos\personalFinance\bin\Debug\personalFinance.exe
+C:\Users\halouzkova\source\repos\personalFinance\bin\Debug\personalFinance.pdb
+C:\Users\halouzkova\source\repos\personalFinance\obj\Debug\personalFinance.csprojAssemblyReference.cache
+C:\Users\halouzkova\source\repos\personalFinance\obj\Debug\personalFinance.exe
+C:\Users\halouzkova\source\repos\personalFinance\obj\Debug\personalFinance.pdb

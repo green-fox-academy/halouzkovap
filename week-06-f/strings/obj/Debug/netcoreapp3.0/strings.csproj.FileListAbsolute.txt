@@ -1,0 +1,11 @@
+C:\Users\halouzkova\source\repos\strings\bin\Debug\netcoreapp3.0\strings.exe
+C:\Users\halouzkova\source\repos\strings\bin\Debug\netcoreapp3.0\strings.deps.json
+C:\Users\halouzkova\source\repos\strings\bin\Debug\netcoreapp3.0\strings.runtimeconfig.json
+C:\Users\halouzkova\source\repos\strings\bin\Debug\netcoreapp3.0\strings.runtimeconfig.dev.json
+C:\Users\halouzkova\source\repos\strings\bin\Debug\netcoreapp3.0\strings.dll
+C:\Users\halouzkova\source\repos\strings\bin\Debug\netcoreapp3.0\strings.pdb
+C:\Users\halouzkova\source\repos\strings\obj\Debug\netcoreapp3.0\strings.csprojAssemblyReference.cache
+C:\Users\halouzkova\source\repos\strings\obj\Debug\netcoreapp3.0\strings.AssemblyInfoInputs.cache
+C:\Users\halouzkova\source\repos\strings\obj\Debug\netcoreapp3.0\strings.AssemblyInfo.cs
+C:\Users\halouzkova\source\repos\strings\obj\Debug\netcoreapp3.0\strings.dll
+C:\Users\halouzkova\source\repos\strings\obj\Debug\netcoreapp3.0\strings.pdb

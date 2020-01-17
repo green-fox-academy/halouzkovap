@@ -19,7 +19,7 @@ namespace drawDiamond
             //    *
             //
             // The diamond should have as many lines as the number was
-            int k, j, n, i, m,p;
+            int k, j, n, i, m, p;
             Console.WriteLine("Write num of lines:");
 
             n = Convert.ToInt32(Console.ReadLine());

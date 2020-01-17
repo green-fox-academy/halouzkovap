@@ -1,0 +1,6 @@
+C:\Users\halouzkova\source\repos\guess-my-number\bin\Debug\guess-my-number.exe.config
+C:\Users\halouzkova\source\repos\guess-my-number\bin\Debug\guess-my-number.exe
+C:\Users\halouzkova\source\repos\guess-my-number\bin\Debug\guess-my-number.pdb
+C:\Users\halouzkova\source\repos\guess-my-number\obj\Debug\guess-my-number.csprojAssemblyReference.cache
+C:\Users\halouzkova\source\repos\guess-my-number\obj\Debug\guess-my-number.exe
+C:\Users\halouzkova\source\repos\guess-my-number\obj\Debug\guess-my-number.pdb

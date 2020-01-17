@@ -1,0 +1,6 @@
+C:\Users\halouzkova\source\repos\CookieClass\bin\Debug\CookieClass.exe.config
+C:\Users\halouzkova\source\repos\CookieClass\bin\Debug\CookieClass.exe
+C:\Users\halouzkova\source\repos\CookieClass\bin\Debug\CookieClass.pdb
+C:\Users\halouzkova\source\repos\CookieClass\obj\Debug\CookieClass.csprojAssemblyReference.cache
+C:\Users\halouzkova\source\repos\CookieClass\obj\Debug\CookieClass.exe
+C:\Users\halouzkova\source\repos\CookieClass\obj\Debug\CookieClass.pdb

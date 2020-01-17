@@ -1,0 +1,11 @@
+C:\Users\42073\greenfox\halouzkovap\week-04-p\findSubstring\findSubstring\bin\Debug\netcoreapp3.0\findSubstring.exe
+C:\Users\42073\greenfox\halouzkovap\week-04-p\findSubstring\findSubstring\bin\Debug\netcoreapp3.0\findSubstring.deps.json
+C:\Users\42073\greenfox\halouzkovap\week-04-p\findSubstring\findSubstring\bin\Debug\netcoreapp3.0\findSubstring.runtimeconfig.json
+C:\Users\42073\greenfox\halouzkovap\week-04-p\findSubstring\findSubstring\bin\Debug\netcoreapp3.0\findSubstring.runtimeconfig.dev.json
+C:\Users\42073\greenfox\halouzkovap\week-04-p\findSubstring\findSubstring\bin\Debug\netcoreapp3.0\findSubstring.dll
+C:\Users\42073\greenfox\halouzkovap\week-04-p\findSubstring\findSubstring\bin\Debug\netcoreapp3.0\findSubstring.pdb
+C:\Users\42073\greenfox\halouzkovap\week-04-p\findSubstring\findSubstring\obj\Debug\netcoreapp3.0\findSubstring.csprojAssemblyReference.cache
+C:\Users\42073\greenfox\halouzkovap\week-04-p\findSubstring\findSubstring\obj\Debug\netcoreapp3.0\findSubstring.AssemblyInfoInputs.cache
+C:\Users\42073\greenfox\halouzkovap\week-04-p\findSubstring\findSubstring\obj\Debug\netcoreapp3.0\findSubstring.AssemblyInfo.cs
+C:\Users\42073\greenfox\halouzkovap\week-04-p\findSubstring\findSubstring\obj\Debug\netcoreapp3.0\findSubstring.dll
+C:\Users\42073\greenfox\halouzkovap\week-04-p\findSubstring\findSubstring\obj\Debug\netcoreapp3.0\findSubstring.pdb

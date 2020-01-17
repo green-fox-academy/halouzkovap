@@ -1,0 +1,12 @@
+﻿<Application x:Class="CalculatorXAML.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:CalculatorXAML"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <Style TargetType="TextBox">
+            <Setter Property="BorderThickness" Value="0"></Setter>
+            <Setter Property="FontWeight" Value="40"></Setter>
+        </Style>
+    </Application.Resources>
+</Application>

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "palindormSearcher", "palindormSearcher.csproj", "{A84140FA-6FB2-40A1-91E8-9880A29D1DCB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A84140FA-6FB2-40A1-91E8-9880A29D1DCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A84140FA-6FB2-40A1-91E8-9880A29D1DCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A84140FA-6FB2-40A1-91E8-9880A29D1DCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A84140FA-6FB2-40A1-91E8-9880A29D1DCB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6735D2A3-9AD9-41B6-8AA0-C0B15B59E390}
+	EndGlobalSection
+EndGlobal

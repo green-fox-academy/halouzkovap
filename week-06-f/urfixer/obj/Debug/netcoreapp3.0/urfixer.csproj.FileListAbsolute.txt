@@ -1,0 +1,11 @@
+C:\Users\halouzkova\source\repos\urfixer\bin\Debug\netcoreapp3.0\urfixer.exe
+C:\Users\halouzkova\source\repos\urfixer\bin\Debug\netcoreapp3.0\urfixer.deps.json
+C:\Users\halouzkova\source\repos\urfixer\bin\Debug\netcoreapp3.0\urfixer.runtimeconfig.json
+C:\Users\halouzkova\source\repos\urfixer\bin\Debug\netcoreapp3.0\urfixer.runtimeconfig.dev.json
+C:\Users\halouzkova\source\repos\urfixer\bin\Debug\netcoreapp3.0\urfixer.dll
+C:\Users\halouzkova\source\repos\urfixer\bin\Debug\netcoreapp3.0\urfixer.pdb
+C:\Users\halouzkova\source\repos\urfixer\obj\Debug\netcoreapp3.0\urfixer.csprojAssemblyReference.cache
+C:\Users\halouzkova\source\repos\urfixer\obj\Debug\netcoreapp3.0\urfixer.AssemblyInfoInputs.cache
+C:\Users\halouzkova\source\repos\urfixer\obj\Debug\netcoreapp3.0\urfixer.AssemblyInfo.cs
+C:\Users\halouzkova\source\repos\urfixer\obj\Debug\netcoreapp3.0\urfixer.dll
+C:\Users\halouzkova\source\repos\urfixer\obj\Debug\netcoreapp3.0\urfixer.pdb

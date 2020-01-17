@@ -1,0 +1,6 @@
+C:\Users\halouzkova\source\repos\mapIntroduction2\bin\Debug\mapIntroduction2.exe.config
+C:\Users\halouzkova\source\repos\mapIntroduction2\bin\Debug\mapIntroduction2.exe
+C:\Users\halouzkova\source\repos\mapIntroduction2\bin\Debug\mapIntroduction2.pdb
+C:\Users\halouzkova\source\repos\mapIntroduction2\obj\Debug\mapIntroduction2.csprojAssemblyReference.cache
+C:\Users\halouzkova\source\repos\mapIntroduction2\obj\Debug\mapIntroduction2.exe
+C:\Users\halouzkova\source\repos\mapIntroduction2\obj\Debug\mapIntroduction2.pdb

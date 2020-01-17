@@ -1,0 +1,10 @@
+C:\Users\42073\greenfox\halouzkovap\week-04-s\subString1\subString1\bin\Debug\netcoreapp3.0\subString1.exe
+C:\Users\42073\greenfox\halouzkovap\week-04-s\subString1\subString1\bin\Debug\netcoreapp3.0\subString1.deps.json
+C:\Users\42073\greenfox\halouzkovap\week-04-s\subString1\subString1\bin\Debug\netcoreapp3.0\subString1.runtimeconfig.json
+C:\Users\42073\greenfox\halouzkovap\week-04-s\subString1\subString1\bin\Debug\netcoreapp3.0\subString1.runtimeconfig.dev.json
+C:\Users\42073\greenfox\halouzkovap\week-04-s\subString1\subString1\bin\Debug\netcoreapp3.0\subString1.dll
+C:\Users\42073\greenfox\halouzkovap\week-04-s\subString1\subString1\bin\Debug\netcoreapp3.0\subString1.pdb
+C:\Users\42073\greenfox\halouzkovap\week-04-s\subString1\subString1\obj\Debug\netcoreapp3.0\subString1.AssemblyInfoInputs.cache
+C:\Users\42073\greenfox\halouzkovap\week-04-s\subString1\subString1\obj\Debug\netcoreapp3.0\subString1.AssemblyInfo.cs
+C:\Users\42073\greenfox\halouzkovap\week-04-s\subString1\subString1\obj\Debug\netcoreapp3.0\subString1.dll
+C:\Users\42073\greenfox\halouzkovap\week-04-s\subString1\subString1\obj\Debug\netcoreapp3.0\subString1.pdb

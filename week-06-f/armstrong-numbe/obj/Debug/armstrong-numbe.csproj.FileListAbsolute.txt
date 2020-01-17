@@ -1,0 +1,5 @@
+C:\Users\halouzkova\source\repos\armstrong-numbe\bin\Debug\armstrong-numbe.exe.config
+C:\Users\halouzkova\source\repos\armstrong-numbe\bin\Debug\armstrong-numbe.exe
+C:\Users\halouzkova\source\repos\armstrong-numbe\bin\Debug\armstrong-numbe.pdb
+C:\Users\halouzkova\source\repos\armstrong-numbe\obj\Debug\armstrong-numbe.exe
+C:\Users\halouzkova\source\repos\armstrong-numbe\obj\Debug\armstrong-numbe.pdb

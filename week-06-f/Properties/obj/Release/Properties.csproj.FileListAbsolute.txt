@@ -1,0 +1,5 @@
+C:\Users\halouzkova\source\repos\Properties\bin\Release\Properties.exe.config
+C:\Users\halouzkova\source\repos\Properties\bin\Release\Properties.exe
+C:\Users\halouzkova\source\repos\Properties\bin\Release\Properties.pdb
+C:\Users\halouzkova\source\repos\Properties\obj\Release\Properties.exe
+C:\Users\halouzkova\source\repos\Properties\obj\Release\Properties.pdb

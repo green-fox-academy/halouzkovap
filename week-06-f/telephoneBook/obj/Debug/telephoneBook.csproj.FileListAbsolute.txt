@@ -1,0 +1,6 @@
+C:\Users\halouzkova\source\repos\telephoneBook\bin\Debug\telephoneBook.exe.config
+C:\Users\halouzkova\source\repos\telephoneBook\bin\Debug\telephoneBook.exe
+C:\Users\halouzkova\source\repos\telephoneBook\bin\Debug\telephoneBook.pdb
+C:\Users\halouzkova\source\repos\telephoneBook\obj\Debug\telephoneBook.csprojAssemblyReference.cache
+C:\Users\halouzkova\source\repos\telephoneBook\obj\Debug\telephoneBook.exe
+C:\Users\halouzkova\source\repos\telephoneBook\obj\Debug\telephoneBook.pdb

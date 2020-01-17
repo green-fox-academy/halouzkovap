@@ -1,0 +1,6 @@
+C:\Users\halouzkova\source\repos\shopingList\bin\Debug\shopingList.exe.config
+C:\Users\halouzkova\source\repos\shopingList\bin\Debug\shopingList.exe
+C:\Users\halouzkova\source\repos\shopingList\bin\Debug\shopingList.pdb
+C:\Users\halouzkova\source\repos\shopingList\obj\Debug\shopingList.csprojAssemblyReference.cache
+C:\Users\halouzkova\source\repos\shopingList\obj\Debug\shopingList.exe
+C:\Users\halouzkova\source\repos\shopingList\obj\Debug\shopingList.pdb

@@ -1,0 +1,6 @@
+C:\Users\halouzkova\source\repos\list-introduction-2\bin\Debug\list-introduction-2.exe.config
+C:\Users\halouzkova\source\repos\list-introduction-2\bin\Debug\list-introduction-2.exe
+C:\Users\halouzkova\source\repos\list-introduction-2\bin\Debug\list-introduction-2.pdb
+C:\Users\halouzkova\source\repos\list-introduction-2\obj\Debug\list-introduction-2.csprojAssemblyReference.cache
+C:\Users\halouzkova\source\repos\list-introduction-2\obj\Debug\list-introduction-2.exe
+C:\Users\halouzkova\source\repos\list-introduction-2\obj\Debug\list-introduction-2.pdb

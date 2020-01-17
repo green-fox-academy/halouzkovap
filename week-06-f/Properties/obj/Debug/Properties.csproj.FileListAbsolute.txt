@@ -1,0 +1,6 @@
+C:\Users\halouzkova\source\repos\Properties\bin\Debug\Properties.exe.config
+C:\Users\halouzkova\source\repos\Properties\bin\Debug\Properties.exe
+C:\Users\halouzkova\source\repos\Properties\bin\Debug\Properties.pdb
+C:\Users\halouzkova\source\repos\Properties\obj\Debug\Properties.csprojAssemblyReference.cache
+C:\Users\halouzkova\source\repos\Properties\obj\Debug\Properties.exe
+C:\Users\halouzkova\source\repos\Properties\obj\Debug\Properties.pdb

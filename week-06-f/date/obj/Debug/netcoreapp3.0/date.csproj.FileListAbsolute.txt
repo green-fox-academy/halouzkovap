@@ -1,0 +1,11 @@
+C:\Users\halouzkova\source\repos\date\bin\Debug\netcoreapp3.0\date.exe
+C:\Users\halouzkova\source\repos\date\bin\Debug\netcoreapp3.0\date.deps.json
+C:\Users\halouzkova\source\repos\date\bin\Debug\netcoreapp3.0\date.runtimeconfig.json
+C:\Users\halouzkova\source\repos\date\bin\Debug\netcoreapp3.0\date.runtimeconfig.dev.json
+C:\Users\halouzkova\source\repos\date\bin\Debug\netcoreapp3.0\date.dll
+C:\Users\halouzkova\source\repos\date\bin\Debug\netcoreapp3.0\date.pdb
+C:\Users\halouzkova\source\repos\date\obj\Debug\netcoreapp3.0\date.csprojAssemblyReference.cache
+C:\Users\halouzkova\source\repos\date\obj\Debug\netcoreapp3.0\date.AssemblyInfoInputs.cache
+C:\Users\halouzkova\source\repos\date\obj\Debug\netcoreapp3.0\date.AssemblyInfo.cs
+C:\Users\halouzkova\source\repos\date\obj\Debug\netcoreapp3.0\date.dll
+C:\Users\halouzkova\source\repos\date\obj\Debug\netcoreapp3.0\date.pdb

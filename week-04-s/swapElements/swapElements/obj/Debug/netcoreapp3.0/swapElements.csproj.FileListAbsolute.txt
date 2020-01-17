@@ -1,0 +1,11 @@
+C:\Users\42073\greenfox\halouzkovap\week-04-s\swapElements\swapElements\bin\Debug\netcoreapp3.0\swapElements.exe
+C:\Users\42073\greenfox\halouzkovap\week-04-s\swapElements\swapElements\bin\Debug\netcoreapp3.0\swapElements.deps.json
+C:\Users\42073\greenfox\halouzkovap\week-04-s\swapElements\swapElements\bin\Debug\netcoreapp3.0\swapElements.runtimeconfig.json
+C:\Users\42073\greenfox\halouzkovap\week-04-s\swapElements\swapElements\bin\Debug\netcoreapp3.0\swapElements.runtimeconfig.dev.json
+C:\Users\42073\greenfox\halouzkovap\week-04-s\swapElements\swapElements\bin\Debug\netcoreapp3.0\swapElements.dll
+C:\Users\42073\greenfox\halouzkovap\week-04-s\swapElements\swapElements\bin\Debug\netcoreapp3.0\swapElements.pdb
+C:\Users\42073\greenfox\halouzkovap\week-04-s\swapElements\swapElements\obj\Debug\netcoreapp3.0\swapElements.csprojAssemblyReference.cache
+C:\Users\42073\greenfox\halouzkovap\week-04-s\swapElements\swapElements\obj\Debug\netcoreapp3.0\swapElements.AssemblyInfoInputs.cache
+C:\Users\42073\greenfox\halouzkovap\week-04-s\swapElements\swapElements\obj\Debug\netcoreapp3.0\swapElements.AssemblyInfo.cs
+C:\Users\42073\greenfox\halouzkovap\week-04-s\swapElements\swapElements\obj\Debug\netcoreapp3.0\swapElements.dll
+C:\Users\42073\greenfox\halouzkovap\week-04-s\swapElements\swapElements\obj\Debug\netcoreapp3.0\swapElements.pdb

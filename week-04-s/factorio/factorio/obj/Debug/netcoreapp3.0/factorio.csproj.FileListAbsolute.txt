@@ -1,0 +1,10 @@
+C:\Users\42073\greenfox\halouzkovap\week-04-s\factorio\factorio\bin\Debug\netcoreapp3.0\factorio.exe
+C:\Users\42073\greenfox\halouzkovap\week-04-s\factorio\factorio\bin\Debug\netcoreapp3.0\factorio.deps.json
+C:\Users\42073\greenfox\halouzkovap\week-04-s\factorio\factorio\bin\Debug\netcoreapp3.0\factorio.runtimeconfig.json
+C:\Users\42073\greenfox\halouzkovap\week-04-s\factorio\factorio\bin\Debug\netcoreapp3.0\factorio.runtimeconfig.dev.json
+C:\Users\42073\greenfox\halouzkovap\week-04-s\factorio\factorio\bin\Debug\netcoreapp3.0\factorio.dll
+C:\Users\42073\greenfox\halouzkovap\week-04-s\factorio\factorio\bin\Debug\netcoreapp3.0\factorio.pdb
+C:\Users\42073\greenfox\halouzkovap\week-04-s\factorio\factorio\obj\Debug\netcoreapp3.0\factorio.AssemblyInfoInputs.cache
+C:\Users\42073\greenfox\halouzkovap\week-04-s\factorio\factorio\obj\Debug\netcoreapp3.0\factorio.AssemblyInfo.cs
+C:\Users\42073\greenfox\halouzkovap\week-04-s\factorio\factorio\obj\Debug\netcoreapp3.0\factorio.dll
+C:\Users\42073\greenfox\halouzkovap\week-04-s\factorio\factorio\obj\Debug\netcoreapp3.0\factorio.pdb

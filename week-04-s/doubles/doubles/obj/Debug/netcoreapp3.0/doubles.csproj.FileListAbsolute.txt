@@ -1,0 +1,11 @@
+C:\Users\42073\greenfox\halouzkovap\week-04-s\doubles\doubles\bin\Debug\netcoreapp3.0\doubles.exe
+C:\Users\42073\greenfox\halouzkovap\week-04-s\doubles\doubles\bin\Debug\netcoreapp3.0\doubles.deps.json
+C:\Users\42073\greenfox\halouzkovap\week-04-s\doubles\doubles\bin\Debug\netcoreapp3.0\doubles.runtimeconfig.json
+C:\Users\42073\greenfox\halouzkovap\week-04-s\doubles\doubles\bin\Debug\netcoreapp3.0\doubles.runtimeconfig.dev.json
+C:\Users\42073\greenfox\halouzkovap\week-04-s\doubles\doubles\bin\Debug\netcoreapp3.0\doubles.dll
+C:\Users\42073\greenfox\halouzkovap\week-04-s\doubles\doubles\bin\Debug\netcoreapp3.0\doubles.pdb
+C:\Users\42073\greenfox\halouzkovap\week-04-s\doubles\doubles\obj\Debug\netcoreapp3.0\doubles.csprojAssemblyReference.cache
+C:\Users\42073\greenfox\halouzkovap\week-04-s\doubles\doubles\obj\Debug\netcoreapp3.0\doubles.AssemblyInfoInputs.cache
+C:\Users\42073\greenfox\halouzkovap\week-04-s\doubles\doubles\obj\Debug\netcoreapp3.0\doubles.AssemblyInfo.cs
+C:\Users\42073\greenfox\halouzkovap\week-04-s\doubles\doubles\obj\Debug\netcoreapp3.0\doubles.dll
+C:\Users\42073\greenfox\halouzkovap\week-04-s\doubles\doubles\obj\Debug\netcoreapp3.0\doubles.pdb

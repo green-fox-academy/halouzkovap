@@ -1,0 +1,5 @@
+C:\Users\halouzkova\source\repos\quoteSwap\bin\Debug\quoteSwap.exe.config
+C:\Users\halouzkova\source\repos\quoteSwap\bin\Debug\quoteSwap.exe
+C:\Users\halouzkova\source\repos\quoteSwap\bin\Debug\quoteSwap.pdb
+C:\Users\halouzkova\source\repos\quoteSwap\obj\Debug\quoteSwap.exe
+C:\Users\halouzkova\source\repos\quoteSwap\obj\Debug\quoteSwap.pdb

@@ -1,0 +1,11 @@
+C:\Users\42073\greenfox\halouzkovap\week-04-s\Function\Function\bin\Debug\netcoreapp3.0\Function.exe
+C:\Users\42073\greenfox\halouzkovap\week-04-s\Function\Function\bin\Debug\netcoreapp3.0\Function.deps.json
+C:\Users\42073\greenfox\halouzkovap\week-04-s\Function\Function\bin\Debug\netcoreapp3.0\Function.runtimeconfig.json
+C:\Users\42073\greenfox\halouzkovap\week-04-s\Function\Function\bin\Debug\netcoreapp3.0\Function.runtimeconfig.dev.json
+C:\Users\42073\greenfox\halouzkovap\week-04-s\Function\Function\bin\Debug\netcoreapp3.0\Function.dll
+C:\Users\42073\greenfox\halouzkovap\week-04-s\Function\Function\bin\Debug\netcoreapp3.0\Function.pdb
+C:\Users\42073\greenfox\halouzkovap\week-04-s\Function\Function\obj\Debug\netcoreapp3.0\Function.AssemblyInfoInputs.cache
+C:\Users\42073\greenfox\halouzkovap\week-04-s\Function\Function\obj\Debug\netcoreapp3.0\Function.AssemblyInfo.cs
+C:\Users\42073\greenfox\halouzkovap\week-04-s\Function\Function\obj\Debug\netcoreapp3.0\Function.dll
+C:\Users\42073\greenfox\halouzkovap\week-04-s\Function\Function\obj\Debug\netcoreapp3.0\Function.pdb
+C:\Users\42073\greenfox\halouzkovap\week-04-s\Function\Function\obj\Debug\netcoreapp3.0\Function.csprojAssemblyReference.cache

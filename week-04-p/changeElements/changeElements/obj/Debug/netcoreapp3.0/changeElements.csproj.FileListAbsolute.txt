@@ -1,0 +1,11 @@
+C:\Users\42073\greenfox\halouzkovap\week-04-p\changeElements\changeElements\bin\Debug\netcoreapp3.0\changeElements.exe
+C:\Users\42073\greenfox\halouzkovap\week-04-p\changeElements\changeElements\bin\Debug\netcoreapp3.0\changeElements.deps.json
+C:\Users\42073\greenfox\halouzkovap\week-04-p\changeElements\changeElements\bin\Debug\netcoreapp3.0\changeElements.runtimeconfig.json
+C:\Users\42073\greenfox\halouzkovap\week-04-p\changeElements\changeElements\bin\Debug\netcoreapp3.0\changeElements.runtimeconfig.dev.json
+C:\Users\42073\greenfox\halouzkovap\week-04-p\changeElements\changeElements\bin\Debug\netcoreapp3.0\changeElements.dll
+C:\Users\42073\greenfox\halouzkovap\week-04-p\changeElements\changeElements\bin\Debug\netcoreapp3.0\changeElements.pdb
+C:\Users\42073\greenfox\halouzkovap\week-04-p\changeElements\changeElements\obj\Debug\netcoreapp3.0\changeElements.csprojAssemblyReference.cache
+C:\Users\42073\greenfox\halouzkovap\week-04-p\changeElements\changeElements\obj\Debug\netcoreapp3.0\changeElements.AssemblyInfoInputs.cache
+C:\Users\42073\greenfox\halouzkovap\week-04-p\changeElements\changeElements\obj\Debug\netcoreapp3.0\changeElements.AssemblyInfo.cs
+C:\Users\42073\greenfox\halouzkovap\week-04-p\changeElements\changeElements\obj\Debug\netcoreapp3.0\changeElements.dll
+C:\Users\42073\greenfox\halouzkovap\week-04-p\changeElements\changeElements\obj\Debug\netcoreapp3.0\changeElements.pdb

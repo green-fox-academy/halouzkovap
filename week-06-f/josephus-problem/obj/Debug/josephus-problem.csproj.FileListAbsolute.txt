@@ -1,0 +1,6 @@
+C:\Users\halouzkova\source\repos\josephus-problem\obj\Debug\josephus-problem.csprojAssemblyReference.cache
+C:\Users\halouzkova\source\repos\josephus-problem\bin\Debug\josephus-problem.exe.config
+C:\Users\halouzkova\source\repos\josephus-problem\bin\Debug\josephus-problem.exe
+C:\Users\halouzkova\source\repos\josephus-problem\bin\Debug\josephus-problem.pdb
+C:\Users\halouzkova\source\repos\josephus-problem\obj\Debug\josephus-problem.exe
+C:\Users\halouzkova\source\repos\josephus-problem\obj\Debug\josephus-problem.pdb

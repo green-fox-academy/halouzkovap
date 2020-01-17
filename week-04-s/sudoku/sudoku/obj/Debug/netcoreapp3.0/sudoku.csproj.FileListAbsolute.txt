@@ -1,0 +1,11 @@
+C:\Users\42073\greenfox\halouzkovap\week-04-s\sudoku\sudoku\bin\Debug\netcoreapp3.0\sudoku.exe
+C:\Users\42073\greenfox\halouzkovap\week-04-s\sudoku\sudoku\bin\Debug\netcoreapp3.0\sudoku.deps.json
+C:\Users\42073\greenfox\halouzkovap\week-04-s\sudoku\sudoku\bin\Debug\netcoreapp3.0\sudoku.runtimeconfig.json
+C:\Users\42073\greenfox\halouzkovap\week-04-s\sudoku\sudoku\bin\Debug\netcoreapp3.0\sudoku.runtimeconfig.dev.json
+C:\Users\42073\greenfox\halouzkovap\week-04-s\sudoku\sudoku\bin\Debug\netcoreapp3.0\sudoku.dll
+C:\Users\42073\greenfox\halouzkovap\week-04-s\sudoku\sudoku\bin\Debug\netcoreapp3.0\sudoku.pdb
+C:\Users\42073\greenfox\halouzkovap\week-04-s\sudoku\sudoku\obj\Debug\netcoreapp3.0\sudoku.csprojAssemblyReference.cache
+C:\Users\42073\greenfox\halouzkovap\week-04-s\sudoku\sudoku\obj\Debug\netcoreapp3.0\sudoku.AssemblyInfoInputs.cache
+C:\Users\42073\greenfox\halouzkovap\week-04-s\sudoku\sudoku\obj\Debug\netcoreapp3.0\sudoku.AssemblyInfo.cs
+C:\Users\42073\greenfox\halouzkovap\week-04-s\sudoku\sudoku\obj\Debug\netcoreapp3.0\sudoku.dll
+C:\Users\42073\greenfox\halouzkovap\week-04-s\sudoku\sudoku\obj\Debug\netcoreapp3.0\sudoku.pdb

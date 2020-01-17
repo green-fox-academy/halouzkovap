@@ -1,0 +1,11 @@
+C:\Users\42073\greenfox\halouzkovap\week-04-s\subint\subint\bin\Debug\netcoreapp3.0\subint.exe
+C:\Users\42073\greenfox\halouzkovap\week-04-s\subint\subint\bin\Debug\netcoreapp3.0\subint.deps.json
+C:\Users\42073\greenfox\halouzkovap\week-04-s\subint\subint\bin\Debug\netcoreapp3.0\subint.runtimeconfig.json
+C:\Users\42073\greenfox\halouzkovap\week-04-s\subint\subint\bin\Debug\netcoreapp3.0\subint.runtimeconfig.dev.json
+C:\Users\42073\greenfox\halouzkovap\week-04-s\subint\subint\bin\Debug\netcoreapp3.0\subint.dll
+C:\Users\42073\greenfox\halouzkovap\week-04-s\subint\subint\bin\Debug\netcoreapp3.0\subint.pdb
+C:\Users\42073\greenfox\halouzkovap\week-04-s\subint\subint\obj\Debug\netcoreapp3.0\subint.csprojAssemblyReference.cache
+C:\Users\42073\greenfox\halouzkovap\week-04-s\subint\subint\obj\Debug\netcoreapp3.0\subint.AssemblyInfoInputs.cache
+C:\Users\42073\greenfox\halouzkovap\week-04-s\subint\subint\obj\Debug\netcoreapp3.0\subint.AssemblyInfo.cs
+C:\Users\42073\greenfox\halouzkovap\week-04-s\subint\subint\obj\Debug\netcoreapp3.0\subint.dll
+C:\Users\42073\greenfox\halouzkovap\week-04-s\subint\subint\obj\Debug\netcoreapp3.0\subint.pdb

@@ -1,0 +1,6 @@
+C:\Users\halouzkova\source\repos\matchinch\bin\Debug\matchinch.exe.config
+C:\Users\halouzkova\source\repos\matchinch\bin\Debug\matchinch.exe
+C:\Users\halouzkova\source\repos\matchinch\bin\Debug\matchinch.pdb
+C:\Users\halouzkova\source\repos\matchinch\obj\Debug\matchinch.csprojAssemblyReference.cache
+C:\Users\halouzkova\source\repos\matchinch\obj\Debug\matchinch.exe
+C:\Users\halouzkova\source\repos\matchinch\obj\Debug\matchinch.pdb

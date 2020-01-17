@@ -1,0 +1,11 @@
+C:\Users\42073\greenfox\halouzkovap\week-04-s\unique\unique\bin\Debug\netcoreapp3.0\unique.exe
+C:\Users\42073\greenfox\halouzkovap\week-04-s\unique\unique\bin\Debug\netcoreapp3.0\unique.deps.json
+C:\Users\42073\greenfox\halouzkovap\week-04-s\unique\unique\bin\Debug\netcoreapp3.0\unique.runtimeconfig.json
+C:\Users\42073\greenfox\halouzkovap\week-04-s\unique\unique\bin\Debug\netcoreapp3.0\unique.runtimeconfig.dev.json
+C:\Users\42073\greenfox\halouzkovap\week-04-s\unique\unique\bin\Debug\netcoreapp3.0\unique.dll
+C:\Users\42073\greenfox\halouzkovap\week-04-s\unique\unique\bin\Debug\netcoreapp3.0\unique.pdb
+C:\Users\42073\greenfox\halouzkovap\week-04-s\unique\unique\obj\Debug\netcoreapp3.0\unique.csprojAssemblyReference.cache
+C:\Users\42073\greenfox\halouzkovap\week-04-s\unique\unique\obj\Debug\netcoreapp3.0\unique.AssemblyInfoInputs.cache
+C:\Users\42073\greenfox\halouzkovap\week-04-s\unique\unique\obj\Debug\netcoreapp3.0\unique.AssemblyInfo.cs
+C:\Users\42073\greenfox\halouzkovap\week-04-s\unique\unique\obj\Debug\netcoreapp3.0\unique.dll
+C:\Users\42073\greenfox\halouzkovap\week-04-s\unique\unique\obj\Debug\netcoreapp3.0\unique.pdb

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29519.87
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "doubleItems", "doubleItems\doubleItems.csproj", "{661A02E2-0DC2-423A-A471-E6239567F86A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{661A02E2-0DC2-423A-A471-E6239567F86A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{661A02E2-0DC2-423A-A471-E6239567F86A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{661A02E2-0DC2-423A-A471-E6239567F86A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{661A02E2-0DC2-423A-A471-E6239567F86A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B3391B26-05FD-42C2-B365-8FE23D9D09C6}
+	EndGlobalSection
+EndGlobal

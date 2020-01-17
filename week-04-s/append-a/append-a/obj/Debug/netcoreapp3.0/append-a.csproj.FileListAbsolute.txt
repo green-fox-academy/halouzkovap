@@ -1,0 +1,11 @@
+C:\Users\42073\greenfox\halouzkovap\week-04-s\append-a\append-a\bin\Debug\netcoreapp3.0\append-a.exe
+C:\Users\42073\greenfox\halouzkovap\week-04-s\append-a\append-a\bin\Debug\netcoreapp3.0\append-a.deps.json
+C:\Users\42073\greenfox\halouzkovap\week-04-s\append-a\append-a\bin\Debug\netcoreapp3.0\append-a.runtimeconfig.json
+C:\Users\42073\greenfox\halouzkovap\week-04-s\append-a\append-a\bin\Debug\netcoreapp3.0\append-a.runtimeconfig.dev.json
+C:\Users\42073\greenfox\halouzkovap\week-04-s\append-a\append-a\bin\Debug\netcoreapp3.0\append-a.dll
+C:\Users\42073\greenfox\halouzkovap\week-04-s\append-a\append-a\bin\Debug\netcoreapp3.0\append-a.pdb
+C:\Users\42073\greenfox\halouzkovap\week-04-s\append-a\append-a\obj\Debug\netcoreapp3.0\append-a.csprojAssemblyReference.cache
+C:\Users\42073\greenfox\halouzkovap\week-04-s\append-a\append-a\obj\Debug\netcoreapp3.0\append-a.AssemblyInfoInputs.cache
+C:\Users\42073\greenfox\halouzkovap\week-04-s\append-a\append-a\obj\Debug\netcoreapp3.0\append-a.AssemblyInfo.cs
+C:\Users\42073\greenfox\halouzkovap\week-04-s\append-a\append-a\obj\Debug\netcoreapp3.0\append-a.dll
+C:\Users\42073\greenfox\halouzkovap\week-04-s\append-a\append-a\obj\Debug\netcoreapp3.0\append-a.pdb

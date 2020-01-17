@@ -1,0 +1,10 @@
+C:\Users\42073\greenfox\halouzkovap\week-04-p\increamentElement\increamentElement\bin\Debug\netcoreapp3.0\increamentElement.exe
+C:\Users\42073\greenfox\halouzkovap\week-04-p\increamentElement\increamentElement\bin\Debug\netcoreapp3.0\increamentElement.deps.json
+C:\Users\42073\greenfox\halouzkovap\week-04-p\increamentElement\increamentElement\bin\Debug\netcoreapp3.0\increamentElement.runtimeconfig.json
+C:\Users\42073\greenfox\halouzkovap\week-04-p\increamentElement\increamentElement\bin\Debug\netcoreapp3.0\increamentElement.runtimeconfig.dev.json
+C:\Users\42073\greenfox\halouzkovap\week-04-p\increamentElement\increamentElement\bin\Debug\netcoreapp3.0\increamentElement.dll
+C:\Users\42073\greenfox\halouzkovap\week-04-p\increamentElement\increamentElement\bin\Debug\netcoreapp3.0\increamentElement.pdb
+C:\Users\42073\greenfox\halouzkovap\week-04-p\increamentElement\increamentElement\obj\Debug\netcoreapp3.0\increamentElement.AssemblyInfoInputs.cache
+C:\Users\42073\greenfox\halouzkovap\week-04-p\increamentElement\increamentElement\obj\Debug\netcoreapp3.0\increamentElement.AssemblyInfo.cs
+C:\Users\42073\greenfox\halouzkovap\week-04-p\increamentElement\increamentElement\obj\Debug\netcoreapp3.0\increamentElement.dll
+C:\Users\42073\greenfox\halouzkovap\week-04-p\increamentElement\increamentElement\obj\Debug\netcoreapp3.0\increamentElement.pdb
