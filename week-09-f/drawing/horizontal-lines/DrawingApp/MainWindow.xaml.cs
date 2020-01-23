@@ -3,7 +3,9 @@ using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
 using Avalonia.Media;
 using GreenFox;
+using System;
 using System.Collections.Generic;
+
 
 namespace DrawingApp
 {
@@ -23,13 +25,54 @@ namespace DrawingApp
             //DrawCenter(10, 20);
 
 
-            DrawRectangle(140, 155, 140);
+            // DrawTriangle(140, 155, 140);
+            //DrawRectangle(0, 0, 30, 50);
+            DrawSquere(0, 0, 50);
 
 
         }
-        public void DrawRectangle(int x, int z, int v)
+        public void DrawSquere(int x, int y, int w)
         {
-            // draw four different size and color rectangles.
+            // create a function that draws one square and takes 3 parameters:
+            // the x and y coordinates of the square's top left corner
+            // and the foxDraw and draws a 50x50 square from that point.
+            // draw 3 squares with that function.
+            // avoid code duplication.
+            var random = new Random();
+            int a;
+            var canvas = this.Get<Canvas>("canvas");
+            var foxDraw = new FoxDraw(canvas);
+            for (int i = 0; i < 3; i++)
+            {
+                a = random.Next(0, 250);
+                foxDraw.DrawRectangle(x + a, y + a, w + a, w + a);
+
+                foxDraw.SetFillColor(Colors.LightPink);
+
+            }
+
+        }
+        public void DrawRectangle(int x, int y, int w, int h)
+        {
+            // draw four different triangles.
+            // avoid code duplication.
+            var random = new Random();
+            int a;
+            var canvas = this.Get<Canvas>("canvas");
+            var foxDraw = new FoxDraw(canvas);
+            for (int i = 0; i < 4; i++)
+            {
+                a = random.Next(0, 300);
+                foxDraw.DrawRectangle(x + a, y + a, w + a, h + a);
+
+                foxDraw.SetFillColor(Colors.Green);
+
+            }
+
+        }
+        public void DrawTriangle(int x, int z, int v)
+        {
+            // draw four different triangles.
             // avoid code duplication.
 
             var canvas = this.Get<Canvas>("canvas");
