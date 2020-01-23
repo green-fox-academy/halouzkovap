@@ -22,6 +22,31 @@ namespace CandyShop
         }
         static void Sweets(List<object> list)
         {
+            List<object> sweet = new List<object> { "Croissant", "Ice cream" };
+            var strings = "hello";
+
+            var stringo = strings.GetType();
+            int j = 0;
+
+            for (int i = 0; i < list.Count; i++)
+            {
+
+                var type = list[i].GetType();
+                if (type != stringo)
+                {
+                    list.Remove(list[i]);
+                    list.Insert(i, sweet[j]);
+                    j++;
+                }
+
+            }
+
+            foreach (var item in list)
+            {
+                System.Console.Write(item + ",");
+            }
+            System.Console.WriteLine();
+
 
         }
     }
