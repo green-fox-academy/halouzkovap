@@ -31,7 +31,22 @@ namespace DrawingApp
 
             //DrawCenter(50, foxDraw);
 
-            PurpleSteps(10, foxDraw);
+            //PurpleSteps(10, foxDraw);
+            PurpleSteps3D(10, foxDraw);
+
+        }
+        public void PurpleSteps3D(int x, FoxDraw foxDraw)
+        {
+
+
+            for (int i = 1; i < 6; i++)
+            {
+                foxDraw.SetFillColor(Colors.Violet);
+                foxDraw.DrawRectangle(0 + (x * i), 0 + (x * i), x * i, x * i);
+
+
+
+            }
 
         }
         public void PurpleSteps(int x, FoxDraw foxDraw)
