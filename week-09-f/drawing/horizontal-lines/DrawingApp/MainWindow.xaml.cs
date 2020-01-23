@@ -27,8 +27,64 @@ namespace DrawingApp
 
             // DrawTriangle(140, 155, 140);
             //DrawRectangle(0, 0, 30, 50);
-            DrawSquere(0, 0, 50);
+            // DrawSquere(0, 0, 50);
 
+            //DrawCenter(50, foxDraw);
+
+            PurpleSteps(10, foxDraw);
+
+        }
+        public void PurpleSteps(int x, FoxDraw foxDraw)
+        {
+
+
+            for (int i = 0; i < 10; i++)
+            {
+                foxDraw.SetFillColor(Colors.Violet);
+                foxDraw.DrawRectangle(0 + (i * x), 0 + (i * x), x, x);
+
+
+
+            }
+
+        }
+        public void DrawRainbowSquere(int x, FoxDraw foxDraw)
+        {
+            // Create a square drawing function that takes 3 parameters:
+            // The square size, and the fill color, foxDraw
+            // and draws a square of that size and color to the center of the canvas.
+            // Create a loop that fills the canvas with rainbow colored squares (red, orange, yellow, green, blue, indigo, violet).
+            var random = new Random();
+            int a;
+            foxDraw.DrawRectangle(x, x, x, x);
+            for (int i = 0; i < 2; i++)
+            {
+                a = random.Next(0, 250);
+                foxDraw.DrawRectangle(x + a, x + a, x, x);
+
+                foxDraw.SetFillColor(Colors.Violet);
+
+            }
+
+        }
+        public void DrawCenter(int x, FoxDraw foxDraw)
+        {
+            // create a function that draws one square and takes 2 parameters:
+            // the square size and the foxDraw
+            // and draws a square of that size to the center of the canvas.
+            // draw 3 squares with that function.
+            // avoid code duplication.
+            var random = new Random();
+            int a;
+            foxDraw.DrawRectangle(x, x, x, x);
+            for (int i = 0; i < 2; i++)
+            {
+                a = random.Next(0, 250);
+                foxDraw.DrawRectangle(x + a, x + a, x, x);
+
+                foxDraw.SetFillColor(Colors.LightPink);
+
+            }
 
         }
         public void DrawSquere(int x, int y, int w)

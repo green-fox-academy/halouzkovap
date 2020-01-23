@@ -2,6 +2,7 @@
 using Avalonia.Controls;
 using Avalonia.Controls.Shapes;
 using Avalonia.Media;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -66,6 +67,11 @@ namespace GreenFox
             };
 
             Canvas.Children.Add(line);
+        }
+
+        internal void SetFillColor(object color)
+        {
+            throw new NotImplementedException();
         }
 
         public void DrawLine(double x1, double y1, double x2, double y2)
