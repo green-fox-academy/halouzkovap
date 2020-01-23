@@ -1,0 +1,33 @@
+﻿<Window x:Class="colored_box.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:colored_box"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="300" Width="300">
+    <Canvas Height="300" Width="300">
+
+        <!--  Draw a box that has different colored lines on each edge. -->
+        <Line
+    X1="100" Y1="100"
+    X2="200" Y2="100"
+    Stroke="Black"
+    StrokeThickness="4" />
+        <Line
+    X1="200" Y1="100"
+    X2="200" Y2="200"
+    Stroke="Yellow"
+    StrokeThickness="4" />
+        <Line
+    X1="200" Y1="200"
+    X2="100" Y2="200"
+    Stroke="Red"
+    StrokeThickness="4" />
+        <Line
+    X1="100" Y1="200"
+    X2="100" Y2="100"
+    Stroke="Green"
+    StrokeThickness="4" />
+    </Canvas>
+</Window>
