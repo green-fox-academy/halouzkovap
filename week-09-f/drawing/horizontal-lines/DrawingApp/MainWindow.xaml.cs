@@ -32,7 +32,7 @@ namespace DrawingApp
             //DrawCenter(50, foxDraw);
 
             //PurpleSteps(10, foxDraw);
-            PurpleSteps3D(10, foxDraw);
+            // PurpleSteps3D(10, foxDraw);
 
         }
         public void PurpleSteps3D(int x, FoxDraw foxDraw)
