@@ -32,7 +32,74 @@ namespace DrawingApp
             //DrawCenter(50, foxDraw);
 
             //PurpleSteps(10, foxDraw);
+
             // PurpleSteps3D(10, foxDraw);
+
+            // LineToCenter(20, 20, foxDraw);
+            var points = new List<Point> { new Point(10, 10), new Point(290, 10), new Point(290, 290), new Point(10, 290) };
+
+            var pointsC = new List<Point> { new Point(50, 100), new Point(70, 70), new Point(80, 90), new Point(90, 90), new Point(100, 70), new Point(120, 100), new Point(85, 130), new Point(50, 100) };
+            //ConnectDots(pointsC, foxDraw);
+            NightSky(foxDraw);
+
+
+        }
+        public void NightSky(FoxDraw foxDraw)
+        {
+            // Draw the night sky:
+            //  - The background should be black
+            foxDraw.SetBackgroundColor(Colors.Black);
+            //  - The stars can be small squares
+            //  - The stars should have random positions on the canvas
+            var random = new Random();
+            int a = random.Next(1, 100);
+            for (int i = 0; i < a; i++)
+            {
+                int x = random.Next(0, 300 - 10);
+                int y = random.Next(0, 300 - 10);
+                foxDraw.SetFillColor(Colors.Gray);
+                foxDraw.DrawRectangle(x, y, 10, 10);
+                x = 0;
+                y = 0;
+            }
+            //  - The stars should have random color (some shade of grey)
+        }
+        public void ConnectDots(List<Point> list, FoxDraw foxDraw)
+        {
+            // Create a function that takes 2 parameters:
+            // A list of (x, y) points and foxDraw
+            // and connects them with green lines.
+            var dots = new List<Point>();
+            for (int i = 0; i < list.Count; i++)
+            {
+
+
+                dots.Add(list[i]);
+            }
+            foxDraw.SetStrokeColor(Colors.Green);
+            foxDraw.SetFillColor(Colors.White);
+            foxDraw.DrawPolygon(dots);
+
+
+        }
+        public void LineToCenter(int x, int y, FoxDraw foxDraw)
+        {
+            // Create a function that draws a single line and takes 3 parameters:
+            // the x and y coordinates of the line's starting point and the
+            // foxDraw and draws a line from that point to the center of the
+            // canvas.
+            // Fill the canvas with lines from the edges, every 20 px, to the center.
+
+
+            for (int i = 0; i <= 300; i += 20)
+            {
+                foxDraw.DrawLine(0, 0 + i, 150, 150);
+                foxDraw.DrawLine(0 + i, 0, 150, 150);
+                foxDraw.DrawLine(300, 0 + i, 150, 150);
+                foxDraw.DrawLine(0 + i, 300, 150, 150);
+
+
+            }
 
         }
         public void PurpleSteps3D(int x, FoxDraw foxDraw)
