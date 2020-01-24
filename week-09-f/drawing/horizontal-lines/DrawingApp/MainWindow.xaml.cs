@@ -33,14 +33,14 @@ namespace DrawingApp
 
             //PurpleSteps(10, foxDraw);
 
-            // PurpleSteps3D(10, foxDraw);
+            PurpleSteps3D(10, foxDraw);
 
             // LineToCenter(20, 20, foxDraw);
             var points = new List<Point> { new Point(10, 10), new Point(290, 10), new Point(290, 290), new Point(10, 290) };
 
             var pointsC = new List<Point> { new Point(50, 100), new Point(70, 70), new Point(80, 90), new Point(90, 90), new Point(100, 70), new Point(120, 100), new Point(85, 130), new Point(50, 100) };
             //ConnectDots(pointsC, foxDraw);
-            NightSky(foxDraw);
+            //NightSky(foxDraw);
 
 
         }
