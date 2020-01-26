@@ -23,7 +23,7 @@ namespace FileRead
         static void Main(string[] args)
         {
             string[] lines = { "This is line 2", "This is line 3", "this is line 4" };
-            using (StreamWriter writer = new StreamWriter(@"C:\Users\42073\Temp\shity.txt"))
+            using (StreamWriter writer = new StreamWriter(@"C:\Users\42073\source\repos\WriteMultipleLines\my.file.txt"))
             {
                 foreach (var line in lines)
                 {
