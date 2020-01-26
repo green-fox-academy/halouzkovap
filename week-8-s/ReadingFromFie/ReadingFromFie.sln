@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29709.97
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadingFromFie", "ReadingFromFie\ReadingFromFie.csproj", "{1EDE4182-8134-4293-9293-4CF87C272DB4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1EDE4182-8134-4293-9293-4CF87C272DB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EDE4182-8134-4293-9293-4CF87C272DB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EDE4182-8134-4293-9293-4CF87C272DB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EDE4182-8134-4293-9293-4CF87C272DB4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {94D80800-6EBE-4BCD-B43D-6F0E89A9AAA6}
+	EndGlobalSection
+EndGlobal
