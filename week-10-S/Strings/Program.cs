@@ -1,6 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+using System.Text;
 
 namespace Strings
 {
@@ -13,10 +12,9 @@ namespace Strings
             //    chars have been changed to 'y' chars.
 
             string word = "luxus";
-            int lenght = word.Length;
-            char finding = 'z';
-            char replace = 'y';
-            Console.WriteLine(ChangeLetter(word, lenght, finding, replace));
+
+            Console.WriteLine(ChangeLetter(word));
+            Console.WriteLine(RecursivelyChangeLetter(word));
 
             //Given a string, compute recursively a new string where all the
             //    'x' chars have been removed.
@@ -27,23 +25,55 @@ namespace Strings
 
             Console.ReadLine();
         }
-        public static string ChangeLetter(string word, int lenght, char finding, char replace)
+        public static string ChangeLetter(string word)
         {
+            StringBuilder newWord = new StringBuilder();
+            //int i;
+            //if (i < word.Length)
+            //{
+            //    return 0;
+            //}
+            //ChangeLetter(word.Substring(i+1,1));
 
-
-
-            List<char> newList = new List<char>();
-            newList = word.ToList();
-
-
-            if (lenght < word.Length)
+            for (int i = 0; i <= word.Length - 1; i++)
             {
-                if (newList[lenght] != finding)
-                    ChangeLetter(word, lenght + 1, finding, replace);
-            }
-            newList[lenght] = replace;
+                if (word.Substring(i, 1) == "x")
+                {
+                    newWord.Append("y");
+                }
+                else
+                {
+                    newWord.Append(word.Substring(i, 1));
+                }
 
-            return newList.ToString();
+            }
+
+            return newWord.ToString();
+
+        }
+
+        public static string RecursivelyChangeLetter(string word)
+        {
+            StringBuilder newWord = new StringBuilder();
+
+            if (0 == word.Length)
+            {
+                return "";
+            }
+            else
+            {
+                if (word.Substring(0, 1) == "x")
+                {
+                    newWord.Append("y");
+                }
+                else
+                {
+                    newWord.Append(word.Substring(0, 1));
+                }
+
+                RecursivelyChangeLetter((word.Substring(1)));
+                return newWord.ToString();
+            }
         }
     }
 }

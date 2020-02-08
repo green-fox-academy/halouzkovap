@@ -6,10 +6,14 @@ namespace ConsoleApp1
     {
         public string Name { get; set; }
         public int Age { get; set; }
+
+        public static int CountOfDog = 0;
         public Dog(string name, int age)
         {
             Name = name;
             Age = age;
+
+            CountOfDog++; // it will count all object
         }
         public override string ToString()
         {
