@@ -12,16 +12,20 @@ namespace Strings
             //    chars have been changed to 'y' chars.
 
             string word = "luxus";
+            string word2 = "luxus";
+
 
             Console.WriteLine(ChangeLetter(word));
             Console.WriteLine(RecursivelyChangeLetter(word));
 
             //Given a string, compute recursively a new string where all the
             //    'x' chars have been removed.
+            Console.WriteLine(word2);
+            Console.WriteLine(RecursivelyRemoveLetter(word2));
 
             //Given a string, compute recursively a new string where all the 
             //    adjacent chars are now separated by a *
-
+            Console.WriteLine(RecursivelyAddStar(word2));
 
             Console.ReadLine();
         }
@@ -71,7 +75,52 @@ namespace Strings
                     newWord.Append(word.Substring(0, 1));
                 }
 
-                RecursivelyChangeLetter((word.Substring(1)));
+                newWord.Append(RecursivelyChangeLetter((word.Substring(1))));
+                return newWord.ToString();
+            }
+        }
+        public static string RecursivelyRemoveLetter(string word)
+        {
+            StringBuilder newWord = new StringBuilder();
+
+            if (0 == word.Length)
+            {
+                return "";
+            }
+            else
+            {
+                if (word.Substring(0, 1) == "x")
+                {
+                    newWord.Append("");
+                }
+                else
+                {
+                    newWord.Append(word.Substring(0, 1));
+                }
+
+                newWord.Append(RecursivelyRemoveLetter((word.Substring(1))));
+                return newWord.ToString();
+            }
+        }
+
+        public static string RecursivelyAddStar(string word)
+        {
+            StringBuilder newWord = new StringBuilder();
+
+            if (0 == word.Length)
+            {
+                return "";
+            }
+            else
+            {
+                if (word.Substring(0, 1) != " ")
+                {
+                    newWord.Append(word.Substring(0, 1));
+                    newWord.Append("*");
+                }
+
+
+                newWord.Append(RecursivelyAddStar((word.Substring(1))));
                 return newWord.ToString();
             }
         }
