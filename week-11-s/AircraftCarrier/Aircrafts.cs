@@ -7,6 +7,7 @@
         public int currentAmmo;
         protected int maxAmmo;
         public int baseDamage;
+        public int AmmoStorage;
 
         public Aircrafts()
         {
@@ -22,19 +23,19 @@
             return damage;
         }
 
-        public void Refill(int substractAmmo)
+        public int Refill(int substractAmmo)
         {
             int canBerefill = maxAmmo - currentAmmo;
             if (substractAmmo <= canBerefill)
             {
                 currentAmmo += substractAmmo;
+                return AmmoStorage;
             }
             else
             {
-                int remaining = substractAmmo - canBerefill;
+                int plus = substractAmmo - canBerefill;
                 currentAmmo = maxAmmo;
-                System.Console.WriteLine("you could add so many ammo. " +
-                    "now you have {0} ammo in your storage and remaining ammo is {1}", currentAmmo, remaining);
+                return AmmoStorage + plus;
             }
 
         }

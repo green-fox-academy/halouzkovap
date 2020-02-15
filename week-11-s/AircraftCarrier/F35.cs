@@ -8,6 +8,7 @@
             currentAmmo = 0;
             maxAmmo = 12;
             baseDamage = 50;
+            AmmoStorage = 0;
         }
     }
 }

@@ -1,12 +1,31 @@
 ﻿namespace GardenApp
 {
-    class Tree
+    public enum TypeOfTree { purple, orange }
+    class Tree : Plant
     {
-        private string name;
+        public TypeOfTree TypeOfTree;
 
-        public Tree(string name)
+
+        public Tree(TypeOfTree typeOfTree) : base()
         {
-            this.name = name; ;
+            TypeOfTree = typeOfTree;
+            Name = "Tree";
+            maxWater = 10;
+            wateringCoeficient = 0.4;
         }
+
+        public override void Info()
+        {
+            bool need = NeedWater();
+            if (need)
+            {
+                System.Console.WriteLine($"The {TypeOfTree.ToString()} {Name} needs water");
+            }
+            else
+            {
+                System.Console.WriteLine($"The {TypeOfTree.ToString()} {Name} doesn´t need water");
+            }
+        }
+
     }
 }

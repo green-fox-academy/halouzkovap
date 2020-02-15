@@ -4,24 +4,66 @@ namespace GardenApp
 {
     class Garden
     {
-        private List<Flowers> flowers;
-        private List<Tree> trees;
+        private List<Plant> plants;
+
 
         public Garden()
         {
-            flowers = new List<Flowers>();
-            trees = new List<Tree>();
+            plants = new List<Plant>();
         }
 
-        public void AddFlower(Flowers flower)
+        public void Add(Plant flower)
         {
-            flowers.Add(flower);
+            plants.Add(flower);
         }
 
-        public void AddTree(Tree tree)
+        public void GardenInfo()
         {
-            trees.Add(tree);
+            foreach (var item in plants)
+            {
+                item.Info();
+            }
+
         }
 
+        public void FeedGarden(double num)
+        {
+            double whoNeedsWater = WhoNeedsWater();
+            double everyPlangGets = num / whoNeedsWater;
+            foreach (var item in plants)
+            {
+                if (item is Flowers)
+                {
+                    if (item.NeedWater())
+                    {
+                        double bum = (double)everyPlangGets * item.wateringCoeficient;
+                        item.AddWaterStorage(bum);
+                    }
+                }
+                else if (item is Tree)
+                {
+                    if (item.NeedWater())
+                    {
+                        double bum = (double)everyPlangGets * item.wateringCoeficient;
+                        item.AddWaterStorage(bum);
+                    }
+                }
+            }
+        }
+
+        private double WhoNeedsWater()
+        {
+            double needs = 0;
+            foreach (var item in plants)
+            {
+                if (item.NeedWater())
+                {
+                    needs++;
+
+                }
+            }
+
+            return needs;
+        }
     }
 }
