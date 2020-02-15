@@ -33,9 +33,9 @@ namespace farm
 
             farm.PritnOut();
             // born new animals
-            Console.WriteLine("Breed method");
-            farm.Breed();
-            farm.PritnOut();
+            //Console.WriteLine("Breed method");
+            //farm.Breed();
+            //farm.PritnOut();
 
             Console.ReadLine();
         }
