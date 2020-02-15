@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29709.97
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GreenFox", "GreenFox.csproj", "{AE9FA03C-15CB-4ED7-8686-2DE92622932F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AE9FA03C-15CB-4ED7-8686-2DE92622932F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE9FA03C-15CB-4ED7-8686-2DE92622932F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE9FA03C-15CB-4ED7-8686-2DE92622932F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE9FA03C-15CB-4ED7-8686-2DE92622932F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {46F0AB01-C9C2-414E-986E-BB555B5135A7}
+	EndGlobalSection
+EndGlobal
