@@ -20,7 +20,40 @@ namespace AircraftCarrier
 
         public void ReFillCarrier(int numOfAmmo)
         {
+            int refill = numOfAmmo;
+            int newRell = 0;
 
+            foreach (var item in Aircrafts)
+            {
+                bool prioriy = item.IsPriority();
+
+                if (prioriy)
+                {
+                    newRell = item.Refill(refill);
+                    if (newRell <= 0)
+                    {
+                        break;
+                    }
+                    else
+                    {
+                        refill = newRell;
+                        continue;
+                    }
+                }
+                else
+                {
+                    newRell = item.Refill(refill);
+                    if (newRell <= 0)
+                    {
+                        break;
+                    }
+                    else
+                    {
+                        refill = newRell;
+                        continue;
+                    }
+                }
+            }
         }
         public void FigthCarrir(Carrier carrier)
         {
