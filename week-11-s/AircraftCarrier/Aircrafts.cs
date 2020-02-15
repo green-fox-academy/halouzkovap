@@ -4,9 +4,9 @@
     public abstract class Aircrafts
     {
         protected string name;
-        protected int currentAmmo;
+        public int currentAmmo;
         protected int maxAmmo;
-        protected int baseDamage;
+        public int baseDamage;
 
         public Aircrafts()
         {
@@ -24,6 +24,18 @@
 
         public void Refill(int substractAmmo)
         {
+            int canBerefill = maxAmmo - currentAmmo;
+            if (substractAmmo <= canBerefill)
+            {
+                currentAmmo += substractAmmo;
+            }
+            else
+            {
+                int remaining = substractAmmo - canBerefill;
+                currentAmmo = maxAmmo;
+                System.Console.WriteLine("you could add so many ammo. " +
+                    "now you have {0} ammo in your storage and remaining ammo is {1}", currentAmmo, remaining);
+            }
 
         }
 
@@ -37,6 +49,10 @@
         }
         public bool IsPriority()
         {
+            if (name == "F16")
+            {
+                return false;
+            }
             return true;
         }
 
