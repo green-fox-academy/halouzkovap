@@ -4,7 +4,7 @@ namespace AircraftCarrier
 {
     class Carrier : Aircrafts
     {
-        public List<Aircrafts> Aircrafts;
+        private List<Aircrafts> Aircrafts;
         private int HP;
         public Carrier()
         {
