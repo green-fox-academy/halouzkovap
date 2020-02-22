@@ -2,7 +2,7 @@
 
 namespace GreenFox
 {
-    class Student : Person, IClonable
+    class Student : Person, ICloneable
     {
 
 
@@ -13,6 +13,7 @@ namespace GreenFox
         {
             previousOrganization = "The School of Life";
             skippeddays = 0;
+
         }
 
 
@@ -22,8 +23,10 @@ namespace GreenFox
             this.skippeddays = 0;
         }
 
-
-
+        public object Clone()
+        {
+            return new Student(this.Name, this.Age, this.Gender, this.previousOrganization);
+        }
 
         public override void Introduce()
         {
@@ -40,9 +43,6 @@ namespace GreenFox
             skippeddays += num;
         }
 
-        public object Clone()
-        {
-            throw new NotImplementedException();
-        }
+
     }
 }
