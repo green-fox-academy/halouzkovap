@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 
 namespace Reservations
 {
@@ -6,6 +7,7 @@ namespace Reservations
     {
         static void Main(string[] args)
         {
+            Console.OutputEncoding = Encoding.UTF8;
             var reserve = new Reservation(dayInWeek.MON);
 
             Console.WriteLine(reserve.GetDowBooking());

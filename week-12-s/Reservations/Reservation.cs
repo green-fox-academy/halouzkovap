@@ -4,15 +4,15 @@ using System.Text;
 namespace Reservations
 {
     public enum dayInWeek { THU, WED, MON, SAT, THR, FRI, SUD };
-    class Reservation : IReservations
+    class Reservation : IReservationy
     {
         private dayInWeek ReservationDay { get; set; }
-        private string reservationNumber;
+        private string ReservationNumber;
 
         public Reservation(dayInWeek day)
         {
             ReservationDay = day;
-            reservationNumber = GetCodeBooking();
+            ReservationNumber = GetCodeBooking();
         }
         public int MyProperty { get; set; }
         public string GetCodeBooking()
@@ -26,7 +26,7 @@ namespace Reservations
 
         public string GetDowBooking()
         {
-            return $"Booking# {reservationNumber} for {ReservationDay}";
+            return $"Booking# {ReservationNumber} for {ReservationDay}";
         }
 
         private string RandomString(int size, bool lowerCase)

@@ -1,6 +1,6 @@
 ﻿namespace Reservations
 {
-    interface IReservations
+    interface IReservationy
     {
         string GetDowBooking();
         string GetCodeBooking();
