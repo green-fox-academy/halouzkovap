@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace GardenApp
 {
@@ -53,17 +54,18 @@ namespace GardenApp
 
         private double WhoNeedsWater()
         {
-            double needs = 0;
-            foreach (var item in plants)
-            {
-                if (item.NeedWater())
-                {
-                    needs++;
-
-                }
-            }
-
-            return needs;
+            //double needs = 0;
+            //foreach (var item in plants)
+            //{
+            //    if (item.NeedWater())
+            //    {
+            //        needs++;
+            //    }
+            //}
+            //
+            //return needs;
+            double count = plants.Count(p => p.NeedWater());
+            return count;
         }
     }
 }

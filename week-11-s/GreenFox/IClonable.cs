@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace GreenFox
+﻿namespace GreenFox
 {
-    interface IClonable
+    public interface IClonable
     {
+        public object Clone();
     }
 }

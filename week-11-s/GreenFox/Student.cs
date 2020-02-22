@@ -2,7 +2,7 @@
 
 namespace GreenFox
 {
-    class Student : Person
+    class Student : Person, IClonable
     {
 
 
@@ -38,6 +38,11 @@ namespace GreenFox
         public void SkipDays(int num)
         {
             skippeddays += num;
+        }
+
+        public object Clone()
+        {
+            throw new NotImplementedException();
         }
     }
 }
