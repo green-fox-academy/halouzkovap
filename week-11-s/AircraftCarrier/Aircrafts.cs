@@ -1,7 +1,7 @@
 ﻿namespace AircraftCarrier
 {
 
-    public abstract class Aircrafts
+    public class Aircrafts
     {
         protected string name;
         public int currentAmmo;
@@ -16,14 +16,14 @@
             //this.baseDamage = baseDamage;
         }
 
-        public int Fight()
+        public virtual int Fight()
         {
             int damage = currentAmmo * baseDamage;
             currentAmmo = 0;
             return damage;
         }
 
-        public int Refill(int substractAmmo)
+        public virtual int Refill(int substractAmmo)
         {
             int canBerefill = maxAmmo - currentAmmo;
             if (substractAmmo <= canBerefill)

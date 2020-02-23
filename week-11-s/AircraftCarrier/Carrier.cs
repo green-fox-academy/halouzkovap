@@ -2,7 +2,7 @@
 
 namespace AircraftCarrier
 {
-    class Carrier
+    class Carrier : Aircrafts
     {
         private List<Aircrafts> Aircrafts;
         private int HP;
@@ -18,7 +18,7 @@ namespace AircraftCarrier
             HP += 1000;
         }
 
-        public void ReFillCarrier(int numOfAmmo)
+        public void Refilled(int numOfAmmo)
         {
             int refill = numOfAmmo;
             int newRell = 0;
@@ -58,6 +58,15 @@ namespace AircraftCarrier
         public void FigthCarrir(Carrier carrier)
         {
             int totalDamage = this.TotalDamage();
+            carrier.HP = carrier.HP - totalDamage;
+            if (carrier.HP < 0)
+            {
+                System.Console.WriteLine($"Aircraft{carrier.name} is dead");
+            }
+            else
+            {
+                System.Console.WriteLine($"Aircraft{carrier.name} is still alive");
+            }
 
         }
         public void GetStatus()
@@ -71,8 +80,6 @@ namespace AircraftCarrier
                 item.GetStatus();
 
             }
-
-
         }
         private int TotalDamage()
         {
