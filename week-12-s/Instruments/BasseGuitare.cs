@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Instruments
+﻿namespace Instruments
 {
     public class BasseGuitare : StringedInstrument
     {
@@ -14,15 +12,11 @@ namespace Instruments
             NameOfInstrument = "Base guitare";
             numberOfStrings = number;
         }
-        protected override void Sound()
+        protected override string Sound()
         {
-            Console.WriteLine(" Duum-duum-duum");
+            return "Duum-duum-duum";
         }
 
-        public override void Play()
-        {
-            base.Play();
-            Sound();
-        }
+
     }
 }

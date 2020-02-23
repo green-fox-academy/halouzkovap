@@ -3,7 +3,7 @@
     class Uturish : Animal
     {
 
-        private string Baby = "uturus";
+        private string Baby = "uterus";
 
         protected override string Reproduction()
         {

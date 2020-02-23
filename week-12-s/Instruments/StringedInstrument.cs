@@ -9,11 +9,11 @@
             numberOfStrings = numberOfStrings;
 
         }
-        protected abstract void Sound();
+        protected abstract string Sound();
 
         public override void Play()
         {
-            System.Console.Write($"{NameOfInstrument}, a {numberOfStrings} - stringed instrument that");
+            System.Console.Write($"{NameOfInstrument}, a {numberOfStrings} - stringed instrument that {Sound()}.\n");
 
         }
 

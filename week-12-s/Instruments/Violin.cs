@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Instruments
+﻿namespace Instruments
 {
     public class Violin : StringedInstrument
     {
@@ -14,15 +12,10 @@ namespace Instruments
             NameOfInstrument = "Violin";
             numberOfStrings = number;
         }
-        protected override void Sound()
+        protected override string Sound()
         {
-            Console.WriteLine("Screech");
+            return "Screech";
         }
 
-        public override void Play()
-        {
-            base.Play();
-            Sound();
-        }
     }
 }
