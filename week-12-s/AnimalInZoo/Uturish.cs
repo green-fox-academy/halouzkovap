@@ -1,6 +1,6 @@
 ﻿namespace AnimalInZoo
 {
-    class Uturish : Animal
+    abstract class Uturish : Animal
     {
 
         private string Baby = "uterus";
