@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\Sharpie\packages\xunit.runner.visualstudio.2.4.1\build\net20\xunit.runner.visualstudio.props" Condition="Exists('..\Sharpie\packages\xunit.runner.visualstudio.2.4.1\build\net20\xunit.runner.visualstudio.props')" />
+  <Import Project="..\Sharpie\packages\xunit.core.2.4.1\build\xunit.core.props" Condition="Exists('..\Sharpie\packages\xunit.core.2.4.1\build\xunit.core.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C871E3C3-3665-4D40-97CE-9F9AD17D83FF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SharpieTests</RootNamespace>
+    <AssemblyName>SharpieTests</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="xunit.abstractions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>..\Sharpie\packages\xunit.abstractions.2.0.3\lib\net35\xunit.abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="xunit.assert, Version=2.4.1.0, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>..\Sharpie\packages\xunit.assert.2.4.1\lib\netstandard1.1\xunit.assert.dll</HintPath>
+    </Reference>
+    <Reference Include="xunit.core, Version=2.4.1.0, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>..\Sharpie\packages\xunit.extensibility.core.2.4.1\lib\net452\xunit.core.dll</HintPath>
+    </Reference>
+    <Reference Include="xunit.execution.desktop, Version=2.4.1.0, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>..\Sharpie\packages\xunit.extensibility.execution.2.4.1\lib\net452\xunit.execution.desktop.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="packages\xunit.2.4.1\.signature.p7s" />
+    <None Include="packages\xunit.2.4.1\xunit.2.4.1.nupkg" />
+    <None Include="packages\xunit.abstractions.2.0.3\.signature.p7s" />
+    <None Include="packages\xunit.abstractions.2.0.3\xunit.abstractions.2.0.3.nupkg" />
+    <None Include="packages\xunit.analyzers.0.10.0\.signature.p7s" />
+    <None Include="packages\xunit.analyzers.0.10.0\tools\install.ps1" />
+    <None Include="packages\xunit.analyzers.0.10.0\tools\uninstall.ps1" />
+    <None Include="packages\xunit.analyzers.0.10.0\xunit.analyzers.0.10.0.nupkg" />
+    <None Include="packages\xunit.assert.2.4.1\.signature.p7s" />
+    <None Include="packages\xunit.assert.2.4.1\xunit.assert.2.4.1.nupkg" />
+    <None Include="packages\xunit.core.2.4.1\.signature.p7s" />
+    <None Include="packages\xunit.core.2.4.1\buildMultiTargeting\xunit.core.props" />
+    <None Include="packages\xunit.core.2.4.1\buildMultiTargeting\xunit.core.targets" />
+    <None Include="packages\xunit.core.2.4.1\build\xunit.core.props" />
+    <None Include="packages\xunit.core.2.4.1\build\xunit.core.targets" />
+    <None Include="packages\xunit.core.2.4.1\xunit.core.2.4.1.nupkg" />
+    <None Include="packages\xunit.extensibility.core.2.4.1\.signature.p7s" />
+    <None Include="packages\xunit.extensibility.core.2.4.1\lib\net452\xunit.core.dll.tdnet" />
+    <None Include="packages\xunit.extensibility.core.2.4.1\xunit.extensibility.core.2.4.1.nupkg" />
+    <None Include="packages\xunit.extensibility.execution.2.4.1\.signature.p7s" />
+    <None Include="packages\xunit.extensibility.execution.2.4.1\xunit.extensibility.execution.2.4.1.nupkg" />
+    <None Include="packages\xunit.runner.visualstudio.2.4.1\.signature.p7s" />
+    <None Include="packages\xunit.runner.visualstudio.2.4.1\build\net20\xunit.runner.visualstudio.props" />
+    <None Include="packages\xunit.runner.visualstudio.2.4.1\build\netcoreapp1.0\xunit.runner.visualstudio.dotnetcore.testadapter.deps.json" />
+    <None Include="packages\xunit.runner.visualstudio.2.4.1\build\netcoreapp1.0\xunit.runner.visualstudio.props" />
+    <None Include="packages\xunit.runner.visualstudio.2.4.1\build\uap10.0\xunit.runner.utility.uwp10.pri" />
+    <None Include="packages\xunit.runner.visualstudio.2.4.1\build\uap10.0\xunit.runner.visualstudio.props" />
+    <None Include="packages\xunit.runner.visualstudio.2.4.1\build\uap10.0\xunit.runner.visualstudio.targets" />
+    <None Include="packages\xunit.runner.visualstudio.2.4.1\build\uap10.0\xunit.runner.visualstudio.uwp.testadapter.pri" />
+    <None Include="packages\xunit.runner.visualstudio.2.4.1\xunit.runner.visualstudio.2.4.1.nupkg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="..\Sharpie\packages\xunit.analyzers.0.10.0\analyzers\dotnet\cs\xunit.analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sharpie\Sharpie.csproj">
+      <Project>{8d0283c6-7a5d-4b79-b44a-391370149cfc}</Project>
+      <Name>Sharpie</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages\xunit.abstractions.2.0.3\lib\net35\xunit.abstractions.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages\xunit.abstractions.2.0.3\lib\net35\xunit.abstractions.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages\xunit.abstractions.2.0.3\lib\netstandard1.0\xunit.abstractions.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages\xunit.abstractions.2.0.3\lib\netstandard1.0\xunit.abstractions.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages\xunit.abstractions.2.0.3\lib\netstandard2.0\xunit.abstractions.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages\xunit.abstractions.2.0.3\lib\netstandard2.0\xunit.abstractions.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages\xunit.analyzers.0.10.0\analyzers\dotnet\cs\xunit.analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages\xunit.assert.2.4.1\lib\netstandard1.1\xunit.assert.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages\xunit.assert.2.4.1\lib\netstandard1.1\xunit.assert.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages\xunit.extensibility.core.2.4.1\lib\net452\xunit.core.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages\xunit.extensibility.core.2.4.1\lib\net452\xunit.core.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages\xunit.extensibility.core.2.4.1\lib\net452\xunit.runner.tdnet.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages\xunit.extensibility.core.2.4.1\lib\net452\xunit.runner.utility.net452.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages\xunit.extensibility.core.2.4.1\lib\netstandard1.1\xunit.core.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages\xunit.extensibility.core.2.4.1\lib\netstandard1.1\xunit.core.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages\xunit.extensibility.execution.2.4.1\lib\net452\xunit.execution.desktop.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages\xunit.extensibility.execution.2.4.1\lib\net452\xunit.execution.desktop.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages\xunit.extensibility.execution.2.4.1\lib\netstandard1.1\xunit.execution.dotnet.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages\xunit.extensibility.execution.2.4.1\lib\netstandard1.1\xunit.execution.dotnet.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages\xunit.runner.visualstudio.2.4.1\build\_common\xunit.abstractions.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages\xunit.runner.visualstudio.2.4.1\build\_common\xunit.runner.reporters.net452.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages\xunit.runner.visualstudio.2.4.1\build\_common\xunit.runner.utility.net452.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages\xunit.runner.visualstudio.2.4.1\build\_common\xunit.runner.visualstudio.testadapter.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages\xunit.runner.visualstudio.2.4.1\build\netcoreapp1.0\xunit.abstractions.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages\xunit.runner.visualstudio.2.4.1\build\netcoreapp1.0\xunit.runner.reporters.netcoreapp10.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages\xunit.runner.visualstudio.2.4.1\build\netcoreapp1.0\xunit.runner.utility.netcoreapp10.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages\xunit.runner.visualstudio.2.4.1\build\netcoreapp1.0\xunit.runner.utility.netcoreapp10.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages\xunit.runner.visualstudio.2.4.1\build\netcoreapp1.0\xunit.runner.visualstudio.dotnetcore.testadapter.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages\xunit.runner.visualstudio.2.4.1\build\uap10.0\xunit.runner.reporters.netstandard11.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages\xunit.runner.visualstudio.2.4.1\build\uap10.0\xunit.runner.utility.uwp10.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages\xunit.runner.visualstudio.2.4.1\build\uap10.0\xunit.runner.visualstudio.uwp.testadapter.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\Sharpie\packages\xunit.core.2.4.1\build\xunit.core.props')" Text="$([System.String]::Format('$(ErrorText)', '..\Sharpie\packages\xunit.core.2.4.1\build\xunit.core.props'))" />
+    <Error Condition="!Exists('..\Sharpie\packages\xunit.core.2.4.1\build\xunit.core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\Sharpie\packages\xunit.core.2.4.1\build\xunit.core.targets'))" />
+    <Error Condition="!Exists('..\Sharpie\packages\xunit.runner.visualstudio.2.4.1\build\net20\xunit.runner.visualstudio.props')" Text="$([System.String]::Format('$(ErrorText)', '..\Sharpie\packages\xunit.runner.visualstudio.2.4.1\build\net20\xunit.runner.visualstudio.props'))" />
+  </Target>
+  <Import Project="..\Sharpie\packages\xunit.core.2.4.1\build\xunit.core.targets" Condition="Exists('..\Sharpie\packages\xunit.core.2.4.1\build\xunit.core.targets')" />
+</Project>
