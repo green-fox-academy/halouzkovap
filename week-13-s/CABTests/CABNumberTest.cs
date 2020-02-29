@@ -19,6 +19,7 @@ namespace CABTests
         {
             var cabNumber = new CABNumber();
             var result = cabNumber.GetCABNumber();
+            //result[1] = result[0];
             var resl = result.Distinct();
             Assert.Equal(4, resl.Count());
         }

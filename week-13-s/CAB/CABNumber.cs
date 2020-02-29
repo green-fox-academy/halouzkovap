@@ -5,7 +5,7 @@ namespace CAB
 {
     public class CABNumber
     {
-        private List<int> CABNum;
+        public List<int> CABNum;
         private Random random;
         public List<int> GetCABNumber()
         {

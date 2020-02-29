@@ -5,38 +5,38 @@ namespace CAB
 {
     public class UserGues
     {
-        private List<int> ListOfUserGuess;
-        private int a;
+        public List<int> ListOfUserGuess;
 
         public void Intro()
         {
-            Console.WriteLine("guess numbers");
-            Console.WriteLine("Write 4 numbers to console these numberes cannot repeat");
             ListOfUserGuess = new List<int>(4);
             do
             {
-                a = Convert.ToInt32(Console.ReadLine());
+                int a = Convert.ToInt32(Console.ReadLine());
                 AddNumbers(a);
             } while (ListOfUserGuess.Count < 4);
 
+        }
 
+        public void PrintGuessingNumber()
+        {
             foreach (var item in ListOfUserGuess)
             {
                 Console.Write(item + ",");
             }
             Console.WriteLine();
+
         }
 
-        protected void AddNumbers(int a)
+        public void AddNumbers(int numberToCheck)
         {
-
-            if (!ListOfUserGuess.Contains(a))
+            if (numberToCheck < 9 && numberToCheck >= 0 && !ListOfUserGuess.Contains(numberToCheck))
             {
-                ListOfUserGuess.Add(a);
+                ListOfUserGuess.Add(numberToCheck);
             }
             else
             {
-                Console.WriteLine("you already have this number, try another one");
+                Console.WriteLine("Your numbers have to be unique and between 0-9. Try it again");
             }
         }
 

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace CAB
 {
@@ -8,8 +9,8 @@ namespace CAB
         public UserGues userGues;
         public CABNumber cabNumber;
         public List<int> cab;
-        private List<int> userGuesses;
-        private int Bull;
+        public List<int> userGuesses;
+        public int Bull;
         private int Cow;
         public Game()
         {
@@ -19,15 +20,21 @@ namespace CAB
         public void Start()
         {
             var cabNumber = new CABNumber();
-            var userGues = new UserGues();
+
 
             cab = cabNumber.GetCABNumber();
+            Console.WriteLine("guess numbers");
+            Console.WriteLine("Write 4 numbers to console these numbers cannot repeat you have to guess all numbers");
 
-            userGues.Intro();
-            userGuesses = userGues.GetUserGuess();
+            while (Bull != 4)
+            {
+                Bull = 0;
+                Cow = 0;
+                RepeatingUntilSucces();
 
-            Play();
-            System.Console.WriteLine(ToString());
+            }
+
+
 
             System.Console.WriteLine("cab numbers were :");
             foreach (var item in cab)
@@ -37,7 +44,17 @@ namespace CAB
             System.Console.WriteLine();
         }
 
-        private void Play()
+        public void RepeatingUntilSucces()
+        {
+            var userGues = new UserGues();
+            userGues.Intro();
+            userGuesses = userGues.GetUserGuess();
+            userGues.PrintGuessingNumber();
+            Play();
+            System.Console.WriteLine(ToString());
+        }
+
+        public void Play()
         {
 
             for (int i = 0; i < cab.Count; i++)
