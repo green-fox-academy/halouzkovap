@@ -7,7 +7,7 @@ namespace CAB
     {
         public List<int> ListOfUserGuess;
 
-        public void Intro()
+        public void GetUserGuessingNumber()
         {
             ListOfUserGuess = new List<int>(4);
             do

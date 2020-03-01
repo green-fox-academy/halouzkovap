@@ -47,7 +47,7 @@ namespace CAB
         public void RepeatingUntilSucces()
         {
             var userGues = new UserGues();
-            userGues.Intro();
+            userGues.GetUserGuessingNumber();
             userGuesses = userGues.GetUserGuess();
             userGues.PrintGuessingNumber();
             Play();
