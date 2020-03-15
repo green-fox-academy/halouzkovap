@@ -49,7 +49,7 @@ namespace Zoo
             {
                 if (!animal.Herbivore)
                 {
-                    if (animal.MaxFood - animal.CurrentBelly < mealOnStock)
+                    if ((animal.MaxFood - animal.CurrentBelly) < mealOnStock)
                     {
                         animal.CurrentBelly = animal.MaxFood;
                         mealOnStock -= (animal.MaxFood - animal.CurrentBelly);
@@ -61,7 +61,7 @@ namespace Zoo
                 }
                 else if (animal.Herbivore)
                 {
-                    if (animal.MaxFood - animal.CurrentBelly < mealOnStock)
+                    if ((animal.MaxFood - animal.CurrentBelly) < vegetableOnStock)
                     {
                         animal.CurrentBelly = animal.MaxFood;
                         vegetableOnStock -= (animal.MaxFood - animal.CurrentBelly);
@@ -110,21 +110,24 @@ namespace Zoo
         {
             //    It should have a GetTheFullestStatus method that returns the status of the animal that is the least hungry,
             // it should take a filterHerbivore parameter and if that is true it should only search between the carnivores
+            StringBuilder st = new StringBuilder();
 
             var CarniAnimal = Animals.Where(x => x.Herbivore != true)
-                .OrderBy(x => x.CurrentBelly).ToList();
-            StringBuilder st = new StringBuilder();
+                .OrderBy(x => x.GetHunger()).ToList();
+
+
             st.Append("Carnivore" + Environment.NewLine);
             foreach (var carn in CarniAnimal)
             {
                 st.Append(carn.GetStatus() + Environment.NewLine);
             }
 
-            st.Append("Herbivore :");
+            st.Append("Herbivore :" + Environment.NewLine);
 
             var HerbiAnimal = Animals.Where(x => x.Herbivore != false)
-                .OrderBy(x => x.CurrentBelly).ToList();
-            foreach (var herbi in Animals)
+                .OrderBy(x => x.GetHunger()).ToList();
+
+            foreach (var herbi in HerbiAnimal)
             {
                 st.Append(herbi.GetStatus() + Environment.NewLine);
             }

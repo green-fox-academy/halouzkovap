@@ -1,6 +1,6 @@
 ﻿namespace Zoo
 {
-    class Elephant : Animal
+    public class Elephant : Animal
     {
         //Elephant
         //Herbivore
@@ -12,6 +12,8 @@
             Herbivore = true;
             ConsumeLevel = 5;
             MaxFood = 40;
+            CurrentBelly = 0;
         }
+
     }
 }

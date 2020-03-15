@@ -1,6 +1,6 @@
 ﻿namespace Zoo
 {
-    class Lion : Animal
+    public class Lion : Animal
     {
 
 
@@ -10,6 +10,7 @@
             ConsumeLevel = 2;
             MaxFood = 10;
             Herbivore = false;
+            CurrentBelly = 0;
         }
     }
 }

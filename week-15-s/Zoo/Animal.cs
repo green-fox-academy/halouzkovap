@@ -11,10 +11,11 @@ namespace Zoo
         public string Name { get; set; }
         public bool Herbivore { get; set; }
         public int MaxFood { get; set; }
-        public int CurrentBelly { get; set; } = 0;
+        public int CurrentBelly;
         public int ConsumeLevel { get; set; }
 
         //It should have an GetHunger  method that returns how much food the animal needs to be full
+
         public int GetHunger()
         {
             return MaxFood - CurrentBelly;
@@ -23,11 +24,12 @@ namespace Zoo
         //it throws an error if the food is more than it is able to eat
         public void Eat(int food)
         {
-            if (this.MaxFood > food)
+            int foodToEat = food;
+            if (foodToEat > MaxFood)
             {
-                this.CurrentBelly += food;
+                throw new Exception(message: "no pleace for so much food");
             }
-            throw new Exception("More food than animal is able to eat");
+            CurrentBelly += foodToEat;
         }
         //It should have a Live  method that returns how much food it consumed
         public int Live()
@@ -37,24 +39,22 @@ namespace Zoo
         //It should have a Run method works like Live but consumes 3 times more food
         public int Run()
         {
-            int comsume = 0;
-            for (int i = 0; i < 3; i++)
-            {
-                comsume += Live();
-            }
 
-            return comsume;
+            int comsume = Live();
+
+            return (comsume * 3);
         }
         //It should have a GetStatus method that returns a string that states the name and the hungerlevel and wether the animal is herbivore
+
+
         public string GetStatus()
         {
             if (!Herbivore)
             {
-                return $"{Name} hunger level is {ConsumeLevel} and animal is carnival";
+                return $"{Name} hunger level is {ConsumeLevel} and animal is carnival, current belly {CurrentBelly}";
             }
-            return $"{Name} hunger level is {ConsumeLevel} and animal is herbivore";
+            return $"{Name} hunger level is {ConsumeLevel} and animal is herbivore, current belly {CurrentBelly}";
 
         }
-
     }
 }
