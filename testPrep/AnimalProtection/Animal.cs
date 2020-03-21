@@ -2,7 +2,7 @@
 
 namespace AnimalProtection
 {
-    public abstract class Animal
+    public class Animal
     {
         //Animal
         //It must have ownerName and stores it's health's state isHealthy(true or false) and a healCost.
