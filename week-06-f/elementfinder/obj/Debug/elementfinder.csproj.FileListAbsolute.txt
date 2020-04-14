@@ -1,6 +1,0 @@
-C:\Users\halouzkova\source\repos\elementfinder\bin\Debug\elementfinder.exe.config
-C:\Users\halouzkova\source\repos\elementfinder\bin\Debug\elementfinder.exe
-C:\Users\halouzkova\source\repos\elementfinder\bin\Debug\elementfinder.pdb
-C:\Users\halouzkova\source\repos\elementfinder\obj\Debug\elementfinder.csprojAssemblyReference.cache
-C:\Users\halouzkova\source\repos\elementfinder\obj\Debug\elementfinder.exe
-C:\Users\halouzkova\source\repos\elementfinder\obj\Debug\elementfinder.pdb

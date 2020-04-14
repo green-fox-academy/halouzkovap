@@ -1,6 +1,0 @@
-C:\Users\halouzkova\source\repos\isInList\bin\Debug\isInList.exe.config
-C:\Users\halouzkova\source\repos\isInList\bin\Debug\isInList.exe
-C:\Users\halouzkova\source\repos\isInList\bin\Debug\isInList.pdb
-C:\Users\halouzkova\source\repos\isInList\obj\Debug\isInList.csprojAssemblyReference.cache
-C:\Users\halouzkova\source\repos\isInList\obj\Debug\isInList.exe
-C:\Users\halouzkova\source\repos\isInList\obj\Debug\isInList.pdb

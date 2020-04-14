@@ -1,6 +1,0 @@
-C:\Users\halouzkova\source\repos\Stopwatch2\bin\Debug\Stopwatch2.exe.config
-C:\Users\halouzkova\source\repos\Stopwatch2\bin\Debug\Stopwatch2.exe
-C:\Users\halouzkova\source\repos\Stopwatch2\bin\Debug\Stopwatch2.pdb
-C:\Users\halouzkova\source\repos\Stopwatch2\obj\Debug\Stopwatch2.csprojAssemblyReference.cache
-C:\Users\halouzkova\source\repos\Stopwatch2\obj\Debug\Stopwatch2.exe
-C:\Users\halouzkova\source\repos\Stopwatch2\obj\Debug\Stopwatch2.pdb

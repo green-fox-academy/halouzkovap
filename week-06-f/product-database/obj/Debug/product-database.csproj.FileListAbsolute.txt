@@ -1,6 +1,0 @@
-C:\Users\halouzkova\source\repos\product-database\bin\Debug\product-database.exe.config
-C:\Users\halouzkova\source\repos\product-database\bin\Debug\product-database.exe
-C:\Users\halouzkova\source\repos\product-database\bin\Debug\product-database.pdb
-C:\Users\halouzkova\source\repos\product-database\obj\Debug\product-database.exe
-C:\Users\halouzkova\source\repos\product-database\obj\Debug\product-database.pdb
-C:\Users\halouzkova\source\repos\product-database\obj\Debug\product-database.csprojAssemblyReference.cache

@@ -1,6 +1,0 @@
-C:\Users\halouzkova\source\repos\solarSystem\bin\Debug\solarSystem.exe.config
-C:\Users\halouzkova\source\repos\solarSystem\bin\Debug\solarSystem.exe
-C:\Users\halouzkova\source\repos\solarSystem\bin\Debug\solarSystem.pdb
-C:\Users\halouzkova\source\repos\solarSystem\obj\Debug\solarSystem.csprojAssemblyReference.cache
-C:\Users\halouzkova\source\repos\solarSystem\obj\Debug\solarSystem.exe
-C:\Users\halouzkova\source\repos\solarSystem\obj\Debug\solarSystem.pdb

@@ -1,5 +1,0 @@
-C:\Users\halouzkova\source\repos\reverse\bin\Debug\reverse.exe.config
-C:\Users\halouzkova\source\repos\reverse\bin\Debug\reverse.exe
-C:\Users\halouzkova\source\repos\reverse\bin\Debug\reverse.pdb
-C:\Users\halouzkova\source\repos\reverse\obj\Debug\reverse.exe
-C:\Users\halouzkova\source\repos\reverse\obj\Debug\reverse.pdb

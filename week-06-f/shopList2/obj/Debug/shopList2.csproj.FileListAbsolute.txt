@@ -1,6 +1,0 @@
-C:\Users\halouzkova\source\repos\shopList2\bin\Debug\shopList2.exe.config
-C:\Users\halouzkova\source\repos\shopList2\bin\Debug\shopList2.exe
-C:\Users\halouzkova\source\repos\shopList2\bin\Debug\shopList2.pdb
-C:\Users\halouzkova\source\repos\shopList2\obj\Debug\shopList2.csprojAssemblyReference.cache
-C:\Users\halouzkova\source\repos\shopList2\obj\Debug\shopList2.exe
-C:\Users\halouzkova\source\repos\shopList2\obj\Debug\shopList2.pdb

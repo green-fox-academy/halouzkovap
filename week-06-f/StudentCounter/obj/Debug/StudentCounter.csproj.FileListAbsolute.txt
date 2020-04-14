@@ -1,6 +1,0 @@
-C:\Users\halouzkova\source\repos\StudentCounter\bin\Debug\StudentCounter.exe.config
-C:\Users\halouzkova\source\repos\StudentCounter\bin\Debug\StudentCounter.exe
-C:\Users\halouzkova\source\repos\StudentCounter\bin\Debug\StudentCounter.pdb
-C:\Users\halouzkova\source\repos\StudentCounter\obj\Debug\StudentCounter.csprojAssemblyReference.cache
-C:\Users\halouzkova\source\repos\StudentCounter\obj\Debug\StudentCounter.exe
-C:\Users\halouzkova\source\repos\StudentCounter\obj\Debug\StudentCounter.pdb

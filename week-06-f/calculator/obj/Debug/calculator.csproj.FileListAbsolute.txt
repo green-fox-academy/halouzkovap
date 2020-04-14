@@ -1,6 +1,0 @@
-C:\Users\halouzkova\source\repos\calculator\bin\Debug\calculator.exe.config
-C:\Users\halouzkova\source\repos\calculator\bin\Debug\calculator.exe
-C:\Users\halouzkova\source\repos\calculator\bin\Debug\calculator.pdb
-C:\Users\halouzkova\source\repos\calculator\obj\Debug\calculator.csprojAssemblyReference.cache
-C:\Users\halouzkova\source\repos\calculator\obj\Debug\calculator.exe
-C:\Users\halouzkova\source\repos\calculator\obj\Debug\calculator.pdb

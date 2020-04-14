@@ -1,5 +1,0 @@
-C:\Users\halouzkova\source\repos\map-introduction-1\bin\Debug\map-introduction-1.exe.config
-C:\Users\halouzkova\source\repos\map-introduction-1\bin\Debug\map-introduction-1.exe
-C:\Users\halouzkova\source\repos\map-introduction-1\bin\Debug\map-introduction-1.pdb
-C:\Users\halouzkova\source\repos\map-introduction-1\obj\Debug\map-introduction-1.exe
-C:\Users\halouzkova\source\repos\map-introduction-1\obj\Debug\map-introduction-1.pdb
