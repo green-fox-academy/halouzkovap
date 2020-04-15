@@ -12,6 +12,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="StarWars.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="starWarst.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
