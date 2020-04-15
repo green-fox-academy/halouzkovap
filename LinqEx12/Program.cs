@@ -15,10 +15,10 @@ namespace LinqEx12
             {
                 csvTable.Load(csvReader);
             }
-            List<Star> searchParameters = new List<Star>();
+            List<Star> starWarsVal = new List<Star>();
             for (int i = 0; i < csvTable.Rows.Count; i++)
             {
-                searchParameters.Add(new Star { Name = csvTable.Rows[i][0].ToString(), Height = csvTable.Rows[i][1].ToString(), Mass = csvTable.Rows[i][2].ToString(), hair_color = csvTable.Rows[i][3].ToString(), skin_color = csvTable.Rows[i][4].ToString(), eye_color = csvTable.Rows[i][5].ToString(), birth_year = csvTable.Rows[i][6].ToString(), gender = csvTable.Rows[i][7].ToString() });
+                starWarsVal.Add(new Star { Name = csvTable.Rows[i][0].ToString(), Height = csvTable.Rows[i][1].ToString(), Mass = csvTable.Rows[i][2].ToString(), hair_color = csvTable.Rows[i][3].ToString(), skin_color = csvTable.Rows[i][4].ToString(), eye_color = csvTable.Rows[i][5].ToString(), birth_year = csvTable.Rows[i][6].ToString().Replace("BBY", ""), gender = csvTable.Rows[i][7].ToString() });
             }
 
 
@@ -26,7 +26,14 @@ namespace LinqEx12
             //💪 Get the age distribution of the characters by gender(where the gender can be "male", "female" and "other")
             //The age groups are: "below 21", "between 21 and 40", "above 40" and "unknown"
             //The result should be a Dictionary<string, Dictionary<string, int>> similar to this one:
-            var query = searchParameters.GroupBy(x => x.gender).Select(x => new { key = x.Key, val = x.Count() });
+
+
+            var query = starWarsVal.Where(x => x.gender == "female" || x.gender == "male")
+                .GroupBy(x => x.gender).Select(x => new { key = x.Key, val = x.GroupBy(x => x.birth_year).Select(x => new { Key = x.Key, Val = x.Count() }) });
+
+
+
+
             foreach (var item in query)
             {
                 Console.WriteLine(item.key + ":" + item.val);
