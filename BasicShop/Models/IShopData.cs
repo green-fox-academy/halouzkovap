@@ -13,6 +13,7 @@ namespace BasicShop.Models
         Item GetById(int id);
 
         IEnumerable<Item> GetMostExpensive();
+        IEnumerable<Item> Serch(string thingy);
 
 
 

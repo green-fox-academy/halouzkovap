@@ -24,10 +24,14 @@
         </div>
         <div class="main-header__search">
             <h4>Search For:</h4>
-            <form method="post" action="">
-                <input type="search" name="search" placeholder="...something like nike" />
-                <button class="btn-search">Search</button>
-            </form>
+            <!-- <form method="post" action="">
+         <input type="search" name="search" placeholder="...something like nike" />
+         <button class="btn-search">Search</button>
+     </form>-->
+            @using(Html.BeginForm("Search","Shop",FormMethod.Post))
+            {
+                @Html.TextBox("SearchTerm")<input type="submit" value="Search">
+            }
         </div>
     </header>
     <div>

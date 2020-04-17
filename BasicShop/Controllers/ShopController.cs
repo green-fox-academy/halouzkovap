@@ -85,11 +85,20 @@ namespace BasicShop.Controllers
             });
         }
 
-        [HttpPost("search")]
-        public IActionResult Search(string name)
+        [HttpPost]
+        public IActionResult Search(string SearchTerm)
         {
-            return View();
-            //todo:
+
+
+            shoes = _shopData.Serch(SearchTerm);
+            if (shoes == null)
+            {
+                return ViewBag("not found what you are looking for");
+            }
+            return View(new ShoeListViewModel
+            {
+                Shoes = shoes
+            });
         }
 
     }

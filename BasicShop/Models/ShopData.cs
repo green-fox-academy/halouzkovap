@@ -56,7 +56,9 @@ namespace BasicShop.Models
             return _shopDb.Shoes.Where(x => x.QuantityOfStock > 0);
         }
 
-
-
+        public IEnumerable<Item> Serch(string thingy)
+        {
+            return _shopDb.Shoes.Where(x => x.Description.Contains(thingy) || x.Name.Contains(thingy));
+        }
     }
 }
