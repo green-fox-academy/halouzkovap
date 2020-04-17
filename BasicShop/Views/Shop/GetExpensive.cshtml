@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewData["Title"] = "GetExpensive";
+}
+
+    <section class="data-view">
+        <table>
+            <tr class="data-view__header">
+                <td>Name</td>
+                <td>Description</td>
+                <td>Price</td>
+                <td>Quantity of stock</td>
+            </tr>
+            @foreach (var item in Model.Shoes)
+            {
+                <tr>
+                    <td>@item.Name</td>
+                    <td>@item.Description</td>
+                    <td>@item.Price</td>
+                    <td>@item.QuantityOfStock</td>
+                </tr>
+            }
+        </table>
+    </section>
+
