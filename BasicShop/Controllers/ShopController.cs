@@ -85,10 +85,11 @@ namespace BasicShop.Controllers
             });
         }
 
-        [HttpPost]
+        [HttpPost("search")]
         public IActionResult Search(string name)
         {
             return View();
+            //todo:
         }
 
     }
