@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Basic Webshop</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/Style/style.css" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+</head>
+<body>
+    <header class="main-header">
+        <div class="main-header__logo">
+            <h1>My Shop</h1>
+        </div>
+        <div class="main-header__navbar">
+            <ul class="main-header__navbar-links">
+                <li class="main-header__navbar-link"><a class="btn-menu" asp-action="OnlyAvailable">Only available</a></li>
+                <li class="main-header__navbar-link"><a class="btn-menu" asp-action="CheapFirts">Cheapest first</a></li>
+                <li class="main-header__navbar-link"><a class="btn-menu" asp-action="ContainsNike">Contains nike</a></li>
+                <li class="main-header__navbar-link"><a class="btn-menu" asp-action="AveradgeStock">Average stock</a></li>
+                <li class="main-header__navbar-link"><a class="btn-menu" asp-action="GetExpensive">Get Expensive</a></li>
+                <li class="main-header__navbar-link"><a class="btn-menu" asp-action="GetAllShoes">Get All</a></li>
+                <li class="main-header__navbar-link"><a class="btn-menu" asp-action="MostExpensive">Most Expensive</a></li>
+            </ul>
+        </div>
+        <div class="main-header__search">
+            <h4>Search For:</h4>
+            <!-- <form method="post" action="">
+         <input type="search" name="search" placeholder="...something like nike" />
+         <button class="btn-search">Search</button>
+     </form>-->
+            @using(Html.BeginForm("Search","Shop",FormMethod.Post))
+            {
+                @Html.TextBox("SearchTerm")<input type="submit" value="Search">
+            }
+        </div>
+    </header>
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>

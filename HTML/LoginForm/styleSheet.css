@@ -1,0 +1,64 @@
+body {
+    margin: 0;
+    background: gray;
+}
+
+.conteiner {
+    align-content: center;
+}
+
+form {
+    background: white;
+    margin: 20px;
+    width: 300px;
+    height: 400px;
+    padding: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+form p {
+    font-size: 18px;
+    letter-spacing: 0.1em;
+}
+
+label[for="username"],
+label[for="password"] {
+    font-size: 0.8rem;
+    line-height: 40px;
+}
+
+input[type="text"],
+input[type="password"] {
+    display: block;
+    padding: 10px 10px 10px 10px;
+    border: solid rgb(160, 157, 157);
+    border-radius: 4px;
+    font-size: 16px;
+    width: auto;
+    clear: both;
+}
+
+input[type=text]:focus {
+    width: 250px;
+    border: solid rgb(63, 248, 73);
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 0.5rem;
+    font-weight: bold;
+    float: right;
+    margin-right: 100px;
+}
+
+input[type="submit"] {
+    background: #4f4c4c;
+    padding: 15px;
+    color: #fff;
+    width: 100px;
+    height: 40px;
+    border-radius: 20px;
+    border: 0;
+    text-align: center;
+}
