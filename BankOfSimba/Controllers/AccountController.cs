@@ -42,5 +42,16 @@ namespace BankOfSimba.Controllers
             ViewBag.CheckoutMessage = "New Account created";
             return View();
         }
+        public IActionResult RaiseBalance()
+        {
+            _bankServis.RaiseBalance();
+            return RedirectToAction("Index");
+
+            //var account = _bankServis.GettAll();
+            //return View(new BankAccountViewModel
+            //{
+            //    Account = account
+            //}); ;
+        }
     }
 }

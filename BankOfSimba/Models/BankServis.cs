@@ -24,5 +24,22 @@ namespace BankOfSimba.Models
         {
             return _bankOfSimbaDbContext.BankAccounts;
         }
+
+        public void RaiseBalance()
+        {
+            foreach (var item in _bankOfSimbaDbContext.BankAccounts)
+            {
+                if (item.Name == "King")
+                {
+                    item.Balance += 100;
+
+                }
+                else
+                {
+                    item.Balance += 10;
+                }
+            }
+            _bankOfSimbaDbContext.SaveChanges();
+        }
     }
 }

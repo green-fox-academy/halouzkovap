@@ -7,5 +7,6 @@ namespace BankOfSimba.Models
         public IEnumerable<BankAccount> GettAll();
 
         public void CreateBankAccount(BankAccount bank);
+        public void RaiseBalance();
     }
 }
