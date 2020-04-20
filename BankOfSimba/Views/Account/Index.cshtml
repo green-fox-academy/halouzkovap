@@ -3,24 +3,32 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Bank of Simba</h1>
+            <p class="lead">This bank is mine</p>
+        </div>
+    </div>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
+<table class="table table-hover">
     <thead>
         <tr>
-            <th></th>
+            <th scope="col">ID</th>
+            <th scope="col">Account</th>
+            <th scope="col">Balance</th>
+            <th scope="col">Type of Annimal</th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.Account) {
+        @foreach (var item in Model.Account)
+        {
         <tr>
-            <td>
-             @item.Name
-            </td>
+            <th scope="row">@item.Id</th>
+            <td >@item.Name</td>
+            <td>@item.Balance Zebra</td>
+            <td>@item.AnimalType</td>
         </tr>
-}
+        }
+
     </tbody>
 </table>
