@@ -18,9 +18,7 @@ namespace BankOfSimba.Models
 
 
         [Required(ErrorMessage = "Please enter balanc")]
-
         [Display(Name = "Balance")]
-
         public decimal Balance { get; set; }
 
 

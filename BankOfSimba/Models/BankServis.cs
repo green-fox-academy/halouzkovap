@@ -10,6 +10,16 @@ namespace BankOfSimba.Models
         {
             _bankOfSimbaDbContext = bankOfSimbaDbContext;
         }
+
+        public void CreateBankAccount(BankAccount bankAccount)
+        {
+
+
+            _bankOfSimbaDbContext.BankAccounts.Add(bankAccount);
+
+            _bankOfSimbaDbContext.SaveChanges();
+        }
+
         public IEnumerable<BankAccount> GettAll()
         {
             return _bankOfSimbaDbContext.BankAccounts;

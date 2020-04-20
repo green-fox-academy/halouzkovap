@@ -20,25 +20,27 @@ namespace BankOfSimba.Controllers
                 Account = account
             }); ;
         }
+        public IActionResult CreateBankAccount()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult CreateBankAccount(BankAccount bankAccount)
+        {
 
-        //[HttpPost]
-        //public IActionResult Checkout(Order order)
-        //{
-        //    var items = _shoppingCart.GetShoppingCartItems();
-        //    _shoppingCart.ShoppingCartItems = items;
 
-        //    if (_shoppingCart.ShoppingCartItems.Count == 0)
-        //    {
-        //        ModelState.AddModelError("", "Your cart is empty, add some pies first");
-        //    }
+            if (ModelState.IsValid)
+            {
+                _bankServis.CreateBankAccount(bankAccount);
 
-        //    if (ModelState.IsValid)
-        //    {
-        //        _orderRepository.CreateOrder(order);
-        //        _shoppingCart.ClearCart();
-        //        return RedirectToAction("CheckoutComplete");
-        //    }
-        //    return View(order);
-        //}
+                return RedirectToAction("CheckoutComplete");
+            }
+            return View(bankAccount);
+        }
+        public IActionResult CheckoutComplete()
+        {
+            ViewBag.CheckoutMessage = "New Account created";
+            return View();
+        }
     }
 }
