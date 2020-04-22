@@ -47,11 +47,18 @@ namespace BankOfSimba.Controllers
             _bankServis.RaiseBalance();
             return RedirectToAction("Index");
 
-            //var account = _bankServis.GettAll();
-            //return View(new BankAccountViewModel
-            //{
-            //    Account = account
-            //}); ;
+        }
+        public IActionResult DecreaseBalance()
+        {
+            _bankServis.DecreaseBalance();
+            return RedirectToAction("Index");
+
+        }
+        public IActionResult TakeThemAll()
+        {
+            _bankServis.TakeThemALL();
+            return RedirectToAction("Index");
+
         }
     }
 }

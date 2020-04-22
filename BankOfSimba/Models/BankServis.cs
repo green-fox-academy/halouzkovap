@@ -20,6 +20,23 @@ namespace BankOfSimba.Models
             _bankOfSimbaDbContext.SaveChanges();
         }
 
+        public void DecreaseBalance()
+        {
+            foreach (var item in _bankOfSimbaDbContext.BankAccounts)
+            {
+                if (item.Name == "King")
+                {
+                    item.Balance -= 100;
+
+                }
+                else
+                {
+                    item.Balance -= 10;
+                }
+            }
+            _bankOfSimbaDbContext.SaveChanges();
+        }
+
         public IEnumerable<BankAccount> GettAll()
         {
             return _bankOfSimbaDbContext.BankAccounts;
@@ -38,6 +55,15 @@ namespace BankOfSimba.Models
                 {
                     item.Balance += 10;
                 }
+            }
+            _bankOfSimbaDbContext.SaveChanges();
+        }
+
+        public void TakeThemALL()
+        {
+            foreach (var item in _bankOfSimbaDbContext.BankAccounts)
+            {
+                item.Balance = 0;
             }
             _bankOfSimbaDbContext.SaveChanges();
         }

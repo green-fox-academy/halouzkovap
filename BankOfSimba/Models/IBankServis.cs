@@ -8,5 +8,7 @@ namespace BankOfSimba.Models
 
         public void CreateBankAccount(BankAccount bank);
         public void RaiseBalance();
+        public void DecreaseBalance();
+        public void TakeThemALL();
     }
 }
