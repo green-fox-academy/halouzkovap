@@ -1,0 +1,21 @@
+﻿@model Email
+@{
+    ViewData["Title"] = "Email";
+}
+
+    <form asp-action="EmailChecked" method="post" class="form-horizontal" role="form">
+
+
+        
+
+
+        <div class="form-group">
+            <label asp-for="Mail" class="col-md-2 control-label"></label>
+            <div class="col-md-5">
+                <input asp-for="Mail" class="form-control" />
+                <span asp-validation-for="Mail" class="text-danger"></span>
+            </div>
+        </div>
+
+    </form>
+
