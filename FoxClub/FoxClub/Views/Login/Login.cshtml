@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Login";
+}
+
+@model Fox
+<h1>Welcome to Programmer Fox Club!</h1>
+<p>Please provide a name, so you can associate it to your pet!</p>
+<form asp-action="Login" method="post" class="form-horizontal" role="form">
+    <div class="form-group">
+        <label asp-for="Name" class="col-md-2 control-label"></label>
+        <div class="col-md-5">
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+    </div>
+</form>

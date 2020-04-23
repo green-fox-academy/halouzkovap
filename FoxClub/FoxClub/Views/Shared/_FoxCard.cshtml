@@ -1,0 +1,15 @@
+﻿@model Fox
+<div class="col mb-4">
+    <div class="card h-100">
+      
+        <img src="~/Image/greenfox.png" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">
+                <a asp-controller="Home"
+                   asp-action="Detail"
+                   asp-route-id="@Model.Id">@Model.Name</a>
+            </h5>
+            <p class="card-text">Click me, if you want know more :D</p>
+        </div>
+    </div>
+</div>

@@ -1,11 +1,13 @@
+using FoxClub.DataContext;
+using FoxClub.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using UsefulUtility.Services;
 
-namespace UsefulUtility
+namespace FoxClub
 {
     public class Startup
     {
@@ -19,11 +21,10 @@ namespace UsefulUtility
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<FoxClubDbContext>(options =>
+               options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddScoped<IFoxServices, FoxServices>();
             services.AddControllersWithViews();
-            services.AddScoped<IUtilityService, UtilityService>();
-            services.AddScoped<IEmailValidator, EmailValidator>();
-            services.AddSingleton<IStudentService, StudentService>();
-
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
