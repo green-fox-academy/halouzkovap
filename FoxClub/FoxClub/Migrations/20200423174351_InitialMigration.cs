@@ -2,7 +2,7 @@
 
 namespace FoxClub.Migrations
 {
-    public partial class addmigrationinitialDBSet : Migration
+    public partial class InitialMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -12,7 +12,7 @@ namespace FoxClub.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(nullable: true)
+                    Name = table.Column<string>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -25,8 +25,8 @@ namespace FoxClub.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Food = table.Column<string>(nullable: true),
-                    FoxId = table.Column<int>(nullable: true)
+                    Food = table.Column<string>(nullable: false),
+                    FoxId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -36,7 +36,7 @@ namespace FoxClub.Migrations
                         column: x => x.FoxId,
                         principalTable: "Foxes",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -45,8 +45,8 @@ namespace FoxClub.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    NameTrick = table.Column<string>(nullable: true),
-                    FoxId = table.Column<int>(nullable: true)
+                    NameTrick = table.Column<string>(nullable: false),
+                    FoxId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -56,7 +56,7 @@ namespace FoxClub.Migrations
                         column: x => x.FoxId,
                         principalTable: "Foxes",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(

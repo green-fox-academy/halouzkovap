@@ -9,5 +9,8 @@ namespace FoxClub.Services
         public IEnumerable<Fox> GetFoxes();
         public Fox GetFox(int id);
         public bool CheckFox(Fox fox);
+        public void AddFoxTrick(int id, string trick);
+        public void AddFoxNutrition(int id);
+
     }
 }

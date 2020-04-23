@@ -1,8 +1,11 @@
-﻿@model Fox
+﻿@model FoxClub.ViewModel.DetailViewModel
 
-<h2>@Model.Name</h2>
+<h2>@Model.Detail.Name</h2>
 
 <div class="thumbnail">
     <img src="~/Image/greenfox.png"  alt="...">
-   
+  @foreach (var item in @Model.Detail.Nutritions)
+  {
+      @item.Food
+  } 
 </div>

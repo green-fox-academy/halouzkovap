@@ -1,5 +1,6 @@
 ﻿using FoxClub.DataContext;
 using FoxClub.Models;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -12,6 +13,22 @@ namespace FoxClub.Services
         public FoxServices(FoxClubDbContext foxClubDbContext)
         {
             this.foxClubDbContext = foxClubDbContext;
+        }
+
+        public void AddFoxNutrition(int id)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void AddFoxTrick(int id, string trick)
+        {
+            var tricks = new Trick
+            {
+                NameTrick = trick,
+                FoxId = id
+            };
+            foxClubDbContext.Tricks.Add(tricks);
+            foxClubDbContext.SaveChanges();
         }
 
         public bool CheckFox(Fox fox)
@@ -32,12 +49,12 @@ namespace FoxClub.Services
 
         public Fox GetFox(int id)
         {
-            return foxClubDbContext.Foxes.FirstOrDefault(f => f.Id == id);
+            return foxClubDbContext.Foxes.Include(f => f.Tricks).Include(f => f.Nutritions).FirstOrDefault(f => f.Id == id);
         }
 
         public IEnumerable<Fox> GetFoxes()
         {
-            return foxClubDbContext.Foxes;
+            return foxClubDbContext.Foxes.Include(f => f.Tricks).Include(f => f.Nutritions);
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace FoxClub.Models
 {
@@ -7,5 +8,7 @@ namespace FoxClub.Models
         public int Id { get; set; }
         [Required]
         public string Name { get; set; }
+        public List<Trick> Tricks { get; set; }
+        public List<Nutrition> Nutritions { get; set; }
     }
 }

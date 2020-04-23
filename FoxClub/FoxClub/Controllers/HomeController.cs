@@ -30,7 +30,10 @@ namespace FoxClub.Controllers
         public IActionResult Detail(int id)
         {
             var fox = foxServices.GetFox(id);
-            return View(fox);
+            return View(new DetailViewModel
+            {
+                Detail = fox
+            });
         }
 
         public IActionResult Privacy()

@@ -8,5 +8,6 @@ namespace FoxClub.Models
         [Required]
         public string Food { get; set; }
         public Fox Fox { get; set; }
+        public int FoxId { get; set; }
     }
 }
