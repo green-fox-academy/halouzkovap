@@ -23,8 +23,18 @@ namespace FoxClub
         {
             services.AddDbContext<FoxClubDbContext>(options =>
                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
+
+            services.AddAuthentication("CookieAuthentication")
+                 .AddCookie("CookieAuthentication", config =>
+                 {
+                     config.Cookie.Name = "UserLoginCookie";
+                     config.LoginPath = "/Login/FoxLogin";
+                 });
+
             services.AddScoped<IFoxServices, FoxServices>();
             services.AddControllersWithViews();
+            services.AddRazorPages().AddRazorRuntimeCompilation();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -45,6 +55,10 @@ namespace FoxClub
 
             app.UseRouting();
 
+            // who are you?  
+            app.UseAuthentication();
+
+            // are you allowed?  
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

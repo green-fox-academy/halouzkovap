@@ -1,4 +1,5 @@
 ﻿using FoxClub.Models;
+
 using Microsoft.EntityFrameworkCore;
 
 namespace FoxClub.DataContext

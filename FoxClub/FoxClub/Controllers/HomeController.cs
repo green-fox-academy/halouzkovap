@@ -1,6 +1,8 @@
 ﻿using FoxClub.Models;
+
 using FoxClub.Services;
 using FoxClub.ViewModel;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System.Diagnostics;
@@ -17,8 +19,21 @@ namespace FoxClub.Controllers
             _logger = logger;
             this.foxServices = foxServices;
         }
-
+        [Authorize]
         public IActionResult Index()
+        {
+            return View();
+        }
+
+        [Authorize]
+        public ActionResult Fox()
+        {
+            var fox = foxServices.GetOnlyFoxes();
+            return View(fox);
+        }
+
+        [Authorize]
+        public IActionResult List()
         {
             var foxes = foxServices.GetFoxes();
             return View(new FoxViewModel
@@ -27,6 +42,7 @@ namespace FoxClub.Controllers
             });
 
         }
+        [Authorize]
         public IActionResult Detail(int id)
         {
             var fox = foxServices.GetFox(id);
@@ -35,6 +51,66 @@ namespace FoxClub.Controllers
                 Detail = fox
             });
         }
+        [Authorize]
+
+        public IActionResult AddTrick(int id)
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [Authorize]
+
+        public IActionResult AddTrick(Trick trick)
+        {
+            var id = trick.Id;
+            var nameOfTrick = trick.NameTrick;
+            foxServices.AddFoxTrick(id, nameOfTrick);
+            return RedirectToAction("List");
+        }
+        [Authorize]
+        public IActionResult AddNutrition(int id)
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [Authorize]
+
+        public IActionResult AddNutrition(Nutrition nutrition)
+        {
+            var id = nutrition.Id;
+            var food = nutrition.Food;
+            foxServices.AddFoxTrick(id, food);
+            return RedirectToAction("List");
+        }
+
+
+
+
+        [Authorize]
+        public IActionResult ListOfTricksAndNutrition()
+        {
+            var trick = foxServices.GetTricks();
+            var foxes = foxServices.GetNutritions();
+            return View();
+
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+        [Authorize]
 
         public IActionResult Privacy()
         {

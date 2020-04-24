@@ -1,0 +1,15 @@
+﻿@model Trick
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+    <h3>Add Tricks</h3>
+<form asp-action="AddTrick" method="post" class="form-horizontal" role="form">
+    <div class="form-group">
+        <label asp-for="NameTrick" class="col-md-2 control-label"></label>
+        <div class="col-md-5">
+            <input asp-for="NameTrick" class="form-control" />
+            <span asp-validation-for="NameTrick" class="text-danger"></span>
+        </div>
+
+    </div>
+</form>

@@ -1,11 +1,54 @@
 ﻿@model FoxClub.ViewModel.DetailViewModel
+@{
+    var number = Model.Detail.Nutritions.Count;
+    var foxTricks = Model.Detail.Tricks.Count;
+}
+
 
 <h2>@Model.Detail.Name</h2>
 
 <div class="thumbnail">
-    <img src="~/Image/greenfox.png"  alt="...">
-  @foreach (var item in @Model.Detail.Nutritions)
-  {
-      @item.Food
-  } 
+    <img src="~/Image/greenfox.png" alt="...">
+    <h3>Nutrition</h3>
+    <ul>
+        @if (number == 0 )
+        {
+        <p>@Model.Detail.Name currently living on salad and water.</p>
+        }
+        else
+        {
+        @foreach (var item in @Model.Detail.Nutritions)
+        {
+            <li>
+                @item.Food
+            </li>
+        }
+        }
+    </ul>
+     
+    <h3>Know tricks</h3>
+    <ul>
+        @if (foxTricks == 0)
+        {
+
+          <p>You know no tricks, yet. Go and Learn some.</p>
+        }
+        else
+        {
+            @foreach (var item in @Model.Detail.Tricks)
+            {
+                <li>
+                    @item.NameTrick
+                </li>
+
+            }
+    }
+
+    </ul>
+        
 </div>
+
+<button type="button" class="btn btn-info" ><a  class="text-white" asp-area="" asp-controller="Home" asp-action="AddTrick" asp-route-id="@Model.Detail.Id">Add Trick</a></button>
+<button type="button" class="btn btn-info"><a class="text-white" asp-area="" asp-controller="Home" asp-action="AddNutrition" asp-route-id="@Model.Detail.Id">Add Nutrition</a></button>
+
+

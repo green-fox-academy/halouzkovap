@@ -1,6 +1,10 @@
 ﻿using FoxClub.Models;
 using FoxClub.Services;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
+using System.Linq;
+using System.Security.Claims;
 
 namespace FoxClub.Controllers
 {
@@ -12,30 +16,36 @@ namespace FoxClub.Controllers
         {
             this.foxServices = foxServices;
         }
-        public IActionResult Login()
-        {
-            return View();
-        }
-        [HttpPost]
-        public IActionResult Login(Fox fox)
-        {
-            if (foxServices.CheckFox(fox))
-            {
-                foxServices.CreateFox(fox);
-                return RedirectToAction("LoginCheckOutOk");
 
+        [HttpGet]
+        public ActionResult FoxLogin()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult FoxLogin([Bind] Fox Fox)
+        {
+            // username = anet  
+            //var Foxes = new Fox();
+            var allFoxex = foxServices.GetFoxes().FirstOrDefault();
+            if (foxServices.GetFoxes().Any(u => u.Name == Fox.Name))
+            {
+                var userClaims = new List<Claim>()
+                {
+                new Claim(ClaimTypes.Name, Fox.Name),
+                new Claim(ClaimTypes.Email, "anet@test.com"),
+                 };
+
+                var grandmaIdentity = new ClaimsIdentity(userClaims, "User Identity");
+
+                var userPrincipal = new ClaimsPrincipal(new[] { grandmaIdentity });
+                HttpContext.SignInAsync(userPrincipal);
+
+                return RedirectToAction("Fox", "Home");
             }
-            return RedirectToAction("LoginCheckOutNOT");
-        }
-        public IActionResult LoginCheckOutOk()
-        {
-            ViewBag.CheckoutOKMessage = "Thank you for your registration";
-            return View();
-        }
-        public IActionResult LoginCheckOutNOT()
-        {
-            ViewBag.CheckoutNotMessage = "This name is already used, choose another one";
-            return View();
+
+            return View(Fox);
         }
     }
 }
