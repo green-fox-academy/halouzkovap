@@ -42,10 +42,32 @@ namespace FoxClub.Controllers
                 var userPrincipal = new ClaimsPrincipal(new[] { grandmaIdentity });
                 HttpContext.SignInAsync(userPrincipal);
 
-                return RedirectToAction("Fox", "Home");
+                return RedirectToAction("List", "Home");
             }
 
-            return View(Fox);
+            return RedirectToAction("Login", "Login");
+        }
+
+        public ActionResult Login()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult Login(Fox fox)
+        {
+            if (foxServices.CheckFox(fox))
+            {
+                foxServices.CreateFox(fox);
+                return RedirectToAction("FoxLogin", "Login");
+            }
+
+            return RedirectToAction("LoginCheckOutNot", "Login");
+        }
+
+        public IActionResult LoginCheckOutNot()
+        {
+            ViewBag.CheckoutNotMessage = "Try another name";
+            return View();
         }
     }
 }

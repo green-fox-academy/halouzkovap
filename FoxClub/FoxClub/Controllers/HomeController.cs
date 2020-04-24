@@ -25,12 +25,7 @@ namespace FoxClub.Controllers
             return View();
         }
 
-        [Authorize]
-        public ActionResult Fox()
-        {
-            var fox = foxServices.GetOnlyFoxes();
-            return View(fox);
-        }
+
 
         [Authorize]
         public IActionResult List()
