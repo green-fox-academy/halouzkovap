@@ -19,12 +19,13 @@ namespace FoxClub.Controllers
             _logger = logger;
             this.foxServices = foxServices;
         }
+
+
         [Authorize]
         public IActionResult Index()
         {
             return View();
         }
-
 
 
         [Authorize]
@@ -37,17 +38,36 @@ namespace FoxClub.Controllers
             });
 
         }
+
         [Authorize]
         public IActionResult Detail(int id)
         {
             var fox = foxServices.GetFox(id);
-            return View(new DetailViewModel
-            {
-                Detail = fox
-            });
+            return RedirectToAction("Fox", fox);
         }
         [Authorize]
+        public IActionResult Fox(Fox fox)
+        {
 
+            var ida = fox.Id;
+            var foxes = foxServices.GetFox(ida);
+            var numOfTrick = foxes.Tricks.Count;
+            var numOfNutritions = foxes.Nutritions.Count;
+            if (numOfTrick > 0)
+            {
+                ViewBag.UserMessage = "You know no tricks, yet. Go and Learn some.";
+            }
+            if (numOfNutritions > 0)
+            {
+                ViewBag.UserMessage2 = "This Fox currently living on salad and water.";
+            }
+            return View(new DetailViewModel
+            {
+                FoxDetail = foxes
+            });
+        }
+
+        [Authorize]
         public IActionResult AddTrick(int id)
         {
             return View();
@@ -55,14 +75,15 @@ namespace FoxClub.Controllers
 
         [HttpPost]
         [Authorize]
-
         public IActionResult AddTrick(Trick trick)
         {
             var id = trick.Id;
+            var fox = foxServices.GetFox(id);
             var nameOfTrick = trick.NameTrick;
             foxServices.AddFoxTrick(id, nameOfTrick);
-            return RedirectToAction("List");
+            return RedirectToAction("Fox", fox);
         }
+
         [Authorize]
         public IActionResult AddNutrition(int id)
         {
@@ -71,41 +92,18 @@ namespace FoxClub.Controllers
 
         [HttpPost]
         [Authorize]
-
         public IActionResult AddNutrition(Nutrition nutrition)
         {
             var id = nutrition.Id;
+            var fox = foxServices.GetFox(id);
             var food = nutrition.Food;
             foxServices.AddFoxTrick(id, food);
-            return RedirectToAction("List");
-        }
-
-
-
-
-        [Authorize]
-        public IActionResult ListOfTricksAndNutrition()
-        {
-            var trick = foxServices.GetTricks();
-            var foxes = foxServices.GetNutritions();
-            return View();
-
+            return RedirectToAction("Fox", fox);
 
         }
 
 
 
-
-
-
-
-
-
-
-
-
-
-        [Authorize]
 
         public IActionResult Privacy()
         {

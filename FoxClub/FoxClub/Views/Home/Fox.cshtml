@@ -1,0 +1,43 @@
+﻿@model FoxClub.ViewModel.DetailViewModel
+
+
+
+<h2>@Model.FoxDetail.Name</h2>
+
+<div class="thumbnail">
+    <img src="~/Image/greenfox.png" alt="...">
+    <h3>Nutrition</h3>
+
+    <p>@ViewBag.UserMessage2</p>
+
+    <ul>
+        @foreach (var item in @Model.FoxDetail.Nutritions)
+        {
+            <li>
+                @item.Food
+            </li>
+        }
+
+    </ul>
+
+    <h3>Know tricks</h3>
+    <p>@ViewBag.UserMessage</p>
+
+    <ul>
+
+        @foreach (var item in @Model.FoxDetail.Tricks)
+        {
+            <li>
+                @item.NameTrick
+            </li>
+
+        }
+
+    </ul>
+
+</div>
+
+<a type="button" class="btn btn-info text-white" asp-area="" asp-controller="Home" asp-action="AddTrick" asp-route-id="@Model.FoxDetail.Id">Add Trick</a>
+<a type="button" class="btn btn-info text-white" asp-area="" asp-controller="Home" asp-action="AddNutrition" asp-route-id="@Model.FoxDetail.Id">Add Nutrition</a>
+
+

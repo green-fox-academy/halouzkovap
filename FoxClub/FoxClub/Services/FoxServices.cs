@@ -67,6 +67,11 @@ namespace FoxClub.Services
             return foxClubDbContext.Foxes.Include(f => f.Tricks).Include(f => f.Nutritions).FirstOrDefault(f => f.Id == id);
         }
 
+        public object GetFox(int? id)
+        {
+            throw new System.NotImplementedException();
+        }
+
         public IEnumerable<Fox> GetFoxes()
         {
             return foxClubDbContext.Foxes.Include(f => f.Tricks).Include(f => f.Nutritions);
@@ -78,10 +83,6 @@ namespace FoxClub.Services
 
         }
 
-        public IEnumerable<Fox> GetOnlyFoxes()
-        {
-            return foxClubDbContext.Foxes;
-        }
 
         public IEnumerable<Trick> GetTricks()
         {

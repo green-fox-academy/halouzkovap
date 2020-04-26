@@ -26,15 +26,29 @@ namespace FoxClub.Controllers
         [HttpPost]
         public ActionResult FoxLogin([Bind] Fox Fox)
         {
-            // username = anet  
-            //var Foxes = new Fox();
+            if (Fox.Name == "Admin")
+            {
+                var userClaims = new List<Claim>()
+                {
+                new Claim(ClaimTypes.Name, Fox.Name),
+
+                 };
+
+                var grandmaIdentity = new ClaimsIdentity(userClaims, "Admin Identity");
+
+                var userPrincipal = new ClaimsPrincipal(new[] { grandmaIdentity });
+                HttpContext.SignInAsync(userPrincipal);
+                return RedirectToAction("List", "Home");
+            }
+
+
             var allFoxex = foxServices.GetFoxes().FirstOrDefault();
             if (foxServices.GetFoxes().Any(u => u.Name == Fox.Name))
             {
                 var userClaims = new List<Claim>()
                 {
                 new Claim(ClaimTypes.Name, Fox.Name),
-                new Claim(ClaimTypes.Email, "anet@test.com"),
+
                  };
 
                 var grandmaIdentity = new ClaimsIdentity(userClaims, "User Identity");
@@ -42,18 +56,18 @@ namespace FoxClub.Controllers
                 var userPrincipal = new ClaimsPrincipal(new[] { grandmaIdentity });
                 HttpContext.SignInAsync(userPrincipal);
 
-                return RedirectToAction("List", "Home");
+                return RedirectToAction("Fox", "Home", allFoxex);
             }
-
-            return RedirectToAction("Login", "Login");
+            ViewBag.UserMessage = "You dont have accont yet. Please register yourself";
+            return RedirectToAction("Register", "Login");
         }
 
-        public ActionResult Login()
+        public ActionResult Register()
         {
             return View();
         }
         [HttpPost]
-        public IActionResult Login(Fox fox)
+        public IActionResult Register(Fox fox)
         {
             if (foxServices.CheckFox(fox))
             {
@@ -61,10 +75,10 @@ namespace FoxClub.Controllers
                 return RedirectToAction("FoxLogin", "Login");
             }
 
-            return RedirectToAction("LoginCheckOutNot", "Login");
+            return RedirectToAction("RegisterCheckOutNot", "Login");
         }
 
-        public IActionResult LoginCheckOutNot()
+        public IActionResult RegisterCheckOutNot()
         {
             ViewBag.CheckoutNotMessage = "Try another name";
             return View();
