@@ -42,8 +42,8 @@ namespace FoxClub.Controllers
             }
 
 
-            var allFoxex = foxServices.GetFoxes().FirstOrDefault();
-            if (foxServices.GetFoxes().Any(u => u.Name == Fox.Name))
+            //var allFoxex = foxServices.GetFoxes();
+            if (foxServices.GetFoxes().Any(f => f.Name == Fox.Name))
             {
                 var userClaims = new List<Claim>()
                 {
@@ -56,7 +56,9 @@ namespace FoxClub.Controllers
                 var userPrincipal = new ClaimsPrincipal(new[] { grandmaIdentity });
                 HttpContext.SignInAsync(userPrincipal);
 
-                return RedirectToAction("Fox", "Home", allFoxex);
+                var fox = foxServices.GetFoxWithNAme(Fox.Name);
+
+                return RedirectToAction("Fox", "Home", fox);
             }
             ViewBag.UserMessage = "You dont have accont yet. Please register yourself";
             return RedirectToAction("Register", "Login");

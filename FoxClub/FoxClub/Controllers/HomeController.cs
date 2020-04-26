@@ -53,11 +53,11 @@ namespace FoxClub.Controllers
             var foxes = foxServices.GetFox(ida);
             var numOfTrick = foxes.Tricks.Count;
             var numOfNutritions = foxes.Nutritions.Count;
-            if (numOfTrick > 0)
+            if (numOfTrick == 0)
             {
                 ViewBag.UserMessage = "You know no tricks, yet. Go and Learn some.";
             }
-            if (numOfNutritions > 0)
+            if (numOfNutritions == 0)
             {
                 ViewBag.UserMessage2 = "This Fox currently living on salad and water.";
             }

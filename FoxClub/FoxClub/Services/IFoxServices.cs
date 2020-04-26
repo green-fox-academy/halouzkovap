@@ -10,12 +10,13 @@ namespace FoxClub.Services
         public IEnumerable<Fox> GetFoxes();
 
         public Fox GetFox(int id);
+        public Fox GetFoxWithNAme(string name);
         public bool CheckFox(Fox fox);
         public void AddFoxTrick(int foxId, string trick);
         public void AddFoxNutrition(int foxId, string trick);
 
         public IEnumerable<Nutrition> GetNutritions();
         public IEnumerable<Trick> GetTricks();
-        object GetFox(int? id);
+
     }
 }

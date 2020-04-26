@@ -3,24 +3,25 @@
     ViewData["Title"] = "FoxLogin";
 }
 
-<h1>FoxLogin</h1>
 
+    <div class="container h-80 ">
+        <div class="row align-items-center h-100">
+            <div class="col-3 mx-auto box-shadow">
+                <div class="text-center">
 
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="FoxLogin">
-            <h2>User Login</h2>
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Name" class="control-label"></label>
-                <input asp-for="Name" class="form-control" />
-                <span asp-validation-for="Name" class="text-danger"></span>
+                    <img id="profile-img" class="rounded-circle profile-img-card" src="~/Image/greenfox.png" alt="..." />
+                    <h1>Welcome to Programmer Fox Club!</h1>
+                    <p>Login to your account</p>
+                    <p id="profile-name" class="profile-name-card"></p>
+                    <form asp-action="FoxLogin" class="form-signin">
+                        <label asp-for="Name" class="control-label"></label>
+                        <input asp-for="Name" class="form-control" />
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                        <br />
+                        <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">enter</button>
+                    </form><!-- /form -->
+                    <br />
+                </div>
             </div>
-           
-            <div class="form-group">
-                <input type="submit" value="Login" class="btn btn-default btn-primary" />
-            </div>
-        </form>
+        </div>
     </div>
-</div>    
