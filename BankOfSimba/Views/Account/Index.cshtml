@@ -1,0 +1,70 @@
+﻿@model BankOfSimba.ViewModels.BankAccountViewModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Bank of Simba</h1>
+            <p class="lead">This bank is mine</p>
+        </div>
+    </div>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Account</th>
+            <th scope="col">Balance</th>
+            <th scope="col">Type of Annimal</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Account)
+        {
+            @if (@item.Name == "King")
+            {
+ <tr>
+                    <th class="text-danger" scope="row">@item.Id</th>
+                    <td  class="text-danger">@item.Name</td>
+                    <td  class="text-danger">@item.Balance Zebra</td>
+                    <td  class="text-danger">@item.AnimalType</td>
+                </tr>
+            }
+            else
+            {
+                <tr>
+                    <th scope="row">@item.Id</th>
+                    <td>@item.Name</td>
+                    <td>@item.Balance Zebra</td>
+                    <td>@item.AnimalType</td>
+                </tr>
+            }
+
+        }
+
+    </tbody>
+</table>
+
+<div class="row">
+    <div class="col-lg-2">
+        <div class="text-center">
+            <a class="btn btn-primary" asp-controller="Account" asp-action="CreateBankAccount">Add new one</a>
+        </div>
+    </div>
+    <div class="col-lg-2">
+        <div class="text-center">
+            <a class="btn btn-danger" asp-controller="Account" asp-action="RaiseBalance">Raise balances</a>
+        </div>
+    </div>
+        <div class="col-lg-2">
+            <div class="text-center">
+                <a class="btn btn-danger" asp-controller="Account" asp-action="DecreaseBalance">Decrease balances</a>
+            </div>
+        </div>
+            <div class="col-lg-2">
+                <div class="text-center">
+                    <a class="btn btn-danger" asp-controller="Account" asp-action="TakeThemAll">Take them their money </a>
+                </div>
+            </div>
+        </div>

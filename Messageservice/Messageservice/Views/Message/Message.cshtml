@@ -1,0 +1,19 @@
+﻿@model Message
+@{
+    ViewData["Title"] = "Message";
+}
+
+<h1>Message</h1>
+<form asp-action="SendMessage" method="post" class="form-horizontal" role="form">
+
+    <div class="form-group">
+        <label asp-for="TextMessage" class="col-md-2 control-label"></label>
+        <div class="col-md-5">
+            <input asp-for="TextMessage" class="form-control" />
+            <span asp-validation-for="TextMessage" class="text-danger"></span>
+        </div>
+    </div>
+
+
+</form>
+

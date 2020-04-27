@@ -1,0 +1,23 @@
+﻿@model StudentViewModel
+@{
+    ViewData["Title"] = "Add";
+}
+
+<h1>Add new student</h1>
+
+<form asp-action="Add" method="post" class="form-horizontal" role="form">
+
+
+
+
+
+    <div class="form-group">
+        <label asp-for="name" class="col-md-2 control-label"></label>
+        <div class="col-md-5">
+            <input asp-for="name" class="form-control" />
+           
+        </div>
+    </div>
+
+</form>
+
