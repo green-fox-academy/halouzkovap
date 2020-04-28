@@ -6,6 +6,12 @@
 
 <h1>Users</h1>
 
+<form asp-controller="User" asp-action="ListU" method="get">
+    <p>
+        Title: <input type="text" name="SearchString">
+        <input type="submit" value="Filter" />
+    </p>
+</form>
 
 <table class="table">
     <thead>

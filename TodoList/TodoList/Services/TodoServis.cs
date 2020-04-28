@@ -76,5 +76,10 @@ namespace TodoList.Services
             return listDbContext.Todos.Include(u => u.User).FirstOrDefault(t => t.Id == id);
 
         }
+
+        public IEnumerable<Todo> FindingTodo(string name)
+        {
+            return listDbContext.Todos.Where(t => t.Description.Contains(name) || t.Title.Contains(name));
+        }
     }
 }

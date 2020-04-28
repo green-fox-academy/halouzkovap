@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using System;
 using TodoList.Models;
 using TodoList.Services;
 using TodoList.ViewModel;
@@ -13,14 +14,38 @@ namespace TodoList.Controllers
         {
             this.todoServis = todoServis;
         }
-        public IActionResult List()
+
+
+        public IActionResult List(string searchString)
         {
             var todo = todoServis.GetAllTodo();
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                todo = todoServis.FindingTodo(searchString);
+
+            }
+            //await todo.ToListAsync();
             return View(new TodoViewModel
             {
                 Todo = todo
             });
         }
+
+        [HttpPost]
+        public string List(string searchString, bool notUsed)
+        {
+            return "From [HttpPost]Index: filter on " + searchString;
+        }
+
+        //public IActionResult List()
+        //{
+        //    var todo = todoServis.GetAllTodo();
+        //    return View(new TodoViewModel
+        //    {
+        //        Todo = todo
+        //    });
+        //}
         public IActionResult Detail(long id)
         {
             var todo = todoServis.Detail(id);

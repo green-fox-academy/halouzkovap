@@ -9,6 +9,7 @@ namespace TodoList.Services
         IEnumerable<Todo> NotDone();
         IEnumerable<Todo> Done();
         IEnumerable<Todo> OnlyUrgent();
+        IEnumerable<Todo> FindingTodo(string name);
 
         Todo FindTodo(long id);
         Todo Detail(long id);
