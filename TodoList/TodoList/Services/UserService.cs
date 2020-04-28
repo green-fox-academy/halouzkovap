@@ -28,35 +28,15 @@ namespace TodoList.Services
             todoListDb.SaveChanges();
         }
 
-        public void DeleteUser(int id)
-        {
-            var user = todoListDb.Users.Find(id);
-            todoListDb.Remove(user);
-            todoListDb.SaveChanges();
-
-        }
-
         public User DetailUser(int id)
         {
             return todoListDb.Users.Include(t => t.Todos).FirstOrDefault(u => u.Id == id);
 
         }
 
-        public IEnumerable<User> FindUser(string name)
-        {
-            return todoListDb.Users.Where(t => t.Name.Contains(name));
-
-        }
-
         public IEnumerable<User> GetUser()
         {
             return todoListDb.Users.Include(t => t.Todos);
-        }
-
-        public void UpdateUser(User user)
-        {
-            todoListDb.Entry(user).State = EntityState.Added;
-            todoListDb.SaveChanges();
         }
     }
 }

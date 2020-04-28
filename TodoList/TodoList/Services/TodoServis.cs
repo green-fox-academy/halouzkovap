@@ -77,9 +77,9 @@ namespace TodoList.Services
 
         }
 
-        public IEnumerable<Todo> FindingTodo(string name)
+        public IEnumerable<Todo> FindingTodo(string searchString)
         {
-            return listDbContext.Todos.Where(t => t.Description.Contains(name) || t.Title.Contains(name));
+            throw new System.NotImplementedException();
         }
     }
 }
