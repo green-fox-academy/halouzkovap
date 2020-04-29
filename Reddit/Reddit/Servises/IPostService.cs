@@ -5,7 +5,10 @@ namespace Reddit.Servises
 {
     public interface IPostService
     {
-        IEnumerable<Post> GellAllPost();
+        IEnumerable<Post> Gell10BestPost();
+        IEnumerable<Post> GetAllPost();
+        IEnumerable<Post> FindPost(string searching);
+
         IEnumerable<Post> GetPostByUsername(string username);
         void CreatePost(Post post);
         Post GetPost(int id);

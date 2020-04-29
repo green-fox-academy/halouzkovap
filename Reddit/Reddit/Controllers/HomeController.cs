@@ -21,7 +21,15 @@ namespace Reddit.Controllers
 
         public IActionResult Index()
         {
-            var posts = postService.GellAllPost();
+            var posts = postService.Gell10BestPost();
+            return View(new PostViewModel
+            {
+                Posts = posts
+            });
+        }
+        public IActionResult List()
+        {
+            var posts = postService.GetAllPost();
             return View(new PostViewModel
             {
                 Posts = posts

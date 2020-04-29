@@ -27,9 +27,20 @@ namespace Reddit.Servises
             db.SaveChanges();
         }
 
-        public IEnumerable<Post> GellAllPost()
+        public IEnumerable<Post> FindPost(string searching)
         {
-            return db.Posts.Include(p => p.Opinions);
+            return db.Posts.Where(p => p.Titel.Contains(searching) || p.PostUrl.Contains(searching));
+        }
+
+        public IEnumerable<Post> Gell10BestPost()
+        {
+            return db.Posts.OrderBy(p => p.Like).Take(10);
+        }
+
+        public IEnumerable<Post> GetAllPost()
+        {
+            return db.Posts.OrderBy(p => p.Like);
+
         }
 
         public Post GetPost(int id)
