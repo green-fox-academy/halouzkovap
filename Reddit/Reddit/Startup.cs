@@ -7,7 +7,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Reddit.DBServis;
 using Reddit.Entities;
-using System;
+using Reddit.Servises;
 
 namespace Reddit
 {
@@ -33,25 +33,23 @@ namespace Reddit
 
             }
            ).AddEntityFrameworkStores<RedditDbContext>();
-            services.Configure<IdentityOptions>(options =>
-            {
-                // Password settings.
-                options.Password.RequiredLength = 6;
-            });
-
-            services.AddAuthentication();
-            services.ConfigureApplicationCookie(options =>
-            {
-                // Cookie settings
-                options.Cookie.HttpOnly = true;
-                options.ExpireTimeSpan = TimeSpan.FromMinutes(15);
-
-                options.LoginPath = "/Account/Login";
-                options.AccessDeniedPath = "/Account/AccessDenied";
-                options.SlidingExpiration = true;
-            });
 
 
+            services.AddAuthentication()
+                .AddCookie();
+            //services.ConfigureApplicationCookie(options =>
+            //{
+            //    // Cookie settings
+            //    options.Cookie.HttpOnly = true;
+            //    options.ExpireTimeSpan = TimeSpan.FromMinutes(15);
+
+            //    options.LoginPath = "/Account/Login";
+            //    options.AccessDeniedPath = "/Account/AccessDenied";
+            //    options.SlidingExpiration = true;
+            //});
+
+
+            services.AddTransient<IPostService, PostService>();
 
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
         }

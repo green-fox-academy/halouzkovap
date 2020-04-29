@@ -1,26 +1,30 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Reddit.Models;
+using Reddit.Servises;
+using Reddit.ViewModel;
+using System.Diagnostics;
 
 namespace Reddit.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly ILogger<HomeController> logger;
+        private readonly IPostService postService;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, IPostService postService)
         {
-            _logger = logger;
+            this.logger = logger;
+            this.postService = postService;
         }
 
         public IActionResult Index()
         {
-            return View();
+            var posts = postService.GellAllPost();
+            return View(new PostViewModel
+            {
+                Posts = posts
+            });
         }
 
         public IActionResult Privacy()
