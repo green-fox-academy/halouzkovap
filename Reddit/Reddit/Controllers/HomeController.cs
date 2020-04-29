@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Reddit.Models;
 using Reddit.Servises;
@@ -26,7 +27,14 @@ namespace Reddit.Controllers
                 Posts = posts
             });
         }
-
+        [HttpGet]
+        [Authorize]
+        public IActionResult Voting(int number, int id)
+        {
+            postService.Voting(number, id);
+            //var post = postService.GellAllPost();
+            return RedirectToAction("Index");
+        }
         public IActionResult Privacy()
         {
             return View();

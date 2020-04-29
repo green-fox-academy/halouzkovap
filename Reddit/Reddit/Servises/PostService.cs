@@ -48,5 +48,18 @@ namespace Reddit.Servises
             db.Entry(post).State = EntityState.Added;
             db.SaveChanges();
         }
+
+        public void Voting(int number, int id)
+        {
+            var post = db.Posts.FirstOrDefault(p => p.Id == id);
+            post.Like += number;
+            if (post.Like < 0)
+            {
+                post.Like = 0;
+
+            }
+            db.Update(post);
+            db.SaveChanges();
+        }
     }
 }
