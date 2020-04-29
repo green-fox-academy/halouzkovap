@@ -45,7 +45,7 @@ namespace Reddit.Servises
 
         public void UpdatePost(Post post)
         {
-            db.Entry(post).State = EntityState.Added;
+            db.Entry(post).State = EntityState.Modified;
             db.SaveChanges();
         }
 

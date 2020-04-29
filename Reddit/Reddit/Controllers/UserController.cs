@@ -41,7 +41,7 @@ namespace Reddit.Controllers
                 }
                 else
                 {
-                    throw new InvalidOperationException("Could not create user in Seeding");
+                    throw new InvalidOperationException("Could not create user ");
                 }
             }
             return View(model);

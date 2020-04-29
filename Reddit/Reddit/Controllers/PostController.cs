@@ -57,5 +57,50 @@ namespace Reddit.Controllers
             var posts = postService.GetPostByUsername(username);
             return View(posts);
         }
+
+        [HttpGet]
+        [Authorize]
+        public IActionResult EditPost(int id)
+        {
+            var post = postService.GetPost(id);
+            return View(post);
+        }
+
+        [HttpPost]
+        [Authorize]
+        public async Task<IActionResult> EditPostAsync(Post model)
+        {
+            if (ModelState.IsValid)
+            {
+
+                var currentUser = await userManager.FindByNameAsync(User.Identity.Name);
+                model.UserReddit = currentUser;
+                postService.UpdatePost(model);
+                return RedirectToAction("UserPost", "Post");
+            }
+            return RedirectToAction("EditPost");
+        }
+
+        [HttpGet]
+
+        public ActionResult Delete(int id)
+        {
+
+            var post = postService.GetPost(id);
+            if (post == null)
+            {
+                return NotFound();
+            }
+            return View(post);
+        }
+
+
+        [HttpPost, ActionName("Delete")]
+
+        public ActionResult DeleteConfirmed(int id)
+        {
+            postService.DeletePost(id);
+            return RedirectToAction("UserPost");
+        }
     }
 }
