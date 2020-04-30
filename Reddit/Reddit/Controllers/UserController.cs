@@ -12,16 +12,18 @@ namespace Reddit.Controllers
     {
         private readonly UserManager<UserReddit> userManager;
         private readonly SignInManager<UserReddit> signInManager;
-        private readonly RoleManager<UserReddit> roleManager;
 
-        public UserController(UserManager<UserReddit> userManager, SignInManager<UserReddit> signInManager, RoleManager<UserReddit> roleManager)
+
+        public UserController(UserManager<UserReddit> userManager, SignInManager<UserReddit> signInManager)
         {
             this.userManager = userManager;
             this.signInManager = signInManager;
-            this.roleManager = roleManager;
+
         }
 
         [HttpGet]
+        [AllowAnonymous]
+
         public IActionResult Register()
         {
             var model = new RegisterViewModel();

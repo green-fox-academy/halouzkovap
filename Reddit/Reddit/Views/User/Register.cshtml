@@ -4,12 +4,15 @@
     ViewData["Title"] = "Register";
 }
 
-<h1>Register</h1>
 
-<h4>RegisterViewModel</h4>
+
 <hr />
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-6 offset-md-3 box-shadow mb-4">
+        <h3>Register yourself</h3>
+        <p>You can add post or voting for posts</p>
+        <br />
+    
         <form asp-action="Register">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
@@ -37,6 +40,9 @@
                 <input asp-for="Email" class="form-control" />
                 <span asp-validation-for="Email" class="text-danger"></span>
             </div>
+            <br />
+
+
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>

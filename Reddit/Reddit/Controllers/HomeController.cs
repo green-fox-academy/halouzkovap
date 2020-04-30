@@ -20,7 +20,7 @@ namespace Reddit.Controllers
             this.logger = logger;
             this.postService = postService;
         }
-        [AllowAnonymous]
+
 
         public IActionResult Index()
         {
@@ -30,7 +30,7 @@ namespace Reddit.Controllers
                 Posts = posts
             });
         }
-        [AllowAnonymous]
+
 
         public IActionResult List(string searchString)
         {
