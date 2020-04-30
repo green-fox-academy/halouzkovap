@@ -1,3 +1,5 @@
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication.Google;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
@@ -30,13 +32,28 @@ namespace Reddit
             services.AddIdentity<UserReddit, IdentityRole>(options =>
             {
                 options.User.RequireUniqueEmail = true;
+                options.Password.RequireDigit = false;
+                options.Password.RequireLowercase = false;
+                options.Password.RequireNonAlphanumeric = false;
+                options.Password.RequireUppercase = false;
+                options.Password.RequiredLength = 4;
+                options.Password.RequiredUniqueChars = 1;
 
             }
            ).AddEntityFrameworkStores<RedditDbContext>();
 
 
-            services.AddAuthentication()
-                .AddCookie();
+            services.AddAuthentication(o =>
+            {
+                o.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+                o.DefaultChallengeScheme = GoogleDefaults.AuthenticationScheme;
+            })
+                .AddCookie()
+                .AddGoogle(o =>
+                {
+                    o.ClientId = Configuration["Google:ClientId"];
+                    o.ClientSecret = Configuration["Google:ClientSecret"];
+                });
             //services.ConfigureApplicationCookie(options =>
             //{
             //    // Cookie settings

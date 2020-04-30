@@ -35,9 +35,9 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.PostingDate)
                 </td>
-                @if (User.Identity.IsAuthenticated && User.Identity.Name == "Admin")
+                @if (User.Identity.IsAuthenticated && User.Identity.Name == "Admin@seznam.cz")
                 {
-                    <td><a asp-action="Delete" asp-route-id="@item.Id"><i class="far fa-trash-alt"></i></a></td>
+                    <td><a asp-controller="Post"  asp-action="Delete" asp-route-id="@item.Id"><i class="far fa-trash-alt"></i></a></td>
                 }
 
             </tr>
