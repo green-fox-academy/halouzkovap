@@ -37,8 +37,11 @@ namespace Reddit.Controllers
         [HttpPost]
         public async Task<IActionResult> Login(LoginViewModel model)
         {
+
+
             if (ModelState.IsValid)
             {
+
                 var result = await signInManager.PasswordSignInAsync(model.Username,
                   model.Password,
                   model.RememberMe,

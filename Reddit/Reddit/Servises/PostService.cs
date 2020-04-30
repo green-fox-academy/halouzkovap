@@ -34,7 +34,7 @@ namespace Reddit.Servises
 
         public IEnumerable<Post> Gell10BestPost()
         {
-            return db.Posts.OrderBy(p => p.Like).Take(10);
+            return db.Posts.OrderByDescending(p => p.Like).Take(10);
         }
 
         public IEnumerable<Post> GetAllPost()
@@ -58,6 +58,15 @@ namespace Reddit.Servises
         {
             db.Entry(post).State = EntityState.Modified;
             db.SaveChanges();
+        }
+
+        public void UpdatePost(int id, string titel, string postUrl, UserReddit currentUser)
+        {
+            var post = db.Posts.FirstOrDefault(p => p.Id == id);
+            post.Titel = titel;
+            post.PostUrl = postUrl;
+            db.SaveChanges();
+
         }
 
         public void Voting(int number, int id)

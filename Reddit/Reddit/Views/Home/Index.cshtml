@@ -18,7 +18,7 @@
                 @Html.DisplayFor(modelItem => item.Like)
 
             </td>
-            <td><a asp-action="Voting" asp-route-id="@item.Id" asp-route-number="1"><i class="far fa-thumbs-up"></i></a></td>
+            <td><a  asp-action="Voting" asp-route-id="@item.Id" asp-route-number="1"><i class="far fa-thumbs-up"></i></a></td>
             <td><a asp-action="Voting" asp-route-id="@item.Id" asp-route-number="-1"><i class="far fa-thumbs-down"></i></a></td>
             <td>
                 <a href=" @Html.DisplayFor(modelItem => item.PostUrl)" target="_blank">@Html.DisplayFor(modelItem => item.Titel)</a>

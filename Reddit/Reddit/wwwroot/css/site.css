@@ -6,7 +6,19 @@ a.navbar-brand {
   text-align: center;
   word-break: break-all;
 }
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
+
+
+   
+/*Resize the wrap to see the search bar change!*/
+.wrap {
+    width: 30%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 /* Provide sufficient contrast against white background */
 a {
   color: #0366d6;

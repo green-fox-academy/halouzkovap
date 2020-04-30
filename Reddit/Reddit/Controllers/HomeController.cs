@@ -1,9 +1,11 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+
 using Reddit.Models;
 using Reddit.Servises;
 using Reddit.ViewModel;
+using System;
 using System.Diagnostics;
 
 namespace Reddit.Controllers
@@ -18,6 +20,7 @@ namespace Reddit.Controllers
             this.logger = logger;
             this.postService = postService;
         }
+        [AllowAnonymous]
 
         public IActionResult Index()
         {
@@ -27,14 +30,28 @@ namespace Reddit.Controllers
                 Posts = posts
             });
         }
-        public IActionResult List()
+        [AllowAnonymous]
+
+        public IActionResult List(string searchString)
         {
+
             var posts = postService.GetAllPost();
-            return View(new PostViewModel
+
+            if (!String.IsNullOrEmpty(searchString))
             {
-                Posts = posts
-            });
+                posts = postService.FindPost(searchString);
+
+            }
+
+            return View(posts);
         }
+
+        //[HttpPost]
+        //public string List(string searchString, bool notUsed)
+        //{
+        //    return "From [HttpPost]Index: filter on " + searchString;
+        //}
+
         [HttpGet]
         [Authorize]
         public IActionResult Voting(int number, int id)

@@ -74,14 +74,17 @@ namespace Reddit.Controllers
             {
 
                 var currentUser = await userManager.FindByNameAsync(User.Identity.Name);
-                model.UserReddit = currentUser;
-                postService.UpdatePost(model);
+                // model.UserReddit = currentUser;
+
+                postService.UpdatePost(model.Id, model.Titel, model.PostUrl, currentUser);
                 return RedirectToAction("UserPost", "Post");
             }
             return RedirectToAction("EditPost");
         }
 
         [HttpGet]
+        [Authorize]
+
 
         public ActionResult Delete(int id)
         {
@@ -96,6 +99,8 @@ namespace Reddit.Controllers
 
 
         [HttpPost, ActionName("Delete")]
+        [Authorize]
+
 
         public ActionResult DeleteConfirmed(int id)
         {

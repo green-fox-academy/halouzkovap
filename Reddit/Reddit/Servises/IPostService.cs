@@ -16,5 +16,6 @@ namespace Reddit.Servises
         void UpdatePost(Post post);
 
         public void Voting(int number, int id);
+        void UpdatePost(int id, string titel, string postUrl, UserReddit currentUser);
     }
 }

@@ -12,11 +12,13 @@ namespace Reddit.Controllers
     {
         private readonly UserManager<UserReddit> userManager;
         private readonly SignInManager<UserReddit> signInManager;
+        private readonly RoleManager<UserReddit> roleManager;
 
-        public UserController(UserManager<UserReddit> userManager, SignInManager<UserReddit> signInManager)
+        public UserController(UserManager<UserReddit> userManager, SignInManager<UserReddit> signInManager, RoleManager<UserReddit> roleManager)
         {
             this.userManager = userManager;
             this.signInManager = signInManager;
+            this.roleManager = roleManager;
         }
 
         [HttpGet]
