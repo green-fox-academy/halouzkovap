@@ -4,6 +4,7 @@ using Frontend.Models;
 using Frontend.ResourceParametrs;
 using Frontend.Services;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Routing;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,22 +29,26 @@ namespace Frontend.Controllers
         }
 
 
-
-        [HttpGet("doubling/{input?}")]
-        public ActionResult Doubling(int? input)
+        [Route("doubling/{input?}")]
+        [HttpGet]
+        [HttpHead]
+        public ActionResult doubling(int? input)
         {
+
             if (input.HasValue)
             {
+
+                var log = new LogObject(input.ToString(), RouteData.Values["action"].ToString());
+                logServices.SaveLog(log);
                 return Ok(new { received = input, result = input * 2 });
             }
-            var log = new LogObject(input.ToString(), "/doubling");
-            logServices.SaveLog(log);
+
             return BadRequest(new { error = "Please provide an input" });
         }
 
 
         [HttpGet("greeter")]
-        public ActionResult<Greet> Greeter([FromQuery] GreetingResourceParametrs greetingResourceParametrs)
+        public ActionResult<Greet> greeter([FromQuery] GreetingResourceParametrs greetingResourceParametrs)
         {
             if (greetingResourceParametrs.Name == null && greetingResourceParametrs.Title == null)
             {
@@ -57,7 +62,7 @@ namespace Frontend.Controllers
             {
                 return BadRequest(new { error = "Please provide a title!" });
             }
-            var log = new LogObject($"{greetingResourceParametrs.Title} {greetingResourceParametrs.Name}", "/greeter");
+            var log = new LogObject($"{greetingResourceParametrs.Title} {greetingResourceParametrs.Name}", RouteData.Values["action"].ToString());
             logServices.SaveLog(log);
 
             return Ok(new { welcome_message = "Oh, hi there " + greetingResourceParametrs.Name + ", my dear " + greetingResourceParametrs.Title + "!" });
@@ -69,7 +74,7 @@ namespace Frontend.Controllers
             if (!String.IsNullOrEmpty(appendable))
             {
                 var newAppendWord = appendable + "A";
-                var log = new LogObject(appendable, "/appenda");
+                var log = new LogObject(appendable, RouteData.Values["action"].ToString());
                 logServices.SaveLog(log);
                 return Ok(new { appendable = newAppendWord });
             }
@@ -88,7 +93,7 @@ namespace Frontend.Controllers
                     result += i;
                 }
 
-                var log = new LogObject(data.until.ToString(), "/DoUntil");
+                var log = new LogObject(data.until.ToString(), RouteData.Values["action"].ToString());
                 logServices.SaveLog(log);
 
                 return Ok(new { result = result, status = 200 });
@@ -101,7 +106,7 @@ namespace Frontend.Controllers
                 {
                     result *= i;
                 }
-                var log = new LogObject(data.until.ToString(), "/DoUntil");
+                var log = new LogObject(data.until.ToString(), RouteData.Values["action"].ToString());
                 logServices.SaveLog(log);
 
                 return Ok(new { result = result, status = 200 });
@@ -111,7 +116,7 @@ namespace Frontend.Controllers
         }
 
         [HttpPost("arrays")]
-        public ActionResult array([FromBody]arra arra)
+        public ActionResult arrays([FromBody]arra arra)
         {
             var operation = arra.what;
             var result = 0;
@@ -120,20 +125,20 @@ namespace Frontend.Controllers
 
                 case "sum":
                     result = arra.numbers.Sum();
-                    var log = new LogObject(arra.numbers.ToString(), "/arrays");
+                    var log = new LogObject(arra.numbers.ToString(), RouteData.Values["action"].ToString());
                     logServices.SaveLog(log);
                     break;
 
                 case "multiply":
                     int c = 0;
                     result = arra.numbers.Aggregate((a, b) => c = a * b);
-                    log = new LogObject(arra.numbers.ToString(), "/arrays");
+                    log = new LogObject(arra.numbers.ToString(), RouteData.Values["action"].ToString());
                     logServices.SaveLog(log);
                     break;
 
                 case "double":
                     arra.numbers = arra.numbers.Select(x => x * 2).ToArray();
-                    log = new LogObject(arra.numbers.ToString(), "/arrays");
+                    log = new LogObject(arra.numbers.ToString(), RouteData.Values["action"].ToString());
                     logServices.SaveLog(log);
                     return Ok(arra.numbers);
 
@@ -181,16 +186,16 @@ namespace Frontend.Controllers
 
             var count = text.Split(new[] { ' ' }).ToArray().Count();
 
-            var log = new LogObject(sith.text, "/sith");
+            var log = new LogObject(sith.text, RouteData.Values["action"].ToString());
             logServices.SaveLog(log);
 
             if (count / 2 != 0)
             {
-                var newSithTex = sith.RetundSithText(text);
-                log = new LogObject(sith.text, "/sith");
+                var newSith = sith.RetundSithText(text);
+                log = new LogObject(sith.text, RouteData.Values["action"].ToString());
 
                 logServices.SaveLog(log);
-                return Ok(new { sith_text = newSithTex });
+                return Ok(newSith.sith_text);
             }
 
             return Ok(new { text_text = sith.text });

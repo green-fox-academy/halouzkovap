@@ -9,10 +9,18 @@ namespace Frontend.Models
         public string sith_text { get; set; }
 
 
+        public SithObj()
+        {
+
+        }
+        public SithObj(string sithText)
+        {
+            this.sith_text = sithText;
+            text = "";
+        }
 
 
-
-        public string RetundSithText(string text)
+        public SithObj RetundSithText(string text)
         {
 
             var test = text;
@@ -33,7 +41,9 @@ namespace Frontend.Models
                 }
             }
 
-            return string.Join(' ', result);
+            var newSithText = string.Join(' ', result);
+            var newSithOvj = new SithObj(newSithText);
+            return newSithOvj;
         }
     }
 }

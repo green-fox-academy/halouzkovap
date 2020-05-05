@@ -26,6 +26,9 @@ namespace Frontend
             services.AddDbContext<FrontendDbContext>(options =>
               options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
+            services.AddControllers()
+                .AddXmlDataContractSerializerFormatters();
+
             services.AddTransient<ILogServices, LogServices>();
 
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
@@ -55,7 +58,7 @@ namespace Frontend
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
-                  name: "Fallback",
+                  name: "Default",
                   pattern: "{controller=Home}/{action=Index}/{id?}");
 
             });
