@@ -28,12 +28,12 @@ namespace Frontend.Models
                 if (result[i].Contains('.'))
                 {
                     ind = r.Next(0, randomWord.Count());
-                    test.Insert(i + 1, randomWord[ind]);
+                    result.Insert(i + 1, randomWord[ind]);
                     i++;
                 }
             }
 
-            return new String(test.ToArray());
+            return string.Join(' ', result);
         }
     }
 }

@@ -181,9 +181,16 @@ namespace Frontend.Controllers
 
             var count = text.Split(new[] { ' ' }).ToArray().Count();
 
+            var log = new LogObject(sith.text, "/sith");
+            logServices.SaveLog(log);
+
             if (count / 2 != 0)
             {
-                return Ok(new { sith_text = sith.RetundSithText(text) });
+                var newSithTex = sith.RetundSithText(text);
+                log = new LogObject(sith.text, "/sith");
+
+                logServices.SaveLog(log);
+                return Ok(new { sith_text = newSithTex });
             }
 
             return Ok(new { text_text = sith.text });
@@ -192,33 +199,16 @@ namespace Frontend.Controllers
 
 
         [HttpPost("translate")]
-        public ActionResult Translate([FromBody]HuTranslater huTranslater)
+        public ActionResult<HuTranslater> Translate([FromBody]HuTranslater huTranslater)
         {
             if (huTranslater.Text == null || huTranslater.Lang == null)
             {
                 return BadRequest(error: "I can't translate that!");
             }
 
-            char[] vowels = new char[] { 'E', 'a', 'e', 'i', 'o', 'u', 'á', 'é', 'í', 'ó', 'ů', 'ú' };
-            var text = huTranslater.Text.ToCharArray().ToList();
-            var output = new List<char>();
-            for (int i = 0; i < text.Count; i++)
-            {
-                if (vowels.Contains(text[i]))
-                {
+            var result = huTranslater.Translater(huTranslater.Text);
 
-                    output.Add(text[i]);
-                    output.Add('v');
-                    output.Add(Char.ToLower(text[i]));
-                }
-                else
-                {
-                    output.Add(text[i]);
-                }
-
-            }
-            var result = new String(output.ToArray());
-            return Ok(new { text = result, lang = "teve" });
+            return Ok(result);
         }
     }
 }
