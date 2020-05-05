@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Frontend.Entities;
 using Frontend.Models;
+using Frontend.ResourceParametrs;
 using Frontend.Services;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -35,39 +36,35 @@ namespace Frontend.Controllers
             {
                 return Ok(new { received = input, result = input * 2 });
             }
-            var log = new LogObject
-            {
-                Endpoint = "/doubling",
-                Data = input.ToString(),
-            };
+            var log = new LogObject(input.ToString(), "/doubling");
             logServices.SaveLog(log);
             return BadRequest(new { error = "Please provide an input" });
         }
 
 
         [HttpGet("greeter")]
-        public IActionResult Greeter(string name, string title)
+        public ActionResult<Greet> Greeter([FromQuery] GreetingResourceParametrs greetingResourceParametrs)
         {
-            if (name == null && title == null)
+            if (greetingResourceParametrs.Name == null && greetingResourceParametrs.Title == null)
             {
                 return BadRequest(new { error = "Please provide a name and a title!" });
             }
-            else if (name == null)
+            else if (greetingResourceParametrs.Name == null)
             {
                 return BadRequest(new { error = "Please provide a name!" });
             }
-            else if (title == null)
+            else if (greetingResourceParametrs.Title == null)
             {
                 return BadRequest(new { error = "Please provide a title!" });
             }
             var log = new LogObject
             {
                 Endpoint = "/greeter",
-                Data = $"name:{name} title:{title}",
+                Data = $"{greetingResourceParametrs.Title} {greetingResourceParametrs.Name}"
             };
             logServices.SaveLog(log);
 
-            return Ok(new { welcome_message = "Oh, hi there " + name + ", my dear " + title + "!" });
+            return Ok(new { welcome_message = "Oh, hi there " + greetingResourceParametrs.Name + ", my dear " + greetingResourceParametrs.Title + "!" });
 
         }
         [HttpGet("appenda/{appendable}")]
@@ -233,7 +230,7 @@ namespace Frontend.Controllers
                 return BadRequest(error: "I can't translate that!");
             }
 
-            char[] vowels = new char[] { 'a', 'e', 'i', 'o', 'u', 'á', 'é', 'í', 'ó', 'ů', 'ú' };
+            char[] vowels = new char[] { 'E', 'a', 'e', 'i', 'o', 'u', 'á', 'é', 'í', 'ó', 'ů', 'ú' };
             var text = huTranslater.Text.ToCharArray().ToList();
             var output = new List<char>();
             for (int i = 0; i < text.Count; i++)

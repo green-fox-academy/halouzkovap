@@ -8,5 +8,14 @@ namespace Frontend.Entities
         public DateTime CreatedAt { get; set; }
         public string Endpoint { get; set; }
         public string Data { get; set; }
+        public LogObject()
+        {
+
+        }
+        public LogObject(string data, string endpoint)
+        {
+            this.Data = data;
+            this.Endpoint = endpoint;
+        }
     }
 }
