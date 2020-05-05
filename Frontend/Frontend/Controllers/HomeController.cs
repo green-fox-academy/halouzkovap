@@ -57,11 +57,7 @@ namespace Frontend.Controllers
             {
                 return BadRequest(new { error = "Please provide a title!" });
             }
-            var log = new LogObject
-            {
-                Endpoint = "/greeter",
-                Data = $"{greetingResourceParametrs.Title} {greetingResourceParametrs.Name}"
-            };
+            var log = new LogObject($"{greetingResourceParametrs.Title} {greetingResourceParametrs.Name}", "/greeter");
             logServices.SaveLog(log);
 
             return Ok(new { welcome_message = "Oh, hi there " + greetingResourceParametrs.Name + ", my dear " + greetingResourceParametrs.Title + "!" });
@@ -73,11 +69,7 @@ namespace Frontend.Controllers
             if (!String.IsNullOrEmpty(appendable))
             {
                 var newAppendWord = appendable + "A";
-                var log = new LogObject
-                {
-                    Endpoint = "/appenda",
-                    Data = newAppendWord,
-                };
+                var log = new LogObject(appendable, "/appenda");
                 logServices.SaveLog(log);
                 return Ok(new { appendable = newAppendWord });
             }
@@ -88,8 +80,6 @@ namespace Frontend.Controllers
         [HttpPost("dountil/{acion}")]
         public ActionResult DoUntil([FromRoute] string acion, [FromBody]JsonObject data)
         {
-
-
             if (acion == "sum")
             {
                 int result = 0;
@@ -98,14 +88,9 @@ namespace Frontend.Controllers
                     result += i;
                 }
 
-
-                var log = new LogObject
-                {
-                    Endpoint = "/DoUntil",
-                    Data = data.until.ToString(),
-                };
-
+                var log = new LogObject(data.until.ToString(), "/DoUntil");
                 logServices.SaveLog(log);
+
                 return Ok(new { result = result, status = 200 });
             }
 
@@ -116,16 +101,11 @@ namespace Frontend.Controllers
                 {
                     result *= i;
                 }
-                var log = new LogObject
-                {
-                    Endpoint = "/DoUntil",
-                    Data = data.until.ToString(),
-                };
-
+                var log = new LogObject(data.until.ToString(), "/DoUntil");
                 logServices.SaveLog(log);
+
                 return Ok(new { result = result, status = 200 });
             }
-
 
             return BadRequest(error: "Please provide a number");
         }
@@ -140,35 +120,20 @@ namespace Frontend.Controllers
 
                 case "sum":
                     result = arra.numbers.Sum();
-                    var log = new LogObject
-                    {
-                        Endpoint = "/arrays",
-                        Data = arra.numbers.ToString(),
-                    };
-
+                    var log = new LogObject(arra.numbers.ToString(), "/arrays");
                     logServices.SaveLog(log);
                     break;
 
                 case "multiply":
                     int c = 0;
                     result = arra.numbers.Aggregate((a, b) => c = a * b);
-                    log = new LogObject
-                    {
-                        Endpoint = "/arrays",
-                        Data = arra.numbers.ToString(),
-                    };
-
+                    log = new LogObject(arra.numbers.ToString(), "/arrays");
                     logServices.SaveLog(log);
                     break;
 
                 case "double":
                     arra.numbers = arra.numbers.Select(x => x * 2).ToArray();
-                    log = new LogObject
-                    {
-                        Endpoint = "/arrays",
-                        Data = arra.numbers.ToString(),
-                    };
-
+                    log = new LogObject(arra.numbers.ToString(), "/arrays");
                     logServices.SaveLog(log);
                     return Ok(arra.numbers);
 
@@ -181,9 +146,27 @@ namespace Frontend.Controllers
         }
 
         [HttpGet("log")]
-        public ActionResult<LogObject> Log()
+        public ActionResult<IEnumerable<LogObject>> Log([FromQuery]LogResourceParametrs logResourceParametrs)
         {
             var logs = logServices.GetLogs();
+
+            if (!String.IsNullOrWhiteSpace(logResourceParametrs.Search))
+            {
+                logs = logServices.SearchLog(logResourceParametrs.Search);
+                return Ok(logs);
+            }
+
+            if (logResourceParametrs.CountOfEntries > 0 && logResourceParametrs.Page == 0)
+            {
+                logs = logServices.GetLatestLogs(logResourceParametrs.CountOfEntries);
+                return Ok(logs);
+            }
+            if (logResourceParametrs.CountOfEntries > 0 && logResourceParametrs.Page > 0)
+            {
+                logs = logServices.GetSecondLatestLogs(logResourceParametrs.CountOfEntries, logResourceParametrs.Page);
+                return Ok(logs);
+            }
+
             return Ok(logs);
         }
 
