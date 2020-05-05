@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace Frontend.ResourceParametrs
+﻿namespace Frontend.ResourceParametrs
 {
     public class GreetingResourceParametrs
     {
+        public string Name { get; set; }
+        public string Title { get; set; }
     }
 }

@@ -171,7 +171,7 @@ namespace Frontend.Controllers
         }
 
         [HttpPost("sith")]
-        public ActionResult Sith([FromBody] SithObj sith)
+        public ActionResult<SithObj> Sith([FromBody] SithObj sith)
         {
             var text = sith.text;
             if (text == null)
@@ -179,31 +179,17 @@ namespace Frontend.Controllers
                 return BadRequest(error: "Feed me some text you have to, padawan young you are. Hmmm.");
             }
 
-            string[] randomWord = new string[] { "Arrgh. Uhmm.", "Err..err.err." };
-
             var count = text.Split(new[] { ' ' }).ToArray().Count();
-            var r = new Random();
-            var ind = r.Next(0, randomWord.Count());
+
             if (count / 2 != 0)
             {
-                var test = sith.text.Split(new[] { ' ' }).ToList();
-                for (int i = 0; i < test.Count; i++)
-                {
-                    if (test[i].Contains('.'))
-                    {
-                        ind = r.Next(0, randomWord.Count());
-                        test.Insert(i + 1, randomWord[ind]);
-                        i++;
-                    }
-                }
-
-                var result = string.Join(' ', test.ToArray());
-                return Ok(new { sith_text = result });
-
+                return Ok(new { sith_text = sith.RetundSithText(text) });
             }
 
             return Ok(new { text_text = sith.text });
         }
+
+
 
         [HttpPost("translate")]
         public ActionResult Translate([FromBody]HuTranslater huTranslater)
