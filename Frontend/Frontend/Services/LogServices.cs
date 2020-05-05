@@ -16,7 +16,7 @@ namespace Frontend.Services
 
         public IEnumerable<LogObject> GetLatestLogs(int number)
         {
-            return dbContext.Logs.OrderByDescending(x => x.Data).Take(number);
+            return dbContext.Logs.OrderBy(x => x.Data).Take(number);
         }
 
         public IEnumerable<LogObject> GetLogs()
@@ -26,7 +26,7 @@ namespace Frontend.Services
 
         public IEnumerable<LogObject> GetSecondLatestLogs(int number, int page)
         {
-            return dbContext.Logs.OrderByDescending(x => x.Data).Skip(number * (page - 1)).Take(number);
+            return dbContext.Logs.OrderBy(x => x.Data).Skip(number * (page - 1)).Take(number);
 
         }
 

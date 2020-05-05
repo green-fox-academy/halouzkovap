@@ -153,26 +153,26 @@ namespace Frontend.Controllers
         [HttpGet("log")]
         public ActionResult<IEnumerable<LogObject>> Log([FromQuery]LogResourceParametrs logResourceParametrs)
         {
-            var logs = logServices.GetLogs();
+
 
             if (!String.IsNullOrWhiteSpace(logResourceParametrs.Search))
             {
-                logs = logServices.SearchLog(logResourceParametrs.Search);
+                var logs = logServices.SearchLog(logResourceParametrs.Search);
                 return Ok(logs);
             }
 
             if (logResourceParametrs.CountOfEntries > 0 && logResourceParametrs.Page == 0)
             {
-                logs = logServices.GetLatestLogs(logResourceParametrs.CountOfEntries);
+                var logs = logServices.GetLatestLogs(logResourceParametrs.CountOfEntries);
                 return Ok(logs);
             }
             if (logResourceParametrs.CountOfEntries > 0 && logResourceParametrs.Page > 0)
             {
-                logs = logServices.GetSecondLatestLogs(logResourceParametrs.CountOfEntries, logResourceParametrs.Page);
+                var logs = logServices.GetSecondLatestLogs(logResourceParametrs.CountOfEntries, logResourceParametrs.Page);
                 return Ok(logs);
             }
-
-            return Ok(logs);
+            var logss = logServices.GetLogs();
+            return Ok(logss);
         }
 
         [HttpPost("sith")]
