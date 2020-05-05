@@ -21,7 +21,7 @@ namespace Frontend.Models
 
         public HuTranslater Translater(string text)
         {
-            char[] vowels = new char[] { 'E', 'a', 'e', 'i', 'o', 'u', 'á', 'é', 'í', 'ó', 'ů', 'ú' };
+            var vowels = "aeiouAEIOUáéíóúÁÉÍÓÚ";
             var oldText = text.ToCharArray().ToList();
             var output = new List<char>();
             for (int i = 0; i < oldText.Count; i++)
