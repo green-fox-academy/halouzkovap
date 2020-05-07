@@ -73,10 +73,10 @@ namespace Frontend.Controllers
         {
             if (!String.IsNullOrEmpty(appendable))
             {
-                var newAppendWord = appendable + "A";
+                var newAppendWord = appendable + "a";
                 var log = new LogObject(appendable, RouteData.Values["action"].ToString());
                 logServices.SaveLog(log);
-                return Ok(new { appendable = newAppendWord });
+                return Ok(new { newAppendWord });
             }
 
             return BadRequest();
@@ -189,7 +189,7 @@ namespace Frontend.Controllers
             var log = new LogObject(sith.text, RouteData.Values["action"].ToString());
             logServices.SaveLog(log);
 
-            if (count / 2 != 0)
+            if (count % 2 != 0)
             {
                 var newSith = sith.RetundSithText(text);
                 log = new LogObject(sith.text, RouteData.Values["action"].ToString());
