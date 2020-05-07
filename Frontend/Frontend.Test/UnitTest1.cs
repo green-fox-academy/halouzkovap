@@ -1,7 +1,10 @@
+using Frontend.Models;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Net;
+using System.Net.Http;
+using System.Text;
 using System.Threading.Tasks;
 using Xunit;
 
@@ -92,6 +95,31 @@ namespace Frontend.Test
         public async Task Appenda_NullInput_BadRequest()
         {
             var responseMessage = await factory.CreateClient().GetAsync($"/appenda/{null}");
+            Assert.Equal(HttpStatusCode.BadRequest, responseMessage.StatusCode);
+        }
+
+        [Theory]
+        [InlineData("sum", 5, 15)]
+        [InlineData("factor", 5, 120)]
+        public async Task DoUnitl_InputNotNull_Succes(string acion, int data, int expected)
+        {
+            var toSend = JsonConvert.SerializeObject(new JsonObject { Until = data });
+            var httpContent = new StringContent(toSend, Encoding.UTF8, "application/json");
+            var response = await factory.CreateClient().PostAsync($"/dountil/{acion}", httpContent);
+            var json = response.Content.ReadAsStringAsync().Result;
+            var dictionary = JsonConvert.DeserializeObject<Dictionary<string, int>>(json);
+            dictionary.TryGetValue("result", out int actual);
+            Assert.Equal(expected, actual);
+        }
+
+        [Fact]
+        public async Task DoUnitl_InputNull_BadRequest()
+        {
+
+            var toSend = JsonConvert.SerializeObject(new JsonObject(0));
+            var httpContent = new StringContent(toSend, Encoding.UTF8, "application/json");
+
+            var responseMessage = await factory.CreateClient().PostAsync($"/dountil/factor", httpContent);
             Assert.Equal(HttpStatusCode.BadRequest, responseMessage.StatusCode);
         }
     }

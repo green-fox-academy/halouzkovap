@@ -1,5 +1,4 @@
-﻿using AutoMapper;
-using Frontend.Entities;
+﻿using Frontend.Entities;
 using Frontend.Models;
 using Frontend.ResourceParametrs;
 using Frontend.Services;
@@ -16,12 +15,12 @@ namespace Frontend.Controllers
     public class HomeController : ControllerBase
     {
         private readonly ILogServices logServices;
-        private readonly IMapper mapper;
 
-        public HomeController(ILogServices logServices, IMapper mapper)
+
+        public HomeController(ILogServices logServices)
         {
             this.logServices = logServices;
-            this.mapper = mapper;
+
         }
         public IActionResult Index()
         {
@@ -86,15 +85,16 @@ namespace Frontend.Controllers
         [HttpPost("dountil/{acion}")]
         public ActionResult DoUntil([FromRoute] string acion, [FromBody]JsonObject data)
         {
+
             if (acion == "sum")
             {
                 int result = 0;
-                for (int i = 1; i <= data.until; i++)
+                for (int i = 1; i <= data.Until; i++)
                 {
                     result += i;
                 }
 
-                var log = new LogObject(data.until.ToString(), RouteData.Values["action"].ToString());
+                var log = new LogObject(data.Until.ToString(), RouteData.Values["action"].ToString());
                 logServices.SaveLog(log);
 
                 return Ok(new { result = result });
@@ -102,18 +102,23 @@ namespace Frontend.Controllers
 
             if (acion == "factor")
             {
+                if (data.Until == 0)
+                {
+                    return BadRequest("Please provide a number");
+                }
                 int result = 1;
-                for (int i = 1; i <= data.until; i++)
+                for (int i = 1; i <= data.Until; i++)
                 {
                     result *= i;
                 }
-                var log = new LogObject(data.until.ToString(), RouteData.Values["action"].ToString());
+                var log = new LogObject(data.Until.ToString(), RouteData.Values["action"].ToString());
                 logServices.SaveLog(log);
 
                 return Ok(new { result = result });
             }
 
             return BadRequest(error: "Please provide a number");
+
         }
 
         [HttpPost("arrays")]
