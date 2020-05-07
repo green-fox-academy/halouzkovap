@@ -68,18 +68,19 @@ namespace Frontend.Controllers
             return Ok(new { welcome_message = "Oh, hi there " + greetingResourceParametrs.Name + ", my dear " + greetingResourceParametrs.Title + "!" });
 
         }
-        [HttpGet("appenda/{appendable}")]
+        [HttpGet("appenda/{appendable?}")]
         public ActionResult Appenda(string appendable)
         {
-            if (!String.IsNullOrEmpty(appendable))
+            if (String.IsNullOrEmpty(appendable))
             {
-                var newAppendWord = appendable + "a";
-                var log = new LogObject(appendable, RouteData.Values["action"].ToString());
-                logServices.SaveLog(log);
-                return Ok(new { newAppendWord });
+                return BadRequest();
             }
+            var newAppendWord = appendable + "a";
+            var log = new LogObject(appendable, RouteData.Values["action"].ToString());
+            logServices.SaveLog(log);
+            return Ok(newAppendWord);
 
-            return BadRequest();
+
         }
 
         [HttpPost("dountil/{acion}")]
@@ -96,7 +97,7 @@ namespace Frontend.Controllers
                 var log = new LogObject(data.until.ToString(), RouteData.Values["action"].ToString());
                 logServices.SaveLog(log);
 
-                return Ok(new { result = result, status = 200 });
+                return Ok(new { result = result });
             }
 
             if (acion == "factor")
@@ -109,7 +110,7 @@ namespace Frontend.Controllers
                 var log = new LogObject(data.until.ToString(), RouteData.Values["action"].ToString());
                 logServices.SaveLog(log);
 
-                return Ok(new { result = result, status = 200 });
+                return Ok(new { result = result });
             }
 
             return BadRequest(error: "Please provide a number");

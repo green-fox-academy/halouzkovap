@@ -80,17 +80,19 @@ namespace Frontend.Test
 
         //appenda/{appendable
         [Theory]
-        [InlineData("Jahod", "newAppendWord: Jahoda")]
+        [InlineData("Jahod", "Jahoda")]
         public async Task Appenda_Input_Succes(string appendable, string expected)
         {
             var responseMessage = await factory.CreateClient().GetAsync($"/appenda/{appendable}");
             var json = responseMessage.Content.ReadAsStringAsync().Result;
-            // actual = JsonConvert.DeserializeObject<string>(json);
-
             Assert.Equal(expected, json);
-
         }
 
-
+        [Fact]
+        public async Task Appenda_NullInput_BadRequest()
+        {
+            var responseMessage = await factory.CreateClient().GetAsync($"/appenda/{null}");
+            Assert.Equal(HttpStatusCode.BadRequest, responseMessage.StatusCode);
+        }
     }
 }
