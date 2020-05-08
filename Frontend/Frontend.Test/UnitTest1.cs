@@ -115,7 +115,6 @@ namespace Frontend.Test
         [Fact]
         public async Task DoUnitl_InputNull_BadRequest()
         {
-
             var toSend = JsonConvert.SerializeObject(new JsonObject(0));
             var httpContent = new StringContent(toSend, Encoding.UTF8, "application/json");
 
