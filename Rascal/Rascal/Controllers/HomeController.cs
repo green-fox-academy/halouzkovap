@@ -22,16 +22,13 @@ namespace Rascal.Controllers
 
 
 
-        public async Task<ActionResult> Index()
+        public IActionResult Index()
         {
             var getmodel = new GetMessageViewModel();
             var user = rascalDb.FindUser("Petra");
             var api = user.UserApiKey.apiKey;
-            var message = await rascal.GetMessage(getmodel, api);
-            return View(new MessageViewModel()
-            {
-                Messages = message
-            });
+            var result = rascal.GetMessage(getmodel, api).Result;
+            return View(result);
         }
 
 

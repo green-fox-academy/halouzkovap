@@ -26,7 +26,7 @@ namespace Rascal
             Environment.GetEnvironmentVariable("urlBase");
             services.AddDbContext<RascalDbContext>(options =>
              options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-            services.AddTransient<RascalService>();
+            services.AddSingleton<RascalService>();
             services.AddTransient<IRascalDbService, RascalDbService>();
             services.AddControllersWithViews();
         }
@@ -55,7 +55,7 @@ namespace Rascal
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=user}/{action=login}/{id?}");
             });
         }
     }

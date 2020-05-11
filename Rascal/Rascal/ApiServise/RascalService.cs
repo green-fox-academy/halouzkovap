@@ -1,6 +1,5 @@
 ﻿using Newtonsoft.Json;
 using Rascal.Models;
-using Rascal.Service;
 using Rascal.ViewModel;
 using System;
 using System.Net.Http;
@@ -11,14 +10,6 @@ namespace Rascal.Servise
 {
     public class RascalService
     {
-        private readonly IRascalDbService rascalDb;
-
-        public RascalService(IRascalDbService rascalDb)
-        {
-
-            this.rascalDb = rascalDb;
-        }
-
 
         //Api/User/register[Post]
         public async Task<UserFromApi> Register(RegisterViewModel registerViewModel)
@@ -72,18 +63,18 @@ namespace Rascal.Servise
 
         }
 
-        public async Task<ResponseMessage> GetMessage(GetMessageViewModel getMessageViewModel, string apiKey)
+        public async Task<MessageViewModel> GetMessage(GetMessageViewModel getMessageViewModel, string apiKey)
         {
             var client = new HttpClient();
             client.DefaultRequestHeaders.Add("apiKey", apiKey);
 
-            var httpContent = new StringContent(JsonConvert.SerializeObject(getMessageViewModel), Encoding.UTF8, "application/json");
+            var httpContent = new StringContent(JsonConvert.SerializeObject(new { count = 100 }), Encoding.UTF8, "application/json");
             var response = await client.PostAsync(Environment.GetEnvironmentVariable("urlBase") + "api/channel/get-messages", httpContent);
             var json = response.Content.ReadAsStringAsync().Result;
 
-            var listMessage = JsonConvert.DeserializeObject<ResponseMessage>(json);
-
-            return listMessage;
+            var list = JsonConvert.DeserializeObject<ResponseMessage>(json);
+            var result = new MessageViewModel() { Messages = list.Messages };
+            return result;
         }
 
         public async Task<Message> PostMessage(CreateMessageViewModel createMessageViewModel)

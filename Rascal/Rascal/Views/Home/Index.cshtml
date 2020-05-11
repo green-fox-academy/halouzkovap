@@ -1,4 +1,4 @@
-﻿@model  IEnumerable<Rascal.ViewModel.MessageViewModel>
+﻿@model Rascal.ViewModel.MessageViewModel
 @{
     ViewData["Title"] = "Home Page";
 }
@@ -6,14 +6,10 @@
     <div class="text-center">
         <h1 class="display-4">Rascal Chat Client</h1>
         <br />
-       @foreach (var item in Model)
+       @foreach (var item in Model.Messages)
        {
-           <p>@item.Messages</p>
+           <p>@item.Content </p>
        }
-
-        <partial name="_PostMessage" />
-
-
        
 
     </div>
