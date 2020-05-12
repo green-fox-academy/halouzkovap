@@ -3,13 +3,22 @@
     ViewData["Title"] = "Home Page";
 }
 
-    <div class="text-center">
-        <h1 class="display-4">Rascal Chat Client</h1>
-        <br />
-       @foreach (var item in Model.Messages)
-       {
-           <p>@item.Content </p>
-       }
-       
 
+<h1 class="display-4">Rascal Chat Client</h1>
+<br />
+@foreach (var item in Model.Messages)
+{
+    <div class="card">
+        <div class="card-header text-left">
+            <img src="@item.Author.AvatarUrl" alt="Avatar" width="50" height="50" class="rounded-circle" /> @item.Author.Username - @item.Created
+        </div>
+        <div class="card-body text-left">
+
+            <p>@item.Content</p>
+
+
+        </div>
     </div>
+}
+<br />
+<a asp-action="PostMessage" class="btn btn-info" data-toggle="modal" data-target="#myModal">Send message to main channel</a>

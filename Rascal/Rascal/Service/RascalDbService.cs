@@ -2,6 +2,7 @@
 using Rascal.DbRascal;
 using Rascal.Entity;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Rascal.Service
@@ -26,10 +27,22 @@ namespace Rascal.Service
             rascalDb.SaveChanges();
         }
 
+        public void CreateChannel(MyChannel channel)
+        {
+            rascalDb.Channels.Add(channel);
+            rascalDb.SaveChanges();
+
+        }
+
         public void CreateUser(User userName)
         {
             rascalDb.Users.Add(userName);
             rascalDb.SaveChanges();
+        }
+
+        public MyChannel FindChannel(int id)
+        {
+            return rascalDb.Channels.Include(x => x.User).FirstOrDefault(x => x.Id == id);
         }
 
         public User FindUser(string id)
@@ -49,6 +62,11 @@ namespace Rascal.Service
             throw new NotImplementedException();
         }
 
+        public List<MyChannel> GetMyChannels()
+        {
+            return rascalDb.Channels.Include(x => x.User).ToList();
+        }
+
         public User GetUser(string user)
         {
             return rascalDb.Users.FirstOrDefault(x => x.UserName == user);
@@ -62,7 +80,11 @@ namespace Rascal.Service
         public void RemoveApiKey(User user)
         {
             var api = rascalDb.UserApiKeys.FirstOrDefault(x => x.User == user);
-            rascalDb.Remove(api);
+            if (api != null)
+            {
+                rascalDb.Remove(api);
+
+            }
             rascalDb.SaveChanges();
         }
     }

@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Rascal.DbRascal;
 
 namespace Rascal.Migrations
 {
     [DbContext(typeof(RascalDbContext))]
-    partial class RascalDbContextModelSnapshot : ModelSnapshot
+    [Migration("20200512090227_AddStoringChannels")]
+    partial class AddStoringChannels
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -47,7 +49,7 @@ namespace Rascal.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Channels");
+                    b.ToTable("MyChannel");
                 });
 
             modelBuilder.Entity("Rascal.Entity.User", b =>

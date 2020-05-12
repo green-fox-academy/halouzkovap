@@ -53,10 +53,10 @@ namespace Rascal
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllerRoute(
-                    name: "default",
-                    pattern: "{controller=user}/{action=login}/{id?}");
+                endpoints.MapDefaultControllerRoute();
             });
+
+
         }
     }
 }

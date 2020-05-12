@@ -12,5 +12,6 @@ namespace Rascal.DbRascal
 
         public DbSet<User> Users { get; set; }
         public DbSet<UserApiKey> UserApiKeys { get; set; }
+        public DbSet<MyChannel> Channels { get; set; }
     }
 }

@@ -39,9 +39,10 @@ namespace Rascal.Servise
             return responseM.ApiKey;
         }
 
-        public async Task<string> Update(UpdateUserViewModel updateUserViewModel)
+        public async Task<string> Update(UpdateUserViewModel updateUserViewModel, string apiKey)
         {
             var client = new HttpClient();
+            client.DefaultRequestHeaders.Add("apiKey", apiKey);
             var httpContent = new StringContent(JsonConvert.SerializeObject(updateUserViewModel), Encoding.UTF8, "application/json");
             var response = await client.PostAsync(Environment.GetEnvironmentVariable("urlBase") + "api/user/update", httpContent);
 
@@ -51,16 +52,15 @@ namespace Rascal.Servise
             return responseM.UserName;
 
         }
-        public async Task<bool> Logout(ResponseLogin responseLogin)
+
+        public async Task<bool> Logout()
         {
             var client = new HttpClient();
-            var httpContent = new StringContent(JsonConvert.SerializeObject(responseLogin), Encoding.UTF8, "application/json");
+            var httpContent = new StringContent("application/json");
             var response = await client.PostAsync(Environment.GetEnvironmentVariable("urlBase") + "api/user/logout", httpContent);
-
             var json = response.Content.ReadAsStringAsync().Result;
             var responseM = JsonConvert.DeserializeObject<bool>(json);
             return responseM;
-
         }
 
         public async Task<MessageViewModel> GetMessage(GetMessageViewModel getMessageViewModel, string apiKey)
@@ -68,7 +68,7 @@ namespace Rascal.Servise
             var client = new HttpClient();
             client.DefaultRequestHeaders.Add("apiKey", apiKey);
 
-            var httpContent = new StringContent(JsonConvert.SerializeObject(new { count = 100 }), Encoding.UTF8, "application/json");
+            var httpContent = new StringContent(JsonConvert.SerializeObject(new { count = getMessageViewModel.Count }), Encoding.UTF8, "application/json");
             var response = await client.PostAsync(Environment.GetEnvironmentVariable("urlBase") + "api/channel/get-messages", httpContent);
             var json = response.Content.ReadAsStringAsync().Result;
 
@@ -77,14 +77,26 @@ namespace Rascal.Servise
             return result;
         }
 
-        public async Task<Message> PostMessage(CreateMessageViewModel createMessageViewModel)
+        public async Task<ResponsePostMessage> PostMessage(CreateMessageViewModel createMessageViewModel, string apikey)
         {
             var client = new HttpClient();
-            var httpContent = new StringContent(JsonConvert.SerializeObject(createMessageViewModel), Encoding.UTF8, "application/json");
-            client.DefaultRequestHeaders.Add("apiKey", "1da4bc9d");
+            var httpContent = new StringContent(JsonConvert.SerializeObject(new { content = createMessageViewModel.Chanel.Content }), Encoding.UTF8, "application/json");
+            client.DefaultRequestHeaders.Add("apiKey", apikey);
             var response = await client.PostAsync(Environment.GetEnvironmentVariable("urlBase") + "api/message", httpContent);
             var json = response.Content.ReadAsStringAsync().Result;
-            var responseMessage = JsonConvert.DeserializeObject<Message>(json);
+            var responseMessage = JsonConvert.DeserializeObject<ResponsePostMessage>(json);
+
+            return responseMessage;
+        }
+
+        public async Task<Chanel> CreateChannel(CreateChannelViewModel channelViewModel, string apiKey)
+        {
+            var client = new HttpClient();
+            var httpContent = new StringContent(JsonConvert.SerializeObject(channelViewModel), Encoding.UTF8, "application/json");
+            client.DefaultRequestHeaders.Add("apiKey", apiKey);
+            var response = await client.PostAsync(Environment.GetEnvironmentVariable("urlBase") + "api/channel", httpContent);
+            var json = response.Content.ReadAsStringAsync().Result;
+            var responseMessage = JsonConvert.DeserializeObject<Chanel>(json);
 
             return responseMessage;
         }

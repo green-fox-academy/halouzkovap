@@ -3,6 +3,7 @@ using Rascal.Entity;
 using Rascal.Service;
 using Rascal.Servise;
 using Rascal.ViewModel;
+using System.Threading.Tasks;
 
 namespace Rascal.Controllers
 {
@@ -37,7 +38,7 @@ namespace Rascal.Controllers
             return RedirectToAction("Register");
         }
 
-        [HttpGet("Login")]
+        [HttpGet("/")]
 
         public ActionResult Login()
         {
@@ -69,10 +70,28 @@ namespace Rascal.Controllers
         [HttpPost("Update")]
         public IActionResult Update(UpdateUserViewModel updateUserViewModel)
         {
+            if (ModelState.IsValid)
+            {
+                var user = rascalDb.FindUser("Petra");
+                var apiKey = rascalDb.GetApiKey(user);
+                var users = rascalService.Update(updateUserViewModel, apiKey);
+                return RedirectToAction("Index", "Home");
+            }
 
-            var user = rascalService.Update(updateUserViewModel);
-            return RedirectToAction("Index", "Home");
+            return View("Update");
         }
 
+        [HttpGet("Logout")]
+        public async Task<IActionResult> Logout()
+        {
+            var result = await rascalService.Logout();
+            if (result == true)
+            {
+
+                return RedirectToAction("Login", "Acount");
+
+            }
+            return RedirectToAction("Index", "Home");
+        }
     }
 }
