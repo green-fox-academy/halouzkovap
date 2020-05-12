@@ -6,23 +6,41 @@
 
 <h1 class="display-4">Rascal Chat Client</h1>
 <br />
-@foreach (var item in Model.ListMessages)
-{
-    <div class="card box-shadow">
-        <div class="card-header text-left">
-            <img src="@item.Author.AvatarUrl" alt="Avatar" width="50" height="50" class="rounded-circle" title="@item.Author.Username" /> @item.Author.Username - @item.Created
+<div class="row">
+    <div class="col-2">
+        <ul>
+            @foreach (var item in Model.ChannelsDb)
+            {
+                <li>
+                    <a asp-controller="Home" asp-action="Index" asp-route-id="@item.Id">@item.Name</a>
+                </li>
+            }
+            <li>
+                <a asp-controller="Home" asp-action="Index" asp-route-id="">Main Channel</a>
+            </li>
+        </ul>
         </div>
-        <div class="card-body text-left">
+    <div class="col-10">
+        @foreach (var item in Model.ListMessages)
+        {
+            <div class="card box-shadow">
+                <div class="card-header text-left">
+                    <img src="@item.Author.AvatarUrl" alt="Avatar" width="50" height="50" class="rounded-circle" title="@item.Author.Username" /> @item.Author.Username - @item.Created
+                </div>
+                <div class="card-body text-left">
 
-            <p>@item.Content</p>
+                    <p>@item.Content</p>
 
 
-        </div>
+                </div>
+            </div>
+            <br />
+        }
+        <br />
+
+        <a asp-action="PostMessage" asp-route-Id="@Model.Id" class="btn btn-info">Send message</a>
     </div>
-    <br />
-}
-<br />
+</div>
 
-<a asp-action="PostMessage"  asp-route-Id="@Model.Id" class="btn btn-info">Send message</a>
 
 

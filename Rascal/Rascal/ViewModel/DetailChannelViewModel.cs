@@ -9,5 +9,6 @@ namespace Rascal.ViewModel
         public MyChannel Channel { get; internal set; }
         public List<Models.Message> ListMessages { get; internal set; }
         public int Id { get; internal set; }
+        public List<MyChannel> ChannelsDb { get; internal set; }
     }
 }

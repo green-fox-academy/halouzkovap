@@ -4,6 +4,6 @@
     {
         public int ChannelId { get; set; }
         public string ChannelSecret { get; set; }
-        public int Count { get; set; } = 100;
+        public int Count { get; set; } = 10;
     }
 }

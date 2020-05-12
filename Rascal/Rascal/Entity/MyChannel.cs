@@ -9,6 +9,7 @@ namespace Rascal.Entity
         public int IdFromApi { get; set; }
         public string Name { get; set; }
         public string Descripiton { get; set; }
+        public string IconUrl { get; set; }
         public string Admin { get; set; }
         public string Secret { get; set; }
         public int UserId { get; set; }
