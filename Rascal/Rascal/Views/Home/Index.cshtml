@@ -11,9 +11,11 @@
         <ul>
             @foreach (var item in Model.ChannelsDb)
             {
-                <li>
-                    <a asp-controller="Home" asp-action="Index" asp-route-id="@item.Id">@item.Name</a>
-                </li>
+            <li>
+                <a asp-controller="Home" asp-action="Index" asp-route-id="@item.Id"><img src="@item.IconUrl" width="50" height="50" class="rounded-circle" title="@item.Name" /></a>
+                <a asp-controller="Home" asp-action="UpdateChannel" asp-route-id="@item.Id">Update Chanel</a>
+
+            </li>
             }
             <li>
                 <a asp-controller="Home" asp-action="Index" asp-route-id="">Main Channel</a>

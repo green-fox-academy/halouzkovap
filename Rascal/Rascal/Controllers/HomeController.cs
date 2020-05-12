@@ -89,12 +89,28 @@ namespace Rascal.Controllers
             }
             return View("CreateChannel");
         }
-        [HttpGet("MyChannels")]
-        public IActionResult GetChannels()
+
+        [HttpGet("UpdateChannel/{id}")]
+        public IActionResult UpdateChannel(int id)
         {
-            var channels = rascalDb.GetMyChannels();
-            return View(channels);
+            var channel = rascalDb.FindChannel(id);
+            var UpdateChannel = new UpdateChannelViewModel() { Name = channel.Name, ChanelId = channel.IdFromApi, Description = channel.Descripiton, IconUrl = channel.IconUrl };
+            return View(UpdateChannel);
         }
+        [HttpPost("UpdateChannel")]
+        public async Task<ActionResult> UpdateChannel(UpdateChannelViewModel updateChannel)
+        {
+            return RedirectToAction("Index", "Home");
+        }
+
+
+
+        //[HttpGet("MyChannels")]
+        //public IActionResult GetChannels()
+        //{
+        //    var channels = rascalDb.GetMyChannels();
+        //    return View(channels);
+        //}
 
 
 
