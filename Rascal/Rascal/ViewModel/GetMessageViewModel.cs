@@ -3,7 +3,7 @@
     public class GetMessageViewModel
     {
         public int ChannelId { get; set; }
-        public int ChannelSecret { get; set; }
-        public int Count { get; set; } = 10;
+        public string ChannelSecret { get; set; }
+        public int Count { get; set; } = 100;
     }
 }

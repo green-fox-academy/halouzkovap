@@ -6,8 +6,13 @@
     <title>@ViewData["Title"] - Rascal</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <script type="text/JavaScript">
+        function RefreshPage(time) {
+            setTimeout("location.reload(true);", time);
+        }
+    </script>
 </head>
-<body>
+<body onload="RefreshPage(60000)">
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
@@ -36,6 +41,9 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="CreateChannel">Add new channel</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="GetChannels">Other Channel</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -49,7 +57,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2020 - Rascal - 
+            &copy; 2020 - Rascal -
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

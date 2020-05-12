@@ -68,7 +68,18 @@ namespace Rascal.Servise
             var client = new HttpClient();
             client.DefaultRequestHeaders.Add("apiKey", apiKey);
 
-            var httpContent = new StringContent(JsonConvert.SerializeObject(new { count = getMessageViewModel.Count }), Encoding.UTF8, "application/json");
+            if (getMessageViewModel.ChannelId != 0)
+            {
+                var Content = new StringContent(JsonConvert.SerializeObject(new { channelId = getMessageViewModel.ChannelId, count = getMessageViewModel.Count, channelSecret = getMessageViewModel.ChannelSecret }), Encoding.UTF8, "application/json");
+                var responseC = await client.PostAsync(Environment.GetEnvironmentVariable("urlBase") + "api/channel/get-messages", Content);
+                var jsonC = responseC.Content.ReadAsStringAsync().Result;
+
+                var listC = JsonConvert.DeserializeObject<ResponseMessage>(jsonC);
+                var resut = new MessageViewModel() { Messages = listC.Messages };
+                return resut;
+            }
+
+            var httpContent = new StringContent(JsonConvert.SerializeObject(new { count = getMessageViewModel.Count, channelSecret = getMessageViewModel.ChannelSecret }), Encoding.UTF8, "application/json");
             var response = await client.PostAsync(Environment.GetEnvironmentVariable("urlBase") + "api/channel/get-messages", httpContent);
             var json = response.Content.ReadAsStringAsync().Result;
 
@@ -80,7 +91,7 @@ namespace Rascal.Servise
         public async Task<ResponsePostMessage> PostMessage(CreateMessageViewModel createMessageViewModel, string apikey)
         {
             var client = new HttpClient();
-            var httpContent = new StringContent(JsonConvert.SerializeObject(new { content = createMessageViewModel.Chanel.Content }), Encoding.UTF8, "application/json");
+            var httpContent = new StringContent(JsonConvert.SerializeObject(new { channelId = createMessageViewModel.Id, channelSecret = createMessageViewModel.channelSecret, content = createMessageViewModel.Content }), Encoding.UTF8, "application/json");
             client.DefaultRequestHeaders.Add("apiKey", apikey);
             var response = await client.PostAsync(Environment.GetEnvironmentVariable("urlBase") + "api/message", httpContent);
             var json = response.Content.ReadAsStringAsync().Result;
@@ -100,51 +111,6 @@ namespace Rascal.Servise
 
             return responseMessage;
         }
-
-        //Channel/ [Post]
-        //Channel/user-channels [Get]
-        //Channel/get-messagge [Post]
-
-        //public List<Message> GetMessages()
-        //{
-        //    try
-        //    {
-        //        using (WebClient webClient = new WebClient())
-        //        {
-        //            webClient.BaseAddress = RascalService.EndPoint;
-        //            var json = webClient.DownloadString("channel/get-messages");
-        //            var list = JsonConvert.DeserializeObject<List<Message>>(json);
-        //            return list.ToList();
-        //        }
-        //    }
-        //    catch (WebException ex)
-        //    {
-        //        throw ex;
-        //    }
-        //}
-
-        //public Message GetMessageForChannel(Chanel chanel)
-        //{
-        //    var result = new Message();
-        //    try
-        //    {
-        //        using (WebClient webClient = new WebClient())
-        //        {
-        //            webClient.BaseAddress = RascalService.EndPoint;
-        //            var url = "channel/get-messages";
-        //            webClient.Headers.Add("user-agent", "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.2; .NET CLR 1.0.3705;)");
-        //            webClient.Headers[HttpRequestHeader.ContentType] = "application/json";
-        //            string data = Newtonsoft.Json.JsonConvert.SerializeObject(chanel);
-        //            var response = webClient.UploadString(url, data);
-        //            result = JsonConvert.DeserializeObject<Message>(response);
-        //            return result;
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        throw ex;
-        //    }
-        //}
 
 
 

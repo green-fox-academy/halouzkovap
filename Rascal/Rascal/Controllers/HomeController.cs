@@ -21,30 +21,49 @@ namespace Rascal.Controllers
         }
 
 
-        [HttpGet("Index")]
-        public IActionResult Index()
+        [HttpGet("Index/{id?}")]
+        public IActionResult Index(int id)
         {
-            var getmodel = new GetMessageViewModel();
             var user = rascalDb.FindUser("Petra");
             var api = user.UserApiKey.apiKey;
+            var channels = rascalDb.FindChannel(id);
+            var getmodel = new GetMessageViewModel();
+            if (channels != null)
+            {
+                getmodel.ChannelId = channels.IdFromApi;
+                getmodel.ChannelSecret = channels.Secret;
+            }
+
             var result = rascal.GetMessage(getmodel, api).Result;
-            return View(result);
+
+            return View(new DetailChannelViewModel() { ListMessages = result.Messages, Id = id });
+
         }
 
 
-        [HttpGet("PostMessage")]
+        [HttpGet("PostMessage/{id?}")]
         public IActionResult PostMessage()
         {
             return View();
         }
         //Message/ [Post]
-        [HttpPost("PostMessage")]
-        public async Task<ActionResult> PostMessage(CreateMessageViewModel createMessageViewModel)
+        [HttpPost("PostMessage/{id?}")]
+        public async Task<ActionResult> PostMessage(int id, CreateMessageViewModel createMessageViewModel)
         {
             var user = rascalDb.FindUser("Petra");
             var api = user.UserApiKey.apiKey;
-            await rascal.PostMessage(createMessageViewModel, api);
-            return RedirectToAction("Index");
+
+
+            var channels = rascalDb.FindChannel(id);
+            var createMessage = new CreateMessageViewModel() { Id = channels.IdFromApi, channelSecret = channels.Secret, Content = createMessageViewModel.Content };
+
+            await rascal.PostMessage(createMessage, api);
+            return RedirectToAction("Index", "Home");
+
+
+
+            // await rascal.PostMessage(createMessageViewModel, api);
+            //return RedirectToAction("Index");
         }
 
         [HttpGet("CreateChannel")]
@@ -61,10 +80,35 @@ namespace Rascal.Controllers
                 var user = rascalDb.FindUser("Petra");
                 var api = user.UserApiKey.apiKey;
                 var chanel = await rascal.CreateChannel(createChannel, api);
-                //rascalDb.CreateChannel(chanel);
+                var myChannel = new Rascal.Entity.MyChannel()
+                {
+                    Admin = chanel.Admin,
+                    Name = chanel.Name,
+                    Descripiton = chanel.Description,
+                    Secret = chanel.Secret,
+                    IdFromApi = chanel.Id,
+                    User = user
+                };
+                rascalDb.CreateChannel(myChannel);
                 return RedirectToAction("Index");
             }
             return View("CreateChannel");
+        }
+        [HttpGet("MyChannels")]
+        public IActionResult GetChannels()
+        {
+            var channels = rascalDb.GetMyChannels();
+            return View(channels);
+        }
+        [HttpGet("ChannelDetail/{id}")]
+        public IActionResult ChannelDetail(int id)
+        {
+            var channels = rascalDb.FindChannel(id);
+            var getmessage = new GetMessageViewModel() { ChannelId = channels.IdFromApi, ChannelSecret = channels.Secret };
+            var user = rascalDb.FindUser("Petra");
+            var api = user.UserApiKey.apiKey;
+            var list = rascal.GetMessage(getmessage, api).Result;
+            return View(new DetailChannelViewModel() { ListMessages = list.Messages, Channel = channels });
         }
 
 

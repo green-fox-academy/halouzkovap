@@ -6,5 +6,9 @@ namespace Rascal.ViewModel
     {
         public Chanel Chanel { get; set; }
 
+        public int Id { get; set; }
+        public string Content { get; set; }
+        public string channelSecret { get; set; }
+
     }
 }
