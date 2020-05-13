@@ -1,4 +1,5 @@
 ﻿using Rascal.Entity;
+using Rascal.Models;
 using System.Collections.Generic;
 
 namespace Rascal.Service
@@ -14,7 +15,9 @@ namespace Rascal.Service
         void CreateUser(User User);
         void CreateApiKey(User user);
         void CreateChannel(MyChannel channel);
+        MyChannel FindChannel(int ApiId);
+        void UpdateChannel(Chanel channel);
         List<MyChannel> GetMyChannels();
-        MyChannel FindChannel(int id);
+        MyChannel FindChannelApiId(int id);
     }
 }

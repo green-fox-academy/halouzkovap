@@ -11,7 +11,7 @@ namespace Rascal.Servise
     public class RascalService
     {
 
-        //Api/User/register[Post]
+
         public async Task<UserFromApi> Register(RegisterViewModel registerViewModel)
         {
             var client = new HttpClient();
@@ -38,6 +38,15 @@ namespace Rascal.Servise
 
             return responseM.ApiKey;
         }
+        public async Task<bool> Logout()
+        {
+            var client = new HttpClient();
+            var httpContent = new StringContent("application/json");
+            var response = await client.PostAsync(Environment.GetEnvironmentVariable("urlBase") + "api/user/logout", httpContent);
+            var json = response.Content.ReadAsStringAsync().Result;
+            var responseM = JsonConvert.DeserializeObject<bool>(json);
+            return responseM;
+        }
 
         public async Task<string> Update(UpdateUserViewModel updateUserViewModel, string apiKey)
         {
@@ -53,15 +62,7 @@ namespace Rascal.Servise
 
         }
 
-        public async Task<bool> Logout()
-        {
-            var client = new HttpClient();
-            var httpContent = new StringContent("application/json");
-            var response = await client.PostAsync(Environment.GetEnvironmentVariable("urlBase") + "api/user/logout", httpContent);
-            var json = response.Content.ReadAsStringAsync().Result;
-            var responseM = JsonConvert.DeserializeObject<bool>(json);
-            return responseM;
-        }
+
 
         public async Task<MessageViewModel> GetMessage(GetMessageViewModel getMessageViewModel, string apiKey)
         {
@@ -113,7 +114,16 @@ namespace Rascal.Servise
         }
 
 
-
+        public async Task<Chanel> UpdateChanel(UpdateChannelViewModel updateChannel, string apiKey)
+        {
+            var client = new HttpClient();
+            var httpContent = new StringContent(JsonConvert.SerializeObject(updateChannel), Encoding.UTF8, "application/json");
+            client.DefaultRequestHeaders.Add("apiKey", apiKey);
+            var response = await client.PostAsync(Environment.GetEnvironmentVariable("urlBase") + "api/channel/update", httpContent);
+            var json = response.Content.ReadAsStringAsync().Result;
+            var responseMessage = JsonConvert.DeserializeObject<Chanel>(json);
+            return responseMessage;
+        }
     }
 }
 

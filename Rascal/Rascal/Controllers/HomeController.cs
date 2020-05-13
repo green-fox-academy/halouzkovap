@@ -94,12 +94,16 @@ namespace Rascal.Controllers
         public IActionResult UpdateChannel(int id)
         {
             var channel = rascalDb.FindChannel(id);
-            var UpdateChannel = new UpdateChannelViewModel() { Name = channel.Name, ChanelId = channel.IdFromApi, Description = channel.Descripiton, IconUrl = channel.IconUrl };
+            var UpdateChannel = new UpdateChannelViewModel() { Name = channel.Name, Id = channel.IdFromApi, Description = channel.Descripiton, IconUrl = channel.IconUrl };
             return View(UpdateChannel);
         }
-        [HttpPost("UpdateChannel")]
+        [HttpPost("UpdateChannel/{id}")]
         public async Task<ActionResult> UpdateChannel(UpdateChannelViewModel updateChannel)
         {
+            var user = rascalDb.FindUser("Petra");
+            var api = user.UserApiKey.apiKey;
+            var responseChannel = await rascal.UpdateChanel(updateChannel, api);
+            rascalDb.UpdateChannel(responseChannel);
             return RedirectToAction("Index", "Home");
         }
 

@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Rascal.DbRascal;
 using Rascal.Entity;
+using Rascal.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -45,6 +46,12 @@ namespace Rascal.Service
             return rascalDb.Channels.Include(x => x.User).FirstOrDefault(x => x.Id == id);
         }
 
+        public MyChannel FindChannelApiId(int id)
+        {
+            return rascalDb.Channels.Include(x => x.User).FirstOrDefault(x => x.IdFromApi == id);
+
+        }
+
         public User FindUser(string id)
         {
             return rascalDb.Users.Include(x => x.UserApiKey).FirstOrDefault(x => x.UserName == id);
@@ -86,6 +93,17 @@ namespace Rascal.Service
 
             }
             rascalDb.SaveChanges();
+        }
+
+        public void UpdateChannel(Chanel channel)
+        {
+            var myChannel = FindChannelApiId(channel.Id);
+            myChannel.IconUrl = channel.IconUrl;
+            myChannel.Name = channel.Name;
+            myChannel.Descripiton = channel.Description;
+            rascalDb.Entry(myChannel).State = EntityState.Modified;
+            rascalDb.SaveChanges();
+
         }
     }
 }
