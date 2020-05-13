@@ -1,0 +1,25 @@
+﻿@model TrainToTest.ViewModel.CreateLinkViewModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+ @ViewData["Message"]
+<div class="row justify-content-lg-center">
+    <div class="col-md-4">
+        <form asp-action="saveLink" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="@Model.UrlAdress" class="control-label"></label>
+                <input asp-for="@Model.UrlAdress" class="form-control" />
+                <span asp-validation-for="@Model.UrlAdress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.Alias" class="control-label"></label>
+                <input type="text" asp-for="@Model.Alias" class="form-control" />
+                <span asp-validation-for="@Model.Alias" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Submit" class="btn btn-outline-info" />
+            </div>
+        </form>
+    </div>
+</div>
