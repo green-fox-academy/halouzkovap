@@ -124,6 +124,8 @@ namespace Rascal.Servise
             var responseMessage = JsonConvert.DeserializeObject<Chanel>(json);
             return responseMessage;
         }
+
+
     }
 }
 
