@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DirectedGraph GraphDirection="LeftToRight" ZoomLevel="0.5" xmlns="http://schemas.microsoft.com/vs/2009/dgml">
+  <Nodes>
+    <Node Id="Assignee" Category="EntityType" Annotations="ConstructorBinding: Microsoft.EntityFrameworkCore.Metadata.ConstructorBinding Relational:TableName: Assignees" BaseClass="" Bounds="70.5233333333334,667.58,185.89,141.92" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot" Group="Expanded" IsAbstract="False" Label="Assignee" Name="Assignee" />
+    <Node Id="Assignee.Email" Category="Property Optional" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="TypeMapping: Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerStringTypeMapping" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="170.523333333333,707.58,50,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="False" IsShadow="False" IsUnicode="True" Label="Email" MaxLength="None" Name="Email" PropertyAccessMode="PropertyAccessMode.Default" Type="string" ValueGenerated="None" />
+    <Node Id="Assignee.Id" Category="Property Primary" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="SqlServer:ValueGenerationStrategy: IdentityColumn TypeMapping: Microsoft.EntityFrameworkCore.Storage.IntTypeMapping" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="90.5233333333334,707.58,50,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="True" IsRequired="True" IsShadow="False" IsUnicode="True" Label="Id" MaxLength="None" Name="Id" PropertyAccessMode="PropertyAccessMode.Default" Type="int" ValueGenerated="ValueGenerated.OnAdd" />
+    <Node Id="Assignee.Name" Category="Property Optional" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="TypeMapping: Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerStringTypeMapping" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="90.5233333333334,763.54,51.6966666666667,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="False" IsShadow="False" IsUnicode="True" Label="Name" MaxLength="None" Name="Name" PropertyAccessMode="PropertyAccessMode.Default" Type="string" ValueGenerated="None" />
+    <Node Id="Assignee.Tasks" Category="Navigation Property" Bounds="172.22,763.54,64.1933333333333,25.96" Dependent="Task" Field="List&lt;Task&gt;" Inverse="Assignee" Label="Tasks (1)" Name="Tasks" Principal="" PropertyAccessMode="PropertyAccessMode.Default" Type="Collectio" />
+    <Node Id="IModel" Category="Model" Annotations="Relational:MaxIdentifierLength: 128 SqlServer:ValueGenerationStrategy: IdentityColumn" Bounds="0,0,575.166666666667,1101.32" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot" Group="Expanded" Label="TodoLvl3DbContext" ProductVersion="3.1.4" PropertyAccessMode="PropertyAccessMode.Default" />
+    <Node Id="Mentor" Category="EntityType" Annotations="ConstructorBinding: Microsoft.EntityFrameworkCore.Metadata.ConstructorBinding Relational:TableName: Mentors" BaseClass="" Bounds="321.763333333333,883.440000000001,195.41,197.88" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot" Group="Expanded" IsAbstract="False" Label="Mentor" Name="Mentor" />
+    <Node Id="Mentor.Email" Category="Property Optional" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="TypeMapping: Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerStringTypeMapping" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="421.763333333333,923.440000000001,50,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="False" IsShadow="False" IsUnicode="True" Label="Email" MaxLength="None" Name="Email" PropertyAccessMode="PropertyAccessMode.Default" Type="string" ValueGenerated="None" />
+    <Node Id="Mentor.Id" Category="Property Primary" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="SqlServer:ValueGenerationStrategy: IdentityColumn TypeMapping: Microsoft.EntityFrameworkCore.Storage.IntTypeMapping" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="341.763333333333,923.440000000001,50,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="True" IsRequired="True" IsShadow="False" IsUnicode="True" Label="Id" MaxLength="None" Name="Id" PropertyAccessMode="PropertyAccessMode.Default" Type="int" ValueGenerated="ValueGenerated.OnAdd" />
+    <Node Id="Mentor.Name" Category="Property Optional" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="TypeMapping: Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerStringTypeMapping" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="341.763333333333,979.400000000001,51.6966666666667,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="False" IsShadow="False" IsUnicode="True" Label="Name" MaxLength="None" Name="Name" PropertyAccessMode="PropertyAccessMode.Default" Type="string" ValueGenerated="None" />
+    <Node Id="Mentor.Project" Category="Navigation Property" Bounds="423.46,979.400000000001,73.7133333333334,25.96" Dependent="" Field="Project" Inverse="Mentor" Label="Project (1)" Name="Project" Principal="" PropertyAccessMode="PropertyAccessMode.Default" Type="ToDependen" />
+    <Node Id="Mentor.Specialization" Category="Property Optional" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="TypeMapping: Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerStringTypeMapping" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="341.763333333333,1035.36,92.4,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="False" IsShadow="False" IsUnicode="True" Label="Specialization" MaxLength="None" Name="Specialization" PropertyAccessMode="PropertyAccessMode.Default" Type="string" ValueGenerated="None" />
+    <Node Id="Project" Category="EntityType" Annotations="ConstructorBinding: Microsoft.EntityFrameworkCore.Metadata.ConstructorBinding Relational:TableName: Projects" BaseClass="" Bounds="286.523333333333,639.6,265.89,197.88" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot" Group="Expanded" IsAbstract="False" Label="Project" Name="Project" />
+    <Node Id="Project.Description" Category="Property Optional" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="TypeMapping: Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerStringTypeMapping" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="412.633333333333,791.52,80.2533333333333,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="False" IsShadow="False" IsUnicode="True" Label="Description" MaxLength="None" Name="Description" PropertyAccessMode="PropertyAccessMode.Default" Type="string" ValueGenerated="None" />
+    <Node Id="Project.DueDate" Category="Property Required" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="TypeMapping: Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDateTimeTypeMapping" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="306.523333333333,735.56,66.3433333333334,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="True" IsShadow="False" IsUnicode="True" Label="DueDate" MaxLength="None" Name="DueDate" PropertyAccessMode="PropertyAccessMode.Default" Type="DateTime" ValueGenerated="None" />
+    <Node Id="Project.Id" Category="Property Primary" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="SqlServer:ValueGenerationStrategy: IdentityColumn TypeMapping: Microsoft.EntityFrameworkCore.Storage.IntTypeMapping" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="306.523333333333,679.6,50,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="True" IsRequired="True" IsShadow="False" IsUnicode="True" Label="Id" MaxLength="None" Name="Id" PropertyAccessMode="PropertyAccessMode.Default" Type="int" ValueGenerated="ValueGenerated.OnAdd" />
+    <Node Id="Project.Mentor" Category="Navigation Property" Bounds="306.523333333333,791.52,76.11,25.96" Dependent="" Field="Mentor" Inverse="Project" Label="Mentor (1)" Name="Mentor" Principal="" PropertyAccessMode="PropertyAccessMode.Default" Type="ToPrincipa" />
+    <Node Id="Project.MentorId" Category="Property Foreign" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="TypeMapping: Microsoft.EntityFrameworkCore.Storage.IntTypeMapping" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="402.866666666667,735.56,69.3733333333333,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="True" IsIndexed="True" IsPrimaryKey="False" IsRequired="True" IsShadow="False" IsUnicode="True" Label="MentorId" MaxLength="None" Name="MentorId" PropertyAccessMode="PropertyAccessMode.Default" Type="int" ValueGenerated="None" />
+    <Node Id="Project.Name" Category="Property Optional" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="TypeMapping: Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerStringTypeMapping" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="386.523333333333,679.6,51.6966666666667,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="False" IsShadow="False" IsUnicode="True" Label="Name" MaxLength="None" Name="Name" PropertyAccessMode="PropertyAccessMode.Default" Type="string" ValueGenerated="None" />
+    <Node Id="Project.Tasks" Category="Navigation Property" Bounds="468.22,679.6,64.1933333333333,25.96" Dependent="Task" Field="List&lt;Task&gt;" Inverse="" Label="Tasks (1)" Name="Tasks" Principal="" PropertyAccessMode="PropertyAccessMode.Default" Type="Collectio" />
+    <Node Id="SubTask" Category="EntityType" Annotations="ConstructorBinding: Microsoft.EntityFrameworkCore.Metadata.ConstructorBinding Relational:TableName: SubTasks" BaseClass="" Bounds="20,40,376.936666666667,253.84" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot" Group="Expanded" IsAbstract="False" Label="SubTask" Name="SubTask" />
+    <Node Id="SubTask.Assignee" Category="Navigation Property" Bounds="40,247.88,84.24,25.96" Dependent="" Field="Assignee" Inverse="" Label="Assignee (1)" Name="Assignee" Principal="" PropertyAccessMode="PropertyAccessMode.Default" Type="ToPrincipa" />
+    <Node Id="SubTask.AssigneeId" Category="Property Foreign" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="TypeMapping: Microsoft.EntityFrameworkCore.Storage.IntTypeMapping" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="40,191.92,77.5033333333333,25.96" Field="nofield" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="True" IsIndexed="True" IsPrimaryKey="False" IsRequired="False" IsShadow="True" IsUnicode="True" Label="AssigneeId" MaxLength="None" Name="AssigneeId" PropertyAccessMode="PropertyAccessMode.Default" Type="Nullable&lt;int&gt;" ValueGenerated="None" />
+    <Node Id="SubTask.AssignneId" Category="Property Required" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="TypeMapping: Microsoft.EntityFrameworkCore.Storage.IntTypeMapping" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="147.503333333333,191.92,78.0166666666667,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="True" IsShadow="False" IsUnicode="True" Label="AssignneId" MaxLength="None" Name="AssignneId" PropertyAccessMode="PropertyAccessMode.Default" Type="int" ValueGenerated="None" />
+    <Node Id="SubTask.CreateAt" Category="Property Required" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="Relational:DefaultValueSql: getdate() TypeMapping: Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDateTimeTypeMapping" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="310.8,135.96,66.1366666666667,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="True" IsShadow="False" IsUnicode="True" Label="CreateAt" MaxLength="None" Name="CreateAt" PropertyAccessMode="PropertyAccessMode.Default" Type="DateTime" ValueGenerated="ValueGenerated.OnAdd" />
+    <Node Id="SubTask.Description" Category="Property Optional" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="TypeMapping: Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerStringTypeMapping" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="255.52,191.92,80.2533333333333,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="False" IsShadow="False" IsUnicode="True" Label="Description" MaxLength="None" Name="Description" PropertyAccessMode="PropertyAccessMode.Default" Type="string" ValueGenerated="None" />
+    <Node Id="SubTask.Id" Category="Property Primary" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="SqlServer:ValueGenerationStrategy: IdentityColumn TypeMapping: Microsoft.EntityFrameworkCore.Storage.IntTypeMapping" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="40,80,50,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="True" IsRequired="True" IsShadow="False" IsUnicode="True" Label="Id" MaxLength="None" Name="Id" PropertyAccessMode="PropertyAccessMode.Default" Type="int" ValueGenerated="ValueGenerated.OnAdd" />
+    <Node Id="SubTask.IsDone" Category="Property Required" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="TypeMapping: Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerBoolTypeMapping" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="40,135.96,56.7966666666667,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="True" IsShadow="False" IsUnicode="True" Label="IsDone" MaxLength="None" Name="IsDone" PropertyAccessMode="PropertyAccessMode.Default" Type="bool" ValueGenerated="None" />
+    <Node Id="SubTask.IsUrgent" Category="Property Required" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="TypeMapping: Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerBoolTypeMapping" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="215.896666666667,135.96,64.9033333333334,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="True" IsShadow="False" IsUnicode="True" Label="IsUrgent" MaxLength="None" Name="IsUrgent" PropertyAccessMode="PropertyAccessMode.Default" Type="bool" ValueGenerated="None" />
+    <Node Id="SubTask.Name" Category="Property Optional" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="TypeMapping: Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerStringTypeMapping" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="120,80,51.6966666666667,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="False" IsShadow="False" IsUnicode="True" Label="Name" MaxLength="None" Name="Name" PropertyAccessMode="PropertyAccessMode.Default" Type="string" ValueGenerated="None" />
+    <Node Id="SubTask.TaksId" Category="Property Required" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="TypeMapping: Microsoft.EntityFrameworkCore.Storage.IntTypeMapping" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="201.696666666667,80,52.3633333333333,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="True" IsShadow="False" IsUnicode="True" Label="TaksId" MaxLength="None" Name="TaksId" PropertyAccessMode="PropertyAccessMode.Default" Type="int" ValueGenerated="None" />
+    <Node Id="SubTask.Task" Category="Navigation Property" Bounds="126.796666666667,135.96,59.1,25.96" Dependent="" Field="Task" Inverse="SubTasks" Label="Task (1)" Name="Task" Principal="" PropertyAccessMode="PropertyAccessMode.Default" Type="ToPrincipa" />
+    <Node Id="SubTask.TaskId" Category="Property Foreign" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="TypeMapping: Microsoft.EntityFrameworkCore.Storage.IntTypeMapping" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="284.06,80,52.3633333333333,25.96" Field="nofield" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="True" IsIndexed="True" IsPrimaryKey="False" IsRequired="False" IsShadow="True" IsUnicode="True" Label="TaskId" MaxLength="None" Name="TaskId" PropertyAccessMode="PropertyAccessMode.Default" Type="Nullable&lt;int&gt;" ValueGenerated="None" />
+    <Node Id="SubTask.TimeToSolve" Category="Property Required" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="TypeMapping: Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDateTimeTypeMapping" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="154.24,247.88,86.2866666666667,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="True" IsShadow="False" IsUnicode="True" Label="TimeToSolve" MaxLength="None" Name="TimeToSolve" PropertyAccessMode="PropertyAccessMode.Default" Type="DateTime" ValueGenerated="None" />
+    <Node Id="Task" Category="EntityType" Annotations="" BaseClass="" Bounds="201.77,339.8,353.396666666667,253.84" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot" Group="Expanded" IsAbstract="False" Label="Task" Name="Task" />
+    <Node Id="Task.Assignee" Category="Navigation Property" Bounds="440.04,491.72,84.24,25.96" Dependent="" Field="Assignee" Inverse="Tasks" Label="Assignee (1)" Name="Assignee" Principal="" PropertyAccessMode="PropertyAccessMode.Default" Type="ToPrincipa" />
+    <Node Id="Task.AssigneeId" Category="Property Foreign" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="TypeMapping: Microsoft.EntityFrameworkCore.Storage.IntTypeMapping" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="414.883333333333,435.76,77.5033333333333,25.96" Field="nofield" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="True" IsIndexed="True" IsPrimaryKey="False" IsRequired="False" IsShadow="True" IsUnicode="True" Label="AssigneeId" MaxLength="None" Name="AssigneeId" PropertyAccessMode="PropertyAccessMode.Default" Type="Nullable&lt;int&gt;" ValueGenerated="None" />
+    <Node Id="Task.AssignneId" Category="Property Required" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="TypeMapping: Microsoft.EntityFrameworkCore.Storage.IntTypeMapping" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="221.77,491.72,78.0166666666667,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="True" IsShadow="False" IsUnicode="True" Label="AssignneId" MaxLength="None" Name="AssignneId" PropertyAccessMode="PropertyAccessMode.Default" Type="int" ValueGenerated="None" />
+    <Node Id="Task.CreateAt" Category="Property Required" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="Relational:DefaultValueSql: getdate() TypeMapping: Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDateTimeTypeMapping" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="221.77,435.76,66.1366666666667,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="True" IsShadow="False" IsUnicode="True" Label="CreateAt" MaxLength="None" Name="CreateAt" PropertyAccessMode="PropertyAccessMode.Default" Type="DateTime" ValueGenerated="ValueGenerated.OnAdd" />
+    <Node Id="Task.Description" Category="Property Optional" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="TypeMapping: Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerStringTypeMapping" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="329.786666666667,491.72,80.2533333333333,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="False" IsShadow="False" IsUnicode="True" Label="Description" MaxLength="None" Name="Description" PropertyAccessMode="PropertyAccessMode.Default" Type="string" ValueGenerated="None" />
+    <Node Id="Task.Id" Category="Property Primary" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="SqlServer:ValueGenerationStrategy: IdentityColumn TypeMapping: Microsoft.EntityFrameworkCore.Storage.IntTypeMapping" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="221.77,379.8,50,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="True" IsRequired="True" IsShadow="False" IsUnicode="True" Label="Id" MaxLength="None" Name="Id" PropertyAccessMode="PropertyAccessMode.Default" Type="int" ValueGenerated="ValueGenerated.OnAdd" />
+    <Node Id="Task.IsDone" Category="Property Required" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="TypeMapping: Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerBoolTypeMapping" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="383.466666666667,379.8,56.7966666666666,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="True" IsShadow="False" IsUnicode="True" Label="IsDone" MaxLength="None" Name="IsDone" PropertyAccessMode="PropertyAccessMode.Default" Type="bool" ValueGenerated="None" />
+    <Node Id="Task.IsUrgent" Category="Property Required" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="TypeMapping: Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerBoolTypeMapping" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="470.263333333333,379.8,64.9033333333333,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="True" IsShadow="False" IsUnicode="True" Label="IsUrgent" MaxLength="None" Name="IsUrgent" PropertyAccessMode="PropertyAccessMode.Default" Type="bool" ValueGenerated="None" />
+    <Node Id="Task.Name" Category="Property Optional" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="TypeMapping: Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerStringTypeMapping" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="301.77,379.8,51.6966666666667,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="False" IsShadow="False" IsUnicode="True" Label="Name" MaxLength="None" Name="Name" PropertyAccessMode="PropertyAccessMode.Default" Type="string" ValueGenerated="None" />
+    <Node Id="Task.ProjectId" Category="Property Foreign" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="TypeMapping: Microsoft.EntityFrameworkCore.Storage.IntTypeMapping" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="317.906666666667,435.76,66.9766666666667,25.96" Field="nofield" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="True" IsIndexed="True" IsPrimaryKey="False" IsRequired="False" IsShadow="True" IsUnicode="True" Label="ProjectId" MaxLength="None" Name="ProjectId" PropertyAccessMode="PropertyAccessMode.Default" Type="Nullable&lt;int&gt;" ValueGenerated="None" />
+    <Node Id="Task.SubTasks" Category="Navigation Property" Bounds="221.77,547.68,84.41,25.96" Dependent="SubTask" Field="List&lt;SubTask&gt;" Inverse="Task" Label="SubTasks (1)" Name="SubTasks" Principal="" PropertyAccessMode="PropertyAccessMode.Default" Type="Collectio" />
+    <Node Id="Task.TimeToSolve" Category="Property Required" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="TypeMapping: Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDateTimeTypeMapping" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="336.18,547.68,86.2866666666666,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="True" IsShadow="False" IsUnicode="True" Label="TimeToSolve" MaxLength="None" Name="TimeToSolve" PropertyAccessMode="PropertyAccessMode.Default" Type="DateTime" ValueGenerated="None" />
+  </Nodes>
+  <Links>
+    <Link Source="Assignee" Target="Assignee.Email" Category="Contains" />
+    <Link Source="Assignee" Target="Assignee.Id" Category="Contains" />
+    <Link Source="Assignee" Target="Assignee.Name" Category="Contains" />
+    <Link Source="Assignee" Target="Assignee.Tasks" Category="Contains" />
+    <Link Source="IModel" Target="Assignee" Category="Contains" />
+    <Link Source="IModel" Target="Mentor" Category="Contains" />
+    <Link Source="IModel" Target="Project" Category="Contains" />
+    <Link Source="IModel" Target="SubTask" Category="Contains" />
+    <Link Source="IModel" Target="Task" Category="Contains" />
+    <Link Source="Mentor" Target="Mentor.Email" Category="Contains" />
+    <Link Source="Mentor" Target="Mentor.Id" Category="Contains" />
+    <Link Source="Mentor" Target="Mentor.Name" Category="Contains" />
+    <Link Source="Mentor" Target="Mentor.Project" Category="Contains" />
+    <Link Source="Mentor" Target="Mentor.Specialization" Category="Contains" />
+    <Link Source="Project" Target="Mentor" Category="Foreign Key" Annotations="" Bounds="419.468322753906,837.47998046875,0,36.9600219726563" From="Project.MentorId" IsUnique="True" Label="1:1" LabelBounds="403.928333333333,852.48,15.54,15.96" Name="Project -&gt; Mentor" To="Mentor.Id" />
+    <Link Source="Project" Target="Project.Description" Category="Contains" />
+    <Link Source="Project" Target="Project.DueDate" Category="Contains" />
+    <Link Source="Project" Target="Project.Id" Category="Contains" />
+    <Link Source="Project" Target="Project.Mentor" Category="Contains" />
+    <Link Source="Project" Target="Project.MentorId" Category="Contains" />
+    <Link Source="Project" Target="Project.Name" Category="Contains" />
+    <Link Source="Project" Target="Project.Tasks" Category="Contains" />
+    <Link Source="SubTask" Target="Assignee" Category="Foreign Key" Annotations="" Bounds="163.468338012695,293.839996337891,11.7585906982422,364.740020751953" From="SubTask.AssigneeId" IsUnique="False" Label="1:*" LabelBounds="149.395,458.74,14.0733333333334,15.96" Name="SubTask -&gt; Assignee" To="Assignee.Id" />
+    <Link Source="SubTask" Target="SubTask.Assignee" Category="Contains" />
+    <Link Source="SubTask" Target="SubTask.AssigneeId" Category="Contains" />
+    <Link Source="SubTask" Target="SubTask.AssignneId" Category="Contains" />
+    <Link Source="SubTask" Target="SubTask.CreateAt" Category="Contains" />
+    <Link Source="SubTask" Target="SubTask.Description" Category="Contains" />
+    <Link Source="SubTask" Target="SubTask.Id" Category="Contains" />
+    <Link Source="SubTask" Target="SubTask.IsDone" Category="Contains" />
+    <Link Source="SubTask" Target="SubTask.IsUrgent" Category="Contains" />
+    <Link Source="SubTask" Target="SubTask.Name" Category="Contains" />
+    <Link Source="SubTask" Target="SubTask.TaksId" Category="Contains" />
+    <Link Source="SubTask" Target="SubTask.Task" Category="Contains" />
+    <Link Source="SubTask" Target="SubTask.TaskId" Category="Contains" />
+    <Link Source="SubTask" Target="SubTask.TimeToSolve" Category="Contains" />
+    <Link Source="SubTask" Target="Task" Category="Foreign Key" Annotations="" Bounds="280.437652587891,293.839996337891,21.6220092773438,38.1310729980469" From="SubTask.TaskId" IsUnique="False" Label="1:*" LabelBounds="279.395,308.84,14.0733333333333,15.96" Name="SubTask -&gt; Task" To="Task.Id" />
+    <Link Source="Task" Target="Assignee" Category="Foreign Key" Annotations="" Bounds="225.178466796875,593.640014648438,52.900634765625,66.8811645507813" From="Task.AssigneeId" IsUnique="False" Label="1:*" LabelBounds="259.902738454369,608.64,14.0733333333333,15.96" Name="Task -&gt; Assignee" To="Assignee.Id" />
+    <Link Source="Task" Target="Project" Category="Foreign Key" Annotations="" Bounds="397.612335205078,593.640014648438,5.59002685546875,37.0606689453125" From="Task.ProjectId" IsUnique="False" Label="1:*" LabelBounds="401.07851654281,608.64,14.0733333333333,15.96" Name="Task -&gt; Project" To="Project.Id" />
+    <Link Source="Task" Target="Task.Assignee" Category="Contains" />
+    <Link Source="Task" Target="Task.AssigneeId" Category="Contains" />
+    <Link Source="Task" Target="Task.AssignneId" Category="Contains" />
+    <Link Source="Task" Target="Task.CreateAt" Category="Contains" />
+    <Link Source="Task" Target="Task.Description" Category="Contains" />
+    <Link Source="Task" Target="Task.Id" Category="Contains" />
+    <Link Source="Task" Target="Task.IsDone" Category="Contains" />
+    <Link Source="Task" Target="Task.IsUrgent" Category="Contains" />
+    <Link Source="Task" Target="Task.Name" Category="Contains" />
+    <Link Source="Task" Target="Task.ProjectId" Category="Contains" />
+    <Link Source="Task" Target="Task.SubTasks" Category="Contains" />
+    <Link Source="Task" Target="Task.TimeToSolve" Category="Contains" />
+  </Links>
+  <Categories>
+    <Category Id="Contains" Label="Contains" Description="Whether the source of the link contains the target object" CanBeDataDriven="False" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Contained By" IsContainment="True" OutgoingActionLabel="Contains" />
+    <Category Id="EntityType" />
+    <Category Id="Foreign Key" />
+    <Category Id="Model" />
+    <Category Id="Navigation Property" />
+    <Category Id="Property Foreign" />
+    <Category Id="Property Optional" />
+    <Category Id="Property Primary" />
+    <Category Id="Property Required" />
+  </Categories>
+  <Properties>
+    <Property Id="AfterSaveBehavior" Group="Property Flags" DataType="System.String" />
+    <Property Id="Annotations" Description="Annotations" Group="Model Properties" DataType="System.String" />
+    <Property Id="BaseClass" Description="Base class" Group="Model Properties" DataType="System.String" />
+    <Property Id="BeforeSaveBehavior" Group="Property Flags" DataType="System.String" />
+    <Property Id="Bounds" DataType="System.Windows.Rect" />
+    <Property Id="CanBeDataDriven" Label="CanBeDataDriven" Description="CanBeDataDriven" DataType="System.Boolean" />
+    <Property Id="CanLinkedNodesBeDataDriven" Label="CanLinkedNodesBeDataDriven" Description="CanLinkedNodesBeDataDriven" DataType="System.Boolean" />
+    <Property Id="ChangeTrackingStrategy" Description="Change tracking strategy" Group="Model Properties" DataType="System.String" />
+    <Property Id="Dependent" Description="Dependent entity" Group="Model Properties" DataType="System.String" />
+    <Property Id="Expression" DataType="System.String" />
+    <Property Id="Field" Description="Backing field" Group="Model Properties" DataType="System.String" />
+    <Property Id="From" Description="Target property" Group="Model Properties" DataType="System.String" />
+    <Property Id="GraphDirection" DataType="Microsoft.VisualStudio.Diagrams.Layout.LayoutOrientation" />
+    <Property Id="Group" Label="Group" Description="Display the node as a group" DataType="Microsoft.VisualStudio.GraphModel.GraphGroupStyle" />
+    <Property Id="GroupLabel" DataType="System.String" />
+    <Property Id="IncomingActionLabel" Label="IncomingActionLabel" Description="IncomingActionLabel" DataType="System.String" />
+    <Property Id="Inverse" Description="Inverse entity" Group="Model Properties" DataType="System.String" />
+    <Property Id="IsAbstract" Label="IsAbstract" Description="IsAbstract" Group="Model Properties" DataType="System.Boolean" />
+    <Property Id="IsAlternateKey" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsConcurrencyToken" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsContainment" DataType="System.Boolean" />
+    <Property Id="IsEnabled" DataType="System.Boolean" />
+    <Property Id="IsForeignKey" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsIndexed" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsPrimaryKey" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsRequired" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsShadow" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsUnicode" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsUnique" Group="Model Properties" DataType="System.Boolean" />
+    <Property Id="Label" Label="Label" Description="Displayable label of an Annotatable object" DataType="System.String" />
+    <Property Id="LabelBounds" DataType="System.Windows.Rect" />
+    <Property Id="MaxLength" DataType="System.String" />
+    <Property Id="Name" Group="Model Properties" DataType="System.String" />
+    <Property Id="OutgoingActionLabel" Label="OutgoingActionLabel" Description="OutgoingActionLabel" DataType="System.String" />
+    <Property Id="Principal" Description="Principal entity" Group="Model Properties" DataType="System.String" />
+    <Property Id="ProductVersion" Label="Product Version" Description="EF Core product version" Group="Model Properties" DataType="System.String" />
+    <Property Id="PropertyAccessMode" Group="Property Flags" DataType="System.String" />
+    <Property Id="TargetType" DataType="System.Type" />
+    <Property Id="To" Description="Source property" Group="Model Properties" DataType="System.String" />
+    <Property Id="Type" Description="CLR data type" Group="Model Properties" DataType="System.String" />
+    <Property Id="Value" DataType="System.String" />
+    <Property Id="ValueGenerated" Group="Property Flags" DataType="System.String" />
+    <Property Id="ValueLabel" DataType="System.String" />
+    <Property Id="ZoomLevel" DataType="System.String" />
+  </Properties>
+  <Styles>
+    <Style TargetType="Node" GroupLabel="EntityType" ValueLabel="True">
+      <Condition Expression="HasCategory('EntityType')" />
+      <Setter Property="Background" Value="#FFC0C0C0" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Property Primary" ValueLabel="True">
+      <Condition Expression="HasCategory('Property Primary')" />
+      <Setter Property="Background" Value="#FF008000" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Property Optional" ValueLabel="True">
+      <Condition Expression="HasCategory('Property Optional')" />
+      <Setter Property="Background" Value="#FF808040" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Property Foreign" ValueLabel="True">
+      <Condition Expression="HasCategory('Property Foreign')" />
+      <Setter Property="Background" Value="#FF8080FF" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Property Required" ValueLabel="True">
+      <Condition Expression="HasCategory('Property Required')" />
+      <Setter Property="Background" Value="#FFC0A000" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Navigation Property" ValueLabel="True">
+      <Condition Expression="HasCategory('Navigation Property')" />
+      <Setter Property="Background" Value="#FF990000" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Navigation Collection" ValueLabel="True">
+      <Condition Expression="HasCategory('Navigation Collection')" />
+      <Setter Property="Background" Value="#FFFF3232" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Model" ValueLabel="True">
+      <Condition Expression="HasCategory('Model')" />
+      <Setter Property="Background" Value="#FFFFFFFF" />
+    </Style>
+  </Styles>
+</DirectedGraph>

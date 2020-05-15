@@ -1,0 +1,66 @@
+﻿@model TodoLvl3.ViewModel.CreateProjectViewModel
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DueDate" class="control-label"></label>
+                <input asp-for="DueDate" class="form-control" />
+                <span asp-validation-for="DueDate" class="text-danger"></span>
+            </div>
+            @if (Model.Tasks.Count() > 0)
+            {
+                <div class="form-group">
+                    <label asp-for="ChoosenTask" class="control-label"></label>
+                    <select asp-for="ChoosenTask" class="form-control">
+                        @foreach (var item in Model.Tasks)
+                        {
+                            <option value="@item.Id">@item.Name</option>
+                        }
+
+                    </select>
+                    <span asp-validation-for="ChoosenTask" class="text-danger"></span>
+                </div>
+            }
+
+
+            @if (Model.Mentors.Count() > 0)
+            {
+                <div class="form-group">
+                    <label asp-for="ChoosenMentor" class="control-label"></label>
+                    <select asp-for="ChoosenMentor" class="form-control">
+                        @foreach (var item in Model.Mentors)
+                        {
+                            <option value="@item.Id">@item.Name</option>
+                        }
+
+                    </select>
+                    <span asp-validation-for="ChoosenMentor" class="text-danger"></span>
+                </div>
+            }
+
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
