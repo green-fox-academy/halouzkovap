@@ -14,7 +14,8 @@ public interface IPostService {
 
     void deleteById(long id);
 
-    Optional<Post> findById(Long id);
+    Post findById(Long id);
+    Optional<Post>findId(Long id);
 
 
     Iterable<Post> findByCategory(Category category);
