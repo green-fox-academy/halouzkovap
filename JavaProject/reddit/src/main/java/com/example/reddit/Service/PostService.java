@@ -60,8 +60,4 @@ public class PostService implements  IPostService{
         return postRepository.findById(id);
     }
 
-    @Override
-    public Iterable<Post> findByCategory(Category category) {
-        return postRepository.findByCategoryAllIgnoreCase((com.example.reddit.Entity.Category) category);
-    }
 }

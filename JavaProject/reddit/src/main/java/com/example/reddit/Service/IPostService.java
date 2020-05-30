@@ -18,6 +18,6 @@ public interface IPostService {
     Optional<Post>findId(Long id);
 
 
-    Iterable<Post> findByCategory(Category category);
+// Iterable<Post> findByCategory(String category);
 
 }

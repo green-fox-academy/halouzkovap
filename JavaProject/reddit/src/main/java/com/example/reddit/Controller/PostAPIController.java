@@ -1,12 +1,16 @@
 package com.example.reddit.Controller;
 
+import com.example.reddit.Entity.Category;
 import com.example.reddit.Entity.Post;
+import com.example.reddit.Entity.User;
 import com.example.reddit.Exception.ApplicationNotFoundException;
+import com.example.reddit.Model.CategoryDtoForCreation;
 import com.example.reddit.Model.PostDtoForCreation;
 import com.example.reddit.Model.PostDtoForUpdate;
 import com.example.reddit.Model.ResponsPostDto;
 import com.example.reddit.Service.ICategoryService;
 import com.example.reddit.Service.IPostService;
+import com.example.reddit.Service.IUserService;
 import lombok.var;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,15 +19,17 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
 @RestController
-public class PostController {
+public class PostAPIController {
 
 
     private final ICategoryService categoryService;
     private final IPostService postService;
+    private final IUserService userService;
 
-    public PostController(IPostService postService, ICategoryService categoryService) {
+    public PostAPIController(IPostService postService, ICategoryService categoryService, IUserService userService) {
         this.categoryService = categoryService;
         this.postService = postService;
+        this.userService = userService;
     }
 
 
@@ -79,4 +85,18 @@ public class PostController {
         postService.deleteById(id);
     }
 
+    @GetMapping("/category")
+    public ResponseEntity<Iterable<Category>> allC() {
+        return ResponseEntity.ok(categoryService.list());
+    }
+
+    @PostMapping("/category")
+    public Category create(@Validated @RequestBody CategoryDtoForCreation categoryDtoForCreation) {
+        Category category = new Category(categoryDtoForCreation.getName(), categoryDtoForCreation.getCt());
+        return categoryService.createCategory(category);
+    }
+    @GetMapping("/user")
+    public Iterable<User> list(){
+        return userService.list();
+    }
 }
