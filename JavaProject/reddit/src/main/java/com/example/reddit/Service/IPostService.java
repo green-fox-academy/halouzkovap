@@ -11,14 +11,18 @@ public interface IPostService {
     Iterable<Post> findAll();
 
     Post save(Post post, int CategoryId);
+
     Post save(Post post);
 
     void deleteById(long id);
 
     Post findById(Long id);
-    Optional<Post>findId(Long id);
+
+    Optional<Post> findId(Long id);
 
 
- Iterable<Post> findByCategory(List<String> ct);
+    Iterable<Post> findByCategory(List<String> ct);
+
+
 
 }

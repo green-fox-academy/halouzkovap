@@ -2,7 +2,6 @@ package com.example.reddit.Service;
 
 import com.example.reddit.Entity.User;
 import com.example.reddit.Repository.UserRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -38,4 +37,22 @@ public class UserService implements IUserService {
     public Optional<User> findUserEmail(String name, String email) {
         return userRepository.findByUserNameAndEmail(name, email);
     }
+
+    @Override
+    public User Create(User u) {
+        return userRepository.save(u);
+    }
+
+
+    @Override
+    public Optional<User> findUser(int id) {
+        return userRepository.findById(id);
+    }
+
+    @Override
+    public void deleteUser(int id) {
+        userRepository.deleteById(id);
+    }
+
+
 }

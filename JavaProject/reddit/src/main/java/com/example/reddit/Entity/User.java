@@ -11,16 +11,14 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
-    @NotNull
+
     private String userName;
-    @NotNull
-    @Column(unique = true)
+
     private String email;
-    @NotNull
-    @Column(unique = true)
+
     private String password;
 
-    @OneToMany(mappedBy = "user")
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private List<Post> posts;
 
 
@@ -34,6 +32,12 @@ public class User {
     public User(String userName, String email) {
         this.userName = userName;
         this.email = email;
+    }
+
+    public User(String userName, String email, String password) {
+        this.userName = userName;
+        this.email = email;
+        this.password = password;
     }
 
     public Integer getId() {

@@ -4,10 +4,7 @@ import com.example.reddit.Entity.Category;
 import com.example.reddit.Entity.Post;
 import com.example.reddit.Entity.User;
 import com.example.reddit.Exception.ApplicationNotFoundException;
-import com.example.reddit.Model.CategoryDtoForCreation;
-import com.example.reddit.Model.PostDtoForCreation;
-import com.example.reddit.Model.PostDtoForUpdate;
-import com.example.reddit.Model.ResponsPostDto;
+import com.example.reddit.Model.*;
 import com.example.reddit.Service.ICategoryService;
 import com.example.reddit.Service.IPostService;
 import com.example.reddit.Service.IUserService;
@@ -17,6 +14,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
+
+import java.util.Optional;
 
 @RestController
 public class PostAPIController {
@@ -37,7 +36,7 @@ public class PostAPIController {
     public ResponseEntity<Iterable<ResponsPostDto>> all() {
         Iterable<Post> list = postService.findAll();
         Iterable<ResponsPostDto> rList = null;
-      
+
         return new ResponseEntity<Iterable<ResponsPostDto>>(rList, HttpStatus.OK);
     }
 
@@ -45,7 +44,7 @@ public class PostAPIController {
     public ResponseEntity<ResponsPostDto> onePost(@PathVariable long id) {
         try {
             Post p1 = postService.findById(id);
-            ResponsPostDto rp1 = new ResponsPostDto(p1.getName(),p1.getUrl(),p1.getCategory().getName());
+            ResponsPostDto rp1 = new ResponsPostDto(p1.getName(), p1.getUrl(), p1.getCategory().getName());
             return new ResponseEntity<ResponsPostDto>(rp1, HttpStatus.OK);
         } catch (ApplicationNotFoundException exception) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "ID Not Found");
@@ -72,7 +71,7 @@ public class PostAPIController {
                         postService.save(post, postDtoForUpdate.categoryId);
                         return null;
                     });
-            Post post = postService.findById( id);
+            Post post = postService.findById(id);
             return new ResponseEntity<ResponsPostDto>(new ResponsPostDto(post.getName(), post.getUrl(), post.getCategory().getName()), HttpStatus.OK);
 
         } catch (ApplicationNotFoundException exception) {
@@ -95,8 +94,27 @@ public class PostAPIController {
         Category category = new Category(categoryDtoForCreation.getName(), categoryDtoForCreation.getCt());
         return categoryService.createCategory(category);
     }
+
     @GetMapping("/user")
-    public Iterable<User> list(){
+    public Iterable<User> list() {
         return userService.list();
+    }
+
+    @GetMapping("/user/{id}")
+    public ResponseEntity<Optional<User>> oneUser(@PathVariable int id) {
+
+        return new ResponseEntity<Optional<User>>(userService.findUser(id), HttpStatus.OK);
+    }
+
+    @PostMapping("/user")
+    ResponseEntity<ResponseUserDto> create(@RequestBody UserDtoCreation udc) {
+        User u = new User(udc.getUserName(),udc.getEmail(),udc.getPassword());
+        userService.Create(u);
+        return new ResponseEntity<ResponseUserDto>(new ResponseUserDto(u.getUserName(),u.getEmail()), HttpStatus.OK);
+    }
+
+    @DeleteMapping("/user/{id}")
+    public void delet(@PathVariable int id) {
+        userService.deleteUser(id);
     }
 }

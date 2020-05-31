@@ -24,4 +24,6 @@ public interface PostRepository extends CrudRepository<Post, Long> {
     @Query("select p from Post p where p.Name=:equal and p.category.name=:equall")
     Post queryByUserAndAndCategory(@Param("equal") String userName,
                                    @Param("equall") String categoryName);
+
+
 }

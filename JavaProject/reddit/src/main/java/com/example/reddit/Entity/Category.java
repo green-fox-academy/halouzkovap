@@ -20,7 +20,7 @@ public class Category {
     private Enum CategoryType;
 
 
-    @OneToMany(mappedBy = "category")
+    @OneToMany(mappedBy = "category", cascade = CascadeType.ALL)
 
     private List<Post> posts;
 

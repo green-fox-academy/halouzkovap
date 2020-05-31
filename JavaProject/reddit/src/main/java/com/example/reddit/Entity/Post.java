@@ -4,6 +4,7 @@ import javax.persistence.*;
 import java.util.Optional;
 
 @Entity
+
 public class Post {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -20,7 +21,7 @@ public class Post {
     @JoinColumn(name = "category_id")
     private Category category;
 
-    public  Post(){
+    public Post() {
 
     }
 
