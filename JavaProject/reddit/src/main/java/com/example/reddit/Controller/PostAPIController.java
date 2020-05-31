@@ -4,6 +4,8 @@ import com.example.reddit.Entity.Category;
 import com.example.reddit.Entity.Post;
 import com.example.reddit.Entity.User;
 import com.example.reddit.Exception.ApplicationNotFoundException;
+import com.example.reddit.Exception.ErrorMessage;
+import com.example.reddit.Exception.FieldErrorMessage;
 import com.example.reddit.Model.*;
 import com.example.reddit.Service.ICategoryService;
 import com.example.reddit.Service.IPostService;
@@ -14,10 +16,19 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
+import org.springframework.validation.FieldError;
+import org.springframework.web.bind.MethodArgumentNotValidException;
 
+import javax.validation.Valid;
+
+
+import javax.xml.bind.ValidationException;
+import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @RestController
+@Validated
 public class PostAPIController {
 
 
@@ -52,7 +63,7 @@ public class PostAPIController {
     }
 
     @PostMapping("/posts")
-    public ResponsPostDto create(@Validated @RequestBody PostDtoForCreation postDtoForCreation) {
+    public ResponsPostDto create(@Valid @RequestBody PostDtoForCreation postDtoForCreation) {
 
         Post p1 = new Post(postDtoForCreation.name, postDtoForCreation.url);
         postService.save(p1, postDtoForCreation.categoryId);
@@ -106,15 +117,27 @@ public class PostAPIController {
         return new ResponseEntity<Optional<User>>(userService.findUser(id), HttpStatus.OK);
     }
 
+
     @PostMapping("/user")
-    ResponseEntity<ResponseUserDto> create(@RequestBody UserDtoCreation udc) {
-        User u = new User(udc.getUserName(),udc.getEmail(),udc.getPassword());
-        userService.Create(u);
-        return new ResponseEntity<ResponseUserDto>(new ResponseUserDto(u.getUserName(),u.getEmail()), HttpStatus.OK);
+    ResponseEntity<ResponseUserDto> create(@RequestBody UserDtoCreation udc) throws ValidationException {
+        if (udc.getUserName() != null && udc.getEmail() != null && udc.getPassword() != null) {
+            User u = new User(udc.getUserName(), udc.getEmail(), udc.getPassword());
+            userService.Create(u);
+            return new ResponseEntity<ResponseUserDto>(new ResponseUserDto(u.getUserName(), u.getEmail()), HttpStatus.OK);
+        } else throw new ValidationException("User cannot be created");
+
     }
 
+
     @DeleteMapping("/user/{id}")
-    public void delet(@PathVariable int id) {
-        userService.deleteUser(id);
+    public ResponseEntity delet(@PathVariable int id) {
+        if (userService.findUser(id).isPresent()) {
+            userService.deleteUser(id);
+            return new ResponseEntity(HttpStatus.OK);
+        } else {
+            return new ResponseEntity(HttpStatus.BAD_REQUEST);
+        }
+
+
     }
 }

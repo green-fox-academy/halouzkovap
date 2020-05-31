@@ -6,6 +6,7 @@ import javax.persistence.Column;
 
 public class UserDtoCreation {
     @NotNull
+
     private String userName;
     @NotNull
     @Column(unique = true)
