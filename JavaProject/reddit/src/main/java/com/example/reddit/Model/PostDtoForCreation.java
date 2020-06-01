@@ -4,6 +4,7 @@ import com.example.reddit.Entity.Category;
 import com.sun.istack.NotNull;
 
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Positive;
 
 
 public class PostDtoForCreation {
@@ -14,6 +15,14 @@ public class PostDtoForCreation {
     @NotNull
     public String url;
     @NotNull
+    @Positive
     public int categoryId;
-    public  int userId;
+    @Positive
+    public int userId;
+
+    public PostDtoForCreation(@NotBlank String name, String url, @Positive int categoryId) {
+        this.name = name;
+        this.url = url;
+        this.categoryId = categoryId;
+    }
 }
