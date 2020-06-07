@@ -1,18 +1,21 @@
 package com.example.reddit.Service;
 
 import com.example.reddit.Entity.Post;
-import jdk.jfr.Category;
+
 
 import java.util.List;
 import java.util.Optional;
 
 public interface IPostService {
+    Post findByIdInt(int id);
 
     Iterable<Post> findAll();
 
     Post save(Post post, int CategoryId);
 
     Post save(Post post);
+
+    boolean saveBool(Post post);
 
     void deleteById(long id);
 
@@ -22,7 +25,6 @@ public interface IPostService {
 
 
     Iterable<Post> findByCategory(List<String> ct);
-
 
 
 }

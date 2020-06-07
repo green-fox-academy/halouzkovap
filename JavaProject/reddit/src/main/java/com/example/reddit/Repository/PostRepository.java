@@ -18,6 +18,7 @@ public interface PostRepository extends CrudRepository<Post, Long> {
 
     Optional<Post> findByUserAllIgnoreCase(User user);
 
+    Post findById(int id);
 
     List<Post> findByCategoryNameIn(List<String> cat);
 

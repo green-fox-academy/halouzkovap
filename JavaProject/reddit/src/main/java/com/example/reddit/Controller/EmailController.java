@@ -13,7 +13,7 @@ public class EmailController {
 
     @RequestMapping(value = "/email/", method = RequestMethod.POST)
     public String index(@RequestBody EmailPojo emailPojo) {
-        String response = sendGridService.sendMail(emailPojo);
+        String response = sendGridService.sendMailWithPojo(emailPojo);
         return response;
     }
 }

@@ -80,10 +80,4 @@ public class SendGridServiceImpl implements SendGridService {
         return "Email is sent Successfully!!";
     }
 
-
-
-    @Override
-    public void sendMail(String subject, String body, String address) {
-
-    }
 }

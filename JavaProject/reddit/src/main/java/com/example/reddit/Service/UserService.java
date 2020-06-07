@@ -43,7 +43,7 @@ public class UserService implements IUserService {
 
     @Override
     public User Create(User u) {
-        sendRegistEmail.sendMail(new EmailPojo(u.getUserName(),u.getUserName(),u.getEmail(),u.getUserName()));
+        sendRegistEmail.sendMailWithPojo(new EmailPojo(u.getUserName(),u.getUserName(),u.getEmail(),u.getUserName()));
         return userRepository.save(u);
     }
 
