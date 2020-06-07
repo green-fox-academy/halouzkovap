@@ -1,7 +1,7 @@
 package com.example.reddit.Service;
 
 
-import com.example.reddit.Controller.EmailPojo;
+import com.example.reddit.ControllerRestTemplateTest.EmailPojo;
 import com.sendgrid.Method;
 import com.sendgrid.Request;
 import com.sendgrid.Response;

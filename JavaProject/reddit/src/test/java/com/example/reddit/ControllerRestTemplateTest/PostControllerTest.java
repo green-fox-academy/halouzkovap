@@ -1,11 +1,10 @@
-package com.example.reddit.Controller;
+package com.example.reddit.ControllerRestTemplateTest;
 
 import com.example.reddit.Model.ResponsPostDto;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -13,6 +12,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class PostControllerTest {
+    //integration test
     @Autowired
     private TestRestTemplate restTemplate;
     private static final String URL = "http://localhost:8080/posts";

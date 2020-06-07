@@ -1,4 +1,4 @@
-package com.example.reddit.Controller;
+package com.example.reddit.ControllerRestTemplateTest;
 
 import com.example.reddit.Entity.Category;
 import com.example.reddit.Entity.User;
@@ -30,7 +30,7 @@ public class CategoryController {
     }
 
     @GetMapping("/category")
-    public ResponseEntity<Iterable<Category>> allC() {
+    public ResponseEntity<Iterable<Category>> all() {
         return ResponseEntity.ok(categoryService.list());
     }
 

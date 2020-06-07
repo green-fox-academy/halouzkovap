@@ -1,31 +1,18 @@
-package com.example.reddit.Controller;
+package com.example.reddit.ControllerRestTemplateTest;
 
-import com.example.reddit.Entity.Category;
 import com.example.reddit.Entity.Post;
-import com.example.reddit.Entity.User;
 import com.example.reddit.Exception.ApplicationNotFoundException;
-import com.example.reddit.Exception.ErrorMessage;
-import com.example.reddit.Exception.FieldErrorMessage;
 import com.example.reddit.Model.*;
 import com.example.reddit.Service.ICategoryService;
 import com.example.reddit.Service.IPostService;
 import com.example.reddit.Service.IUserService;
-import lombok.var;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
-import org.springframework.validation.FieldError;
-import org.springframework.web.bind.MethodArgumentNotValidException;
 
 import javax.validation.Valid;
-
-
-import javax.xml.bind.ValidationException;
-import java.util.List;
-import java.util.Optional;
-import java.util.stream.Collectors;
 
 @RestController
 @Validated

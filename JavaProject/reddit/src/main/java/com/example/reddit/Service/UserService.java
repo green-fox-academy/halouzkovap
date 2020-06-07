@@ -1,6 +1,6 @@
 package com.example.reddit.Service;
 
-import com.example.reddit.Controller.EmailPojo;
+import com.example.reddit.ControllerRestTemplateTest.EmailPojo;
 import com.example.reddit.Entity.User;
 import com.example.reddit.Repository.UserRepository;
 import org.springframework.stereotype.Service;

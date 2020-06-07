@@ -1,7 +1,6 @@
-package com.example.reddit.Controller;
+package com.example.reddit.ControllerRestTemplateTest;
 
 import com.example.reddit.Service.SendGridService;
-import com.example.reddit.Service.SendGridServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

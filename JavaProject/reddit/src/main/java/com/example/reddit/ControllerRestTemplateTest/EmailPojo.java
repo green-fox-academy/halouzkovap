@@ -1,4 +1,4 @@
-package com.example.reddit.Controller;
+package com.example.reddit.ControllerRestTemplateTest;
 
 public class EmailPojo {
     private String toName;

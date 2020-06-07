@@ -1,4 +1,4 @@
-package com.example.reddit.Controller;
+package com.example.reddit.ControllerRestTemplateTest;
 
 import javax.validation.ConstraintViolation;
 import javax.validation.ConstraintViolationException;
