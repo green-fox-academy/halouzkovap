@@ -1,5 +1,6 @@
 package com.example.reddit.Service;
 
+import com.example.reddit.Controller.EmailPojo;
 import com.example.reddit.Entity.User;
 import com.example.reddit.Repository.UserRepository;
 import org.springframework.stereotype.Service;
@@ -11,10 +12,12 @@ import java.util.Optional;
 public class UserService implements IUserService {
 
     private final UserRepository userRepository;
+    private final SendGridService sendRegistEmail;
 
 
-    public UserService(UserRepository userRepository) {
+    public UserService(UserRepository userRepository, SendGridService sendRegistEmail) {
         this.userRepository = userRepository;
+        this.sendRegistEmail = sendRegistEmail;
     }
 
 
@@ -40,6 +43,7 @@ public class UserService implements IUserService {
 
     @Override
     public User Create(User u) {
+        sendRegistEmail.sendMail(new EmailPojo(u.getUserName(),u.getUserName(),u.getEmail(),u.getUserName()));
         return userRepository.save(u);
     }
 
